@@ -22,9 +22,9 @@ tonemap_mode = 2
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6wwtl")
 
-[node name="player_manager" parent="." instance=ExtResource("3_0bbpv")]
-
 [node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
 
-[node name="HexGrid" parent="." node_paths=PackedStringArray("player_manager") instance=ExtResource("1_1x53f")]
-player_manager = NodePath("../player_manager")
+[node name="HexGrid" parent="." instance=ExtResource("1_1x53f")]
+
+[node name="player_manager" parent="." node_paths=PackedStringArray("grid") instance=ExtResource("3_0bbpv")]
+grid = NodePath("../HexGrid")
