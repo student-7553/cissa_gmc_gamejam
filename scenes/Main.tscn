@@ -28,12 +28,9 @@ tonemap_mode = 2
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6wwtl")
 
-[node name="player_manager" parent="." instance=ExtResource("3_0bbpv")]
-
 [node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
 
-[node name="HexGrid" parent="." node_paths=PackedStringArray("player_manager") instance=ExtResource("1_1x53f")]
-player_manager = NodePath("../player_manager")
+[node name="HexGrid" parent="." instance=ExtResource("1_1x53f")]
 
 [node name="CardManager" type="Node3D" parent="."]
 script = ExtResource("4_rarhs")
@@ -44,3 +41,5 @@ cardStackCount = 20
 script = ExtResource("7_nxtc6")
 
 [node name="Control" parent="." instance=ExtResource("9_lhr70")]
+
+[node name="player_manager" parent="." instance=ExtResource("3_0bbpv")]
