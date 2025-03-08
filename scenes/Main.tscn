@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=6 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
+[ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -17,10 +18,9 @@ tonemap_mode = 2
 
 [node name="Main" type="Node3D"]
 
+[node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6wwtl")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.822144, 0.56928, 0, -0.56928, 0.822144, 7.873, 9.364, 6.92)
-
-[node name="Node3D" parent="." instance=ExtResource("1_1x53f")]
+[node name="HexGrid" parent="." instance=ExtResource("1_1x53f")]
