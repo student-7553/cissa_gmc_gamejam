@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj3jvom7plog4"]
+
+[ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cell.gd" id="1_6r62y"]
+
+[node name="HexCell" type="Node3D"]
+script = ExtResource("1_6r62y")
