@@ -1,11 +1,22 @@
 extends Node3D
 
+@export var arrayRowSize = 10
+@export var arrayColumnSize = 10
 
-# Called when the node enters the scene tree for the first time.
+@export var cellScene: PackedScene
+
+var grid: Array[Array] = []
+
 func _ready() -> void:
-	pass # Replace with function body.
+	for n in arrayRowSize:
+		var newRow = []
 
+		for i in arrayColumnSize:
+			var cellNode = cellScene.instantiate()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+			add_child(cellNode)
+			newRow.append(cellNode)
+
+		grid.push_front(newRow)
+
 	pass
