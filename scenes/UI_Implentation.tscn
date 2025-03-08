@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://db1bayer40vn"]
+
+[ext_resource type="Script" path="res://scenes/ui_implentation.gd" id="1_ni0ms"]
+[ext_resource type="Texture2D" uid="uid://dxflifp8sebtl" path="res://assets/UI/pov (1).png" id="1_vis4x"]
+[ext_resource type="Texture2D" uid="uid://ck0kdo4jx6yb" path="res://assets/Cards/Sprite-asteroid.png" id="2_7ia38"]
+[ext_resource type="Texture2D" uid="uid://dsy3ji5hb5ghq" path="res://assets/Cards/Sprite-beach.png" id="3_wd8ij"]
+[ext_resource type="Texture2D" uid="uid://de82l6h2lf4ac" path="res://assets/Cards/Sprite-desert.png" id="4_0m1i7"]
+[ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="6_ogau0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 5.0
+offset_right = -2.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ni0ms")
+
+[node name="Pov UI" type="Sprite2D" parent="."]
+position = Vector2(576, 318)
+texture = ExtResource("1_vis4x")
+
+[node name="Card Deck" type="Node" parent="."]
+
+[node name="Sprite-asteroid" type="Sprite2D" parent="Card Deck"]
+position = Vector2(1064, 539)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_7ia38")
+
+[node name="Sprite-beach" type="Sprite2D" parent="Card Deck"]
+position = Vector2(1045, 561)
+rotation = -0.490582
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_wd8ij")
+
+[node name="Sprite-Lava" type="Sprite2D" parent="Card Deck"]
+position = Vector2(1073, 563)
+rotation = 0.181586
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_0m1i7")
+
+[node name="Sprite-top-of-deck" type="Sprite2D" parent="Card Deck"]
+position = Vector2(1052, 554)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_ogau0")
