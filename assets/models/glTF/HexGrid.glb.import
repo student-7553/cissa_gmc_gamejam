@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://blmobj4oe4x85"
-path="res://.godot/imported/TEST_Block.glb-7a51b8ed64eaad0ace28216e72219aee.scn"
+uid="uid://cjauso7ifwhu6"
+path="res://.godot/imported/HexGrid.glb-8e9244ddbd5a3fb240b127ee8f2abba2.scn"
 
 [deps]
 
-source_file="res://assets/models/TEST_Block.glb"
-dest_files=["res://.godot/imported/TEST_Block.glb-7a51b8ed64eaad0ace28216e72219aee.scn"]
+source_file="res://assets/models/glTF/HexGrid.glb"
+dest_files=["res://.godot/imported/HexGrid.glb-8e9244ddbd5a3fb240b127ee8f2abba2.scn"]
 
 [params]
 

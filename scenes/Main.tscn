@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://6pv160xcxskc"]
+
+[ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_m1mpq"]
+sky_material = SubResource("ProceduralSkyMaterial_8wwdc")
+
+[sub_resource type="Environment" id="Environment_6wwtl"]
+background_mode = 2
+background_energy_multiplier = 1.72
+sky = SubResource("Sky_m1mpq")
+tonemap_mode = 2
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6wwtl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.206204, 0.978509, 0, -0.978509, 0.206204, 7.87322, 12.0241, -3.57519)
+
+[node name="Node3D" parent="." instance=ExtResource("1_1x53f")]
