@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt6gvl36cu631"]
+
+[ext_resource type="Texture2D" path="res://assets/UI/panel down.png" id="1_ebm8y"]
+[ext_resource type="Texture2D" path="res://assets/UI/Screenshot 2025-03-08 160715.png" id="2_otsvp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelDown" type="Sprite2D" parent="."]
+position = Vector2(579, 596.5)
+scale = Vector2(0.482422, 0.151562)
+texture = ExtResource("1_ebm8y")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 51.0
+offset_right = 406.0
+offset_bottom = 170.0
+min_value = 1.0
+page = 1.0
+value = 40.0
+rounded = true
+texture_under = ExtResource("2_otsvp")
+texture_over = ExtResource("2_otsvp")
+texture_progress = ExtResource("2_otsvp")
+tint_under = Color(0, 1, 1, 1)
+tint_progress = Color(0, 0, 0, 1)
+
+[node name="Node" type="Node" parent="TextureProgressBar"]
