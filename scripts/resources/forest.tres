@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://b675xlo28u8uq"]
+
+[ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_5ygsc"]
+[ext_resource type="PackedScene" uid="uid://cc4v8jnx14h83" path="res://scenes/node_mesh/node_forest_mesh.tscn" id="1_eexb2"]
+
+[resource]
+script = ExtResource("1_5ygsc")
+nodeMeshScene = ExtResource("1_eexb2")
+score = 1
+metadata/_custom_type_script = "uid://cx0txkira3or2"
