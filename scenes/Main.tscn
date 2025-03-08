@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=7 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
-[ext_resource type="PackedScene" uid="uid://bj3jvom7plog4" path="res://scenes/HexCell.tscn" id="3_0bbpv"]
-[ext_resource type="Resource" uid="uid://bvrmwfp2obc6p" path="res://scripts/resources/LifeData.tres" id="3_rarhs"]
+[ext_resource type="PackedScene" uid="uid://b3u6rjnwxgblj" path="res://scenes/player_manager.tscn" id="3_0bbpv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,13 +19,12 @@ tonemap_mode = 2
 
 [node name="Main" type="Node3D"]
 
-[node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6wwtl")
 
-[node name="HexGrid" parent="." instance=ExtResource("1_1x53f")]
-life_data = ExtResource("3_rarhs")
+[node name="player_manager" parent="." instance=ExtResource("3_0bbpv")]
 
-[node name="HexCell" parent="." instance=ExtResource("3_0bbpv")]
-life_data = ExtResource("3_rarhs")
+[node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
+
+[node name="HexGrid" parent="." node_paths=PackedStringArray("player_manager") instance=ExtResource("1_1x53f")]
+player_manager = NodePath("../player_manager")
