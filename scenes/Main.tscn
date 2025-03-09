@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
-[ext_resource type="Resource" uid="uid://bkloj8id3pfu" path="res://scripts/resources/card_list.tres" id="4_nxtc6"]
+[ext_resource type="Resource" uid="uid://etvktktstvu2" path="res://scripts/resources/card_list.tres" id="4_nxtc6"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
-[ext_resource type="Script" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
-[ext_resource type="PackedScene" uid="uid://b3u6rjnwxgblj" path="res://scenes/grid_manager.tscn" id="12_bjd11"]
-[ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
+[ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
+[ext_resource type="PackedScene" uid="uid://ggxwtq4sadur" path="res://scenes/player_manager.tscn" id="12_bjd11"]
+[ext_resource type="PackedScene" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
