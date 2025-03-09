@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt1a3dtvvh8b3"]
+
+[ext_resource type="PackedScene" uid="uid://8legoen78d4u" path="res://assets/models/glTF/HexCell_Ocean_1.glb" id="1_5ejjh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="HexCell_Ocean_1" parent="." instance=ExtResource("1_5ejjh")]

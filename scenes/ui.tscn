@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=5 format=3 uid="uid://dt6gvl36cu631"]
 
-[ext_resource type="Texture2D" path="res://assets/UI/panel down.png" id="1_ebm8y"]
-[ext_resource type="Texture2D" path="res://assets/UI/Screenshot 2025-03-08 160715.png" id="2_otsvp"]
+[ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://1s3esgk43fs5" path="res://scenes/texture_progress_bar.gd" id="1_x4jx1"]
+[ext_resource type="Script" uid="uid://bsekmqr2wkbme" path="res://scripts/ui/total_life_energy.gd" id="1_yev5y"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nt7q6"]
+size = Vector2(500, 20)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,22 +18,43 @@ grow_vertical = 2
 [node name="PanelDown" type="Sprite2D" parent="."]
 position = Vector2(579, 596.5)
 scale = Vector2(0.482422, 0.151562)
-texture = ExtResource("1_ebm8y")
+
+[node name="TotalLifeEnergy" type="Label" parent="."]
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 23.0
+text = "0"
+script = ExtResource("1_yev5y")
+
+[node name="CardCount" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0000000"
+script = ExtResource("1_nt7q6")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_left = 102.0
-offset_top = 51.0
-offset_right = 406.0
-offset_bottom = 170.0
-min_value = 1.0
-page = 1.0
-value = 40.0
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 20.0
+grow_horizontal = 2
+value = 50.0
 rounded = true
-texture_under = ExtResource("2_otsvp")
-texture_over = ExtResource("2_otsvp")
-texture_progress = ExtResource("2_otsvp")
-tint_under = Color(0, 1, 1, 1)
+texture_progress = SubResource("PlaceholderTexture2D_nt7q6")
+tint_under = Color(0.810834, 0.888816, 0.958046, 1)
 tint_progress = Color(0, 0, 0, 1)
+script = ExtResource("1_x4jx1")
 
 [node name="Node" type="Node" parent="TextureProgressBar"]
