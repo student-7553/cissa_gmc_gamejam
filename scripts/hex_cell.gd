@@ -1,17 +1,16 @@
 extends Node3D
 class_name Hex_Cell
 
-
 const ANGLE: float = 60
 const CELL_WIDTH: float = 2
 const SIDES: int = 6
-const HEX_DIRECTIONS: Array[Vector3] = [Vector3(0, 1, 0), Vector3(0, 0, 1), Vector3(1, 0, 0), Vector3(0, -1, 0), Vector3(0, 0, -1), Vector3(-1, 0, 0)]
+
+@export var synergy: Synergy
 
 var current_score = 0
 var base_score = 0
 var save_pos: Vector3
 var cube_coord: Vector3 ## Position in the hex grid (q, r, s)
-var neighbours: Array[Hex_Cell]
 
 var card: Card = null
 
@@ -21,12 +20,6 @@ signal select_cell(cell: Hex_Cell)
 
 func _ready() -> void:
 	save_pos = position
-
-func find_neighbours():
-	"""
-	Could declare a reference to grid and simply reference the array
-	"""
-	pass
 
 func handleClick(nextCard: Card) -> void:
 	select_cell.emit(self)
@@ -66,7 +59,6 @@ func pop_up():
 func pop_down():
 	var tw: Tween = get_tree().create_tween()
 	tw.tween_property(self, "position:y", save_pos.y, 0.25)
-	tw.tween_callback(find_neighbours)
 
 func _on_area_3d_mouse_entered() -> void:
 	print("wdwdwdwdwdu")
