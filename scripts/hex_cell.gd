@@ -14,6 +14,7 @@ var cube_coord: Vector3 ## Position in the hex grid (q, r, s)
 var neighbours: Array[Hex_Cell]
 
 var card: Card = null
+var cardNode: Node = null
 
 var isHovered: bool = false
 
@@ -32,25 +33,25 @@ func handleClick(nextCard: Card) -> void:
 	select_cell.emit(self)
 	print(cube_coord)
 
-	if checkCardChange(nextCard):
-		print("Card can not be placed here..")
-		return
+	if cardNode != null:
+		var checkNode = cardNode.get_node("check")
+		assert(checkNode != null)
+		if checkNode.checkIfValidToPlace(nextCard):
+			print("Not possible to place this node down on the existing node")
+			return
+
+	print("Success: Placed the node down")
+
 	setCard(nextCard)
 	
 
-func checkCardChange(nextCard: Card) -> bool:
-	if card == null:
-		return false
-	# todo this logic
-	return true
-
 func setCard(_card: Card) -> void:
-	var new_node = _card.nodeMeshScene.instantiate()
+	cardNode = _card.nodeMeshScene.instantiate()
 	
-	add_child(new_node)
+	add_child(cardNode)
 
 	# todo the bottom y positon should be dynamic
-	new_node.translate(Vector3(0, 0.25, 0))
+	cardNode.translate(Vector3(0, 0.25, 0))
 
 	pass
 
@@ -69,5 +70,4 @@ func pop_down():
 	tw.tween_callback(find_neighbours)
 
 func _on_area_3d_mouse_entered() -> void:
-	print("wdwdwdwdwdu")
 	select_cell.emit(self)

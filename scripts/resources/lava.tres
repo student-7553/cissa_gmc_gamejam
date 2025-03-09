@@ -8,4 +8,5 @@
 script = ExtResource("1_tyf36")
 cardSprite = ExtResource("1_ugylg")
 nodeMeshScene = ExtResource("2_xvyn2")
+cellKey = 0
 metadata/_custom_type_script = "uid://cx0txkira3or2"

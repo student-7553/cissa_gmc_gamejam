@@ -1,25 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvsl6iabrrppl"]
+[gd_scene load_steps=8 format=3 uid="uid://cvsl6iabrrppl"]
 
-[ext_resource type="AudioStream" uid="uid://cb3671r2wtmcl" path="res://assets/sfx/Stellaris Soundtrack - Spatial Lullaby.mp3" id="1_1bhy6"]
-[ext_resource type="Script" uid="uid://7srhvtvbjkyk" path="res://scenes/sfx.gd" id="1_2haqr"]
+[ext_resource type="Script" uid="uid://7srhvtvbjkyk" path="res://scripts/sfx.gd" id="1_2haqr"]
 [ext_resource type="AudioStream" uid="uid://basqekuri50i0" path="res://assets/sfx/OpenCardStack.mp3" id="2_lccbc"]
-[ext_resource type="AudioStream" uid="uid://sc20wbamvxr8" path="res://assets/sfx/ButtonHover.mp3" id="3_qyyvk"]
+[ext_resource type="AudioStream" uid="uid://d0u77revrs2i7" path="res://assets/sfx/Soundtrack_Combined.mp3" id="2_voggf"]
+[ext_resource type="AudioStream" uid="uid://b613owqyafnhj" path="res://assets/sfx/ButtonHover2.mp3" id="3_2haqr"]
+[ext_resource type="AudioStream" uid="uid://hbqjaale4bxv" path="res://assets/sfx/PlaceNode_1.mp3" id="5_voggf"]
+[ext_resource type="AudioStream" uid="uid://b7keq10gdsg2d" path="res://assets/sfx/PlaceNode_2.mp3" id="6_0jrv7"]
+[ext_resource type="AudioStream" uid="uid://ipvqfulpehop" path="res://assets/sfx/PlaceNode_3.mp3" id="7_1pw5g"]
 
 [node name="Sfx" type="Node3D"]
 script = ExtResource("1_2haqr")
 
-[node name="AudioStreamPlayer3D_Music" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("1_1bhy6")
-volume_db = -5.079
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_voggf")
+volume_db = -16.509
 autoplay = true
+bus = &"Music"
 
-[node name="AudioStreamPlayer3D_Move" type="AudioStreamPlayer3D" parent="."]
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2haqr")
+volume_db = -29.867
+bus = &"Hover"
 
-[node name="AudioStreamPlayer3D_OpenStack" type="AudioStreamPlayer3D" parent="."]
+[node name="OpenCards" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_lccbc")
-volume_db = -16.085
-bus = &"Hover"
+volume_db = -27.733
+bus = &"Cards"
 
-[node name="AudioStreamPlayer3D_Hover" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_qyyvk")
-bus = &"Hover"
+[node name="PlaceNodes" type="Node" parent="."]
+
+[node name="PlaceNode_1" type="AudioStreamPlayer" parent="PlaceNodes"]
+stream = ExtResource("5_voggf")
+bus = &"Placement"
+
+[node name="PlaceNode_2" type="AudioStreamPlayer" parent="PlaceNodes"]
+stream = ExtResource("6_0jrv7")
+bus = &"Placement"
+
+[node name="PlaceNode_3" type="AudioStreamPlayer" parent="PlaceNodes"]
+stream = ExtResource("7_1pw5g")
+bus = &"Placement"
