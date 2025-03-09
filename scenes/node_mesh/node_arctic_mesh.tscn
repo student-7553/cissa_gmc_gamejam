@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgacn6wle2m7l"]
+[gd_scene load_steps=3 format=3 uid="uid://bgacn6wle2m7l"]
 
 [ext_resource type="PackedScene" uid="uid://btidctxipuuiy" path="res://assets/models/glTF/HexCell_Arctic_1.glb" id="1_8bnxa"]
+[ext_resource type="Script" uid="uid://bjj3l2fp4ech3" path="res://scripts/synergy/arctic_synergy.gd" id="2_bp0kn"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="HexCell_Arctic_12" parent="." instance=ExtResource("1_8bnxa")]
 
 [node name="SynergyLogic" type="Node3D" parent="."]
+script = ExtResource("2_bp0kn")
 
 [node name="arctic_check" type="Node3D" parent="."]

@@ -9,5 +9,9 @@ func scan_neighbours(neighbours: Array[Hex_Cell]):
 		attempt_synergy(cell)
 
 # another cell will try to call this function. if the synergy is the right type then call this function
-func attempt_synergy(cell: Hex_Cell):
+func attempt_synergy(adj_cell: Hex_Cell):
+	pass
+
+# Called when placed down
+func initial_synergy():
 	pass

@@ -56,5 +56,4 @@ func pop_down():
 	tw.tween_property(self, "position:y", save_pos.y, 0.25)
 
 func _on_area_3d_mouse_entered() -> void:
-	print("wdwdwdwdwdu")
 	select_cell.emit(self)

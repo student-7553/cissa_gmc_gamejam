@@ -3,7 +3,7 @@ class_name Hex_Grid
 
 @export var map_size = 8
 @export var tile_size = 2
-@export var tile_scene: PackedScene
+@export var tile_scene: PackedScene ## The tile to start with
 
 var RAY_LENGTH = 50
 var cardManager: CardManager
@@ -25,15 +25,17 @@ func generate_map():
 		for y in range(- map_size, map_size):
 			if in_map(x, y):
 				add_tile(x, y)
+	print(grid)
 # 
 func add_tile(x, y):
 	var new_tile: Hex_Cell = tile_scene.instantiate()
 	var offset: float = 0.0 if !(x % 2) else tile_size / 2.0
 	
 	add_child(new_tile)
-	new_tile.initCell(oddq_to_cube(Vector2(x, y)), cardManager.possibleCards.cards[cardManager.defaultSpawnCard])
-
-	grid[new_tile.cube_coord] = new_tile
+	var cube_coord: Vector3 = oddq_to_cube(Vector2(x, y))
+	new_tile.initCell(cube_coord, cardManager.possibleCards.cards[cardManager.defaultSpawnCard])
+	
+	grid[cube_coord] = new_tile
 	
 	new_tile.translate(Vector3(x * tile_size, 0, y * tile_size + offset))
 
