@@ -23,5 +23,5 @@ bus/4/name = &"Hover"
 bus/4/solo = false
 bus/4/mute = false
 bus/4/bypass_fx = false
-bus/4/volume_db = 0.0
+bus/4/volume_db = -6.25101
 bus/4/send = &"Master"
