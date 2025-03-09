@@ -13,7 +13,9 @@ var currentStackCards: Array[Card] = []
 func _ready() -> void:
 	currentStackCards.resize(cardStackCount);
 
+	# Todo figure out a random number
 	var randomNumber = 0
+
 	for cardIndex in cardStackCount:
 		currentStackCards[cardIndex] = possibleCards[randomNumber]
 	
@@ -25,5 +27,6 @@ func _ready() -> void:
 func playCard() -> void:
 	var poppedCard = currentStackCards.pop_front()
 	cardStackUpdate.emit()
-	# Spawn the node on the field
+
+	# Todo Spawn the node on the field
 	pass
