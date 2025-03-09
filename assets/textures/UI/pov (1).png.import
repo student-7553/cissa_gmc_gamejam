@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de82l6h2lf4ac"
-path.s3tc="res://.godot/imported/Sprite-desert.png-d172503e96fc2d4d821ec903e9d576fe.s3tc.ctex"
+uid="uid://dxflifp8sebtl"
+path="res://.godot/imported/pov (1).png-5f30e4cc5b12f3bfb98e9f73c78ad77a.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cards/Sprite-desert.png"
-dest_files=["res://.godot/imported/Sprite-desert.png-d172503e96fc2d4d821ec903e9d576fe.s3tc.ctex"]
+source_file="res://assets/textures/UI/pov (1).png"
+dest_files=["res://.godot/imported/pov (1).png-5f30e4cc5b12f3bfb98e9f73c78ad77a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
