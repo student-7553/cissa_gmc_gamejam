@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvsl6iabrrppl"]
+
+[ext_resource type="AudioStream" uid="uid://cb3671r2wtmcl" path="res://assets/sfx/Stellaris Soundtrack - Spatial Lullaby.mp3" id="1_1bhy6"]
+[ext_resource type="Script" uid="uid://7srhvtvbjkyk" path="res://scenes/sfx.gd" id="1_2haqr"]
+[ext_resource type="AudioStream" uid="uid://basqekuri50i0" path="res://assets/sfx/OpenCardStack.mp3" id="2_lccbc"]
+[ext_resource type="AudioStream" uid="uid://sc20wbamvxr8" path="res://assets/sfx/ButtonHover.mp3" id="3_qyyvk"]
+
+[node name="Sfx" type="Node3D"]
+script = ExtResource("1_2haqr")
+
+[node name="AudioStreamPlayer3D_Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_1bhy6")
+volume_db = -5.079
+autoplay = true
+
+[node name="AudioStreamPlayer3D_Move" type="AudioStreamPlayer3D" parent="."]
+
+[node name="AudioStreamPlayer3D_OpenStack" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_lccbc")
+volume_db = -16.085
+bus = &"Hover"
+
+[node name="AudioStreamPlayer3D_Hover" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_qyyvk")
+bus = &"Hover"

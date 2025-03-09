@@ -6,5 +6,4 @@
 [resource]
 script = ExtResource("1_5ygsc")
 nodeMeshScene = ExtResource("1_eexb2")
-score = 1
 metadata/_custom_type_script = "uid://cx0txkira3or2"
