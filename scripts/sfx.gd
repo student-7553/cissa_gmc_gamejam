@@ -1,4 +1,4 @@
-extends Node3D
+extends Node
 class_name Sound_Manager
 
 @onready var sfx_OpenCards: AudioStreamPlayer = $OpenCards
@@ -6,6 +6,8 @@ class_name Sound_Manager
 @onready var sfx_PlaceNode_1: AudioStreamPlayer = $PlaceNodes/PlaceNode_1
 @onready var sfx_PlaceNode_2: AudioStreamPlayer = $PlaceNodes/PlaceNode_2
 @onready var sfx_PlaceNode_3: AudioStreamPlayer = $PlaceNodes/PlaceNode_3
+@onready var sfx_ViewCard: AudioStreamPlayer = $ViewCard
+@onready var sfx_LowerCard: AudioStreamPlayer = $LowerCard
 
 func _ready() -> void:
 	Globals.sound_manager = self
