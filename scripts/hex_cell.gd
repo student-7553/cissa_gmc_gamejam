@@ -37,7 +37,6 @@ func handleClick(nextCard: Card) -> void:
 		return
 	setCard(nextCard)
 	
-	# Handle the click logic here
 
 func checkCardChange(nextCard: Card) -> bool:
 	if card == null:
@@ -70,4 +69,5 @@ func pop_down():
 	tw.tween_callback(find_neighbours)
 
 func _on_area_3d_mouse_entered() -> void:
+	print("wdwdwdwdwdu")
 	select_cell.emit(self)

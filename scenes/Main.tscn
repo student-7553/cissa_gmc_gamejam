@@ -1,19 +1,18 @@
-[gd_scene load_steps=18 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=17 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
-[ext_resource type="PackedScene" uid="uid://b3u6rjnwxgblj" path="res://scenes/player_manager.tscn" id="3_0bbpv"]
-[ext_resource type="Script" path="res://scripts/card_manager.gd" id="4_rarhs"]
+[ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Resource" uid="uid://bipd1jf56chbp" path="res://scripts/resources/arctic.tres" id="5_c01mt"]
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="5_q8u5g"]
 [ext_resource type="Resource" uid="uid://b675xlo28u8uq" path="res://scripts/resources/forest.tres" id="6_nxtc6"]
-[ext_resource type="Script" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
+[ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
 [ext_resource type="Resource" uid="uid://c82sy05k4nyy" path="res://scripts/resources/ground.tres" id="7_qmy6f"]
 [ext_resource type="Resource" uid="uid://cffe810tmx7pv" path="res://scripts/resources/lava.tres" id="8_mwfav"]
 [ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="9_3p2gp"]
-[ext_resource type="PackedScene" uid="uid://dt6gvl36cu631" path="res://scenes/ui.tscn" id="9_lhr70"]
 [ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="10_cvmbd"]
-[ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
+[ext_resource type="PackedScene" path="res://scenes/grid_manager.tscn" id="12_bjd11"]
+[ext_resource type="PackedScene" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -47,10 +46,7 @@ cardStackCount = 20
 [node name="LifeEnergyManager" type="Node3D" parent="."]
 script = ExtResource("7_nxtc6")
 
-[node name="Control" parent="." instance=ExtResource("9_lhr70")]
-mouse_filter = 2
-
-[node name="player_manager" parent="." node_paths=PackedStringArray("grid") instance=ExtResource("3_0bbpv")]
+[node name="grid_manager" parent="." node_paths=PackedStringArray("grid") instance=ExtResource("12_bjd11")]
 grid = NodePath("../HexGrid")
 
 [node name="Sfx" parent="." instance=ExtResource("14_mwfav")]
