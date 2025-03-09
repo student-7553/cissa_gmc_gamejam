@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://cwufgwrucgiv8" path="res://assets/textures/cards/Sprite-ground.png" id="1_wyxy0"]
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_x0g0b"]
-[ext_resource type="PackedScene" uid="uid://chgfq28rtorg1" path="res://scenes/node_mesh/node_ground.tscn" id="2_aom5n"]
+[ext_resource type="PackedScene" uid="uid://b38mwc80soeru" path="res://scenes/hex_cells/ground_hcell.tscn" id="2_wyxy0"]
 
 [resource]
 script = ExtResource("1_x0g0b")
 cardSprite = ExtResource("1_wyxy0")
-nodeMeshScene = ExtResource("2_aom5n")
+scene = ExtResource("2_wyxy0")
 cellKey = 0
 metadata/_custom_type_script = "uid://cx0txkira3or2"

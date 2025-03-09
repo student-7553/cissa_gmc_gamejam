@@ -33,7 +33,7 @@ func add_tile(x, y):
 	
 	add_child(new_tile)
 	var cube_coord: Vector3 = oddq_to_cube(Vector2(x, y))
-	new_tile.initCell(cube_coord, cardManager.possibleCards.cards[cardManager.defaultSpawnCard])
+	new_tile.init_cell(cube_coord, cardManager.possibleCards.cards[cardManager.defaultSpawnCard])
 	
 	grid[cube_coord] = new_tile
 	

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://0lua3araahhy"]
+
+[ext_resource type="PackedScene" uid="uid://btidctxipuuiy" path="res://assets/models/glTF/HexCell_Arctic_1.glb" id="1_tnm24"]
+[ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_gxjut"]
+[ext_resource type="Script" uid="uid://buloub7v6367x" path="res://scripts/cards/check/arctic_check.gd" id="3_rn81e"]
+[ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="4_r3cpd"]
+
+[node name="arctic_hcell" instance=ExtResource("1_tnm24")]
+script = ExtResource("2_gxjut")
+
+[node name="HexCell_Arctic_1" parent="." index="0"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="check" type="Node" parent="." index="1"]
+script = ExtResource("3_rn81e")
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+
+[node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("4_r3cpd")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

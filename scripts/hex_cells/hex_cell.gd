@@ -1,10 +1,7 @@
 extends Node3D
 class_name Hex_Cell
 
-const ANGLE: float = 60
-const CELL_WIDTH: float = 2
-const SIDES: int = 6
-
+@export var card: Card
 @export var synergy: Synergy
 
 var current_score = 0
@@ -12,7 +9,6 @@ var base_score = 0
 var save_pos: Vector3
 var cube_coord: Vector3 ## Position in the hex grid (q, r, s)
 
-var card: Card = null
 var cardNode: Node = null
 
 var isHovered: bool = false
@@ -23,35 +19,33 @@ func _ready() -> void:
 	save_pos = position
 
 func handleClick(nextCard: Card) -> void:
-	select_cell.emit(self)
-	print(cube_coord)
-
 	if cardNode != null:
 		var checkNode = cardNode.get_node("check")
 		assert(checkNode != null)
-		if checkNode.checkIfValidToPlace(nextCard):
+		if checkNode.checkIfValidToPlace(nextCard): ## Check logic
 			print("Not possible to place this node down on the existing node")
 			return
-
 	print("Success: Placed the node down")
-
 	setCard(nextCard)
-	
 
 func setCard(_card: Card) -> void:
-	cardNode = _card.nodeMeshScene.instantiate()
-	
+	cardNode = _card.scene.instantiate()
 	add_child(cardNode)
-
 	# todo the bottom y positon should be dynamic
 	cardNode.translate(Vector3(0, 0.25, 0))
 
-	pass
-
-func initCell(_cube_coord: Vector3, card: Card) -> void:
+func init_cell(_cube_coord: Vector3, _card: Card) -> void:
 	cube_coord = _cube_coord
-	# setCard(card)
-	pass
+	card = _card
+
+## Called when a cell is being replaced
+func copy_cell_data(cell: Hex_Cell):
+	cube_coord = cell.cube_coord
+	card = cell.card
+	save_pos = cell.save_pos
+	current_score = cell.current_score
+	base_score = cell.base_score
+	position = cell.position
 
 func pop_up():
 	var tw: Tween = get_tree().create_tween()
@@ -61,5 +55,5 @@ func pop_down():
 	var tw: Tween = get_tree().create_tween()
 	tw.tween_property(self, "position:y", save_pos.y, 0.25)
 
-func _on_area_3d_mouse_entered() -> void:
+func mouse_entered() -> void:
 	select_cell.emit(self)

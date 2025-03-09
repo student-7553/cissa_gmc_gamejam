@@ -3,7 +3,7 @@ class_name Card
 
 @export var cardSprite: Texture2D
 
-@export var nodeMeshScene: PackedScene
+@export var scene: PackedScene
 
 @export var cellKey: PossibleCell
 
