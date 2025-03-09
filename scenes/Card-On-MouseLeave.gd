@@ -12,11 +12,11 @@ func _on_control_mouse_exited() -> void:
 	Globals.sound_manager.sfx_LowerCard.play()
 	var tw: Tween = get_tree().create_tween()
 	tw.tween_property(self, "position:y", save_pos.y + 300, 0.5)
-	print("mouse exited")
+	#print("mouse exited")
 
 func _on_mouse_entered() -> void:
 	Globals.sound_manager.sfx_ViewCard.play()
-	print("mouse reentered")
+	#print("mouse reentered")
 	var tw: Tween = get_tree().create_tween()
 	tw.tween_property(self, "position:y", save_pos.y, 0.25)
 	#tw.tween_callback(find_neighbours)

@@ -35,7 +35,7 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.129558, 0.129559, 0.129558, 1)
 
-[node name="Control" type="CanvasLayer"]
+[node name="UI" type="CanvasLayer"]
 follow_viewport_enabled = true
 
 [node name="Pov" type="TextureRect" parent="."]
@@ -166,6 +166,8 @@ offset_left = -126.0
 offset_top = -383.0
 offset_right = 111.0
 offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("7_7dvkv")
 
 [node name="Card-Beach" type="TextureRect" parent="Current-Card/Card Holder"]

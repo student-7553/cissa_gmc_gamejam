@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnx2iulwpuq1k"]
 
-[ext_resource type="PackedScene" uid="uid://b2nx03untf7sx" path="res://assets/models/glTF/HexCell_Lava_1.glb" id="1_jted7"]
+[ext_resource type="PackedScene" uid="uid://b1rlom1f74mls" path="res://assets/models/glTF/HexCell_Lava_1.glb" id="1_jted7"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_jdx5f"]
 [ext_resource type="Script" path="res://scripts/cards/check/lava_check.gd" id="3_kv2vi"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="4_ijk8f"]

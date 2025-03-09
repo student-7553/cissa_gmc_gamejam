@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c54ukn8exfwdg"]
 
-[ext_resource type="PackedScene" uid="uid://b16o52bj57yoi" path="res://assets/models/glTF/HexCell_Mountain_1.glb" id="1_x88t0"]
+[ext_resource type="PackedScene" uid="uid://dn0o8fb7kg06s" path="res://assets/models/glTF/HexCell_Mountain_1.glb" id="1_x88t0"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_flkdx"]
 [ext_resource type="Script" path="res://scripts/cards/check/mountain_check.gd" id="3_k7v7d"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="4_kf45k"]

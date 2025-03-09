@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cff51cqo10bdx"]
 
-[ext_resource type="PackedScene" uid="uid://8legoen78d4u" path="res://assets/models/glTF/HexCell_Ocean_1.glb" id="1_xor61"]
+[ext_resource type="PackedScene" uid="uid://b0n7kew1266pq" path="res://assets/models/glTF/HexCell_Ocean_1.glb" id="1_xor61"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_018vy"]
 [ext_resource type="Script" path="res://scripts/cards/check/ocean_check.gd" id="3_uxdka"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="4_cg5u2"]
