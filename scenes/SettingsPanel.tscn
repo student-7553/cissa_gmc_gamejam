@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://clwmii4ww5lc8"]
+[gd_scene load_steps=5 format=3 uid="uid://clwmii4ww5lc8"]
 
 [ext_resource type="Texture2D" uid="uid://bfd72wi70onyh" path="res://assets/textures/UI/SettingsPanel.png" id="1_f62ks"]
+[ext_resource type="Texture2D" uid="uid://b0ugcq717r4p3" path="res://assets/textures/UI/SettingsPanel_Click.png" id="2_udqel"]
+[ext_resource type="Texture2D" uid="uid://f4u25n8qphd4" path="res://assets/textures/UI/SettingsPanel_Hover.png" id="3_sdcb2"]
+[ext_resource type="BitMap" uid="uid://curauawat75xq" path="res://assets/textures/UI/SettingsPanel_Mask.bmp" id="4_2drfb"]
 
 [node name="SettingsPanel" type="Control"]
 layout_mode = 3
@@ -10,23 +13,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control_SettingsPanel" type="Control" parent="."]
+[node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Control_SettingsPanel"]
-position = Vector2(576, 324)
-texture = ExtResource("1_f62ks")
-
-[node name="Button_Settings" type="Button" parent="Control_SettingsPanel/Sprite2D"]
-visible = false
-anchors_preset = -1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -565.0
-offset_top = -471.0
-offset_right = -325.0
-offset_bottom = -330.0
+offset_top = -649.944
+offset_right = 1152.0
+offset_bottom = -1.94403
+grow_vertical = 0
+texture_normal = ExtResource("1_f62ks")
+texture_pressed = ExtResource("2_udqel")
+texture_hover = ExtResource("3_sdcb2")
+texture_click_mask = ExtResource("4_2drfb")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=27 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://bsekmqr2wkbme" path="res://scripts/ui/total_life_energy.gd" id="1_yev5y"]
+[ext_resource type="PackedScene" uid="uid://clwmii4ww5lc8" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
 [ext_resource type="Texture2D" uid="uid://xkeirwhipm1r" path="res://assets/Cards/Sprite-forest.png" id="3_toj4d"]
 [ext_resource type="Script" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
@@ -49,11 +50,15 @@ font_size = 64
 [node name="UI" type="CanvasLayer"]
 follow_viewport_enabled = true
 
-[node name="Pov" type="TextureRect" parent="."]
+[node name="HUD" type="TextureRect" parent="."]
 anchors_preset = -1
 anchor_right = 1.001
 anchor_bottom = 1.003
 texture = ExtResource("1_8k7j3")
+
+[node name="SettingsPanel" parent="HUD" instance=ExtResource("2_jkdwc")]
+layout_mode = 1
+mouse_filter = 2
 
 [node name="Card Deck" type="Node" parent="."]
 
