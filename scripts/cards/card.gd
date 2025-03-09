@@ -5,5 +5,9 @@ class_name Card
 
 @export var nodeMeshScene: PackedScene
 
+@export var cellKey: PossibleCell
 
-# @export var scoreSynergy: int = 1
+
+enum PossibleCell {
+	FOREST, GROUND, LAVA, OCEAN, MOUNTAIN, ARCTIC, BEACH
+}

@@ -32,17 +32,12 @@ func handleClick(nextCard: Card) -> void:
 	select_cell.emit(self)
 	print(cube_coord)
 
-	if checkCardChange(nextCard):
-		print("Card can not be placed here..")
-		return
+	# if card != null && checkCardChange(nextCard):
+	# 	print("Card can not be placed here..")
+	# 	return
+
 	setCard(nextCard)
 	
-
-func checkCardChange(nextCard: Card) -> bool:
-	if card == null:
-		return false
-	# todo this logic
-	return true
 
 func setCard(_card: Card) -> void:
 	var new_node = _card.nodeMeshScene.instantiate()
