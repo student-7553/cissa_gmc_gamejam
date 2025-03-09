@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cc4v8jnx14h83"]
 
-[ext_resource type="PackedScene" uid="uid://cxir7wnrim4cp" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_d1woj"]
+[ext_resource type="PackedScene" uid="uid://bdgmgi6abxfj8" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_d1woj"]
 [ext_resource type="Script" uid="uid://nnc4xsoliy1b" path="res://scenes/node_mesh/node_forest_mesh.gd" id="1_ka5kc"]
 [ext_resource type="Script" uid="uid://teo6twu3gca4" path="res://scripts/cards/check/forest_check.gd" id="3_ibxmp"]
 
