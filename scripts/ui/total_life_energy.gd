@@ -8,7 +8,8 @@ func updateUI() -> void:
 	pass
 
 func _ready() -> void:
-	lifeEnergyManager = get_node("../../LifeEnergyManager")
-	lifeEnergyManager.update.connect(updateUI)
-	updateUI()
+	if lifeEnergyManager:
+		lifeEnergyManager = get_node("../../LifeEnergyManager")
+		lifeEnergyManager.update.connect(updateUI)
+		updateUI()
 	pass

@@ -1,8 +1,8 @@
-extends Control
+extends Button
 
 
 
 
 func _on_deck_button_pressed() -> void:
-	pass # Replace with function body.
+	print("deck button pressed")
 	# opens scrolling deck card

@@ -1,77 +1,156 @@
-[gd_scene load_steps=13 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=15 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Script" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
-[ext_resource type="Script" path="res://scenes/texture_progress_bar.gd" id="1_x4jx1"]
 [ext_resource type="Script" path="res://scripts/ui/total_life_energy.gd" id="1_yev5y"]
+[ext_resource type="Texture2D" uid="uid://xkeirwhipm1r" path="res://assets/Cards/Sprite-forest.png" id="3_toj4d"]
 [ext_resource type="Texture2D" uid="uid://dxflifp8sebtl" path="res://assets/UI/pov (1).png" id="4_kk0c7"]
-[ext_resource type="Texture2D" uid="uid://k848kb0xek15" path="res://assets/Cards/Sprite-asteroid.png" id="5_npgcx"]
+[ext_resource type="Script" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
-[ext_resource type="Texture2D" uid="uid://qn5e7c7f4xfx" path="res://assets/Cards/Sprite-desert.png" id="7_1i7w1"]
+[ext_resource type="Script" path="res://scenes/player's_progress.gd" id="7_fyfsq"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dsj4x"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vev5l"]
-bg_color = Color(0.259294, 0.259294, 0.259294, 0.603922)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfdtt"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kqf8t"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wid3i"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nt7q6"]
-size = Vector2(500, 20)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jei0d"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfhj8"]
+bg_color = Color(0.109804, 0.113725, 0.0313726, 0.921569)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_waygp"]
+bg_color = Color(0.28908, 0.71665, 7.70092e-07, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.129558, 0.129559, 0.129558, 1)
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="Pov" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 1.001
+anchor_bottom = 1.003
+texture = ExtResource("4_kk0c7")
 
 [node name="Card Deck" type="Node" parent="."]
 
-[node name="Sprite-asteroid" type="Sprite2D" parent="Card Deck"]
-position = Vector2(1060, 572)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("5_npgcx")
+[node name="Panel" type="Panel" parent="Card Deck"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -147.0
+offset_top = -165.0
+offset_right = -29.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qrt2e")
 
-[node name="Sprite-beach" type="Sprite2D" parent="Card Deck"]
-position = Vector2(1074, 546)
+[node name="TextureRect2" type="TextureRect" parent="Card Deck/Panel"]
+z_index = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.144
+anchor_top = 0.643
+anchor_right = 1.144
+anchor_bottom = 0.643
+offset_left = -148.992
+offset_top = -64.164
+offset_right = 491.008
+offset_bottom = 575.836
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -0.255385
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_4cct8")
+expand_mode = 1
 
-[node name="Sprite-desert" type="Sprite2D" parent="Card Deck"]
-position = Vector2(1065, 561)
+[node name="TextureRect3" type="TextureRect" parent="Card Deck/Panel"]
+z_index = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.137
+anchor_top = 0.667
+anchor_right = 1.137
+anchor_bottom = 0.667
+offset_left = -134.166
+offset_top = -98.716
+offset_right = 505.834
+offset_bottom = 541.284
+rotation = 0.317316
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("7_1i7w1")
+texture = ExtResource("3_toj4d")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Sprite-top-of-deck" type="Sprite2D" parent="Card Deck"]
-position = Vector2(1070, 569)
+[node name="TextureRect4" type="TextureRect" parent="Card Deck/Panel"]
+z_index = 11
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.981
+anchor_top = 0.772
+anchor_right = 0.996
+anchor_bottom = 0.772
+offset_left = -137.758
+offset_top = -103.256
+offset_right = 500.472
+offset_bottom = 536.744
+rotation = -0.0152121
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_x1e8k")
+expand_mode = 1
 
-[node name="Button" type="Button" parent="Card Deck"]
-offset_left = 1018.0
-offset_top = 483.0
-offset_right = 1134.0
-offset_bottom = 637.0
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_dsj4x")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_vev5l")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_kqf8t")
+[node name="Button2" type="Button" parent="Card Deck/Panel"]
+z_index = 51
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.822
+anchor_right = 1.0
+anchor_bottom = 0.822
+offset_left = -122.0
+offset_top = -116.656
+offset_right = -12.0
+offset_bottom = 27.344
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qfdtt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wid3i")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jei0d")
+action_mode = 0
+script = ExtResource("5_ox6g0")
 
 [node name="PanelDown" type="Sprite2D" parent="."]
 position = Vector2(579, 596.5)
 scale = Vector2(0.482422, 0.151562)
 
 [node name="TotalLifeEnergy" type="Label" parent="."]
-layout_mode = 1
-offset_right = 64.0
-offset_bottom = 23.0
-text = "0"
+z_index = 10
+anchors_preset = -1
+anchor_left = 0.479
+anchor_top = 0.066
+anchor_right = 0.479
+anchor_bottom = 0.066
+offset_left = -32.0
+offset_top = -11.768
+offset_right = 32.192
+offset_bottom = 11.232
+text = "100
+"
+horizontal_alignment = 1
 script = ExtResource("1_yev5y")
 
 [node name="CardCount" type="Label" parent="."]
 z_index = 20
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -84,26 +163,21 @@ grow_vertical = 0
 text = "0000000"
 script = ExtResource("1_nt7q6")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-z_index = 10
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -250.0
-offset_right = 250.0
-offset_bottom = 20.0
-grow_horizontal = 2
-value = 20.0
-rounded = true
-texture_progress = SubResource("PlaceholderTexture2D_nt7q6")
-tint_under = Color(0.810834, 0.888816, 0.958046, 1)
-tint_progress = Color(0.41816, 0.739412, 2.31028e-06, 1)
-script = ExtResource("1_x4jx1")
+[node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 15
+anchors_preset = -1
+anchor_left = 0.497
+anchor_right = 0.497
+offset_left = -288.0
+offset_top = 5.0
+offset_right = 288.456
+offset_bottom = 36.0
+theme_override_styles/background = SubResource("StyleBoxFlat_cfhj8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_waygp")
+max_value = 1000.0
+step = 1.0
+value = 50.0
+show_percentage = false
+script = ExtResource("7_fyfsq")
 
-[node name="Node" type="Node" parent="TextureProgressBar"]
-
-[node name="Pov(1)" type="Sprite2D" parent="."]
-position = Vector2(577, 326)
-texture = ExtResource("4_kk0c7")
+[connection signal="pressed" from="Card Deck/Panel/Button2" to="Card Deck/Panel/Button2" method="_on_deck_button_pressed"]
