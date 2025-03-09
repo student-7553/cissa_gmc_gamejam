@@ -24,6 +24,12 @@ func select_new_cell(cell: Hex_Cell):
 	current_cell = cell
 	current_cell.pop_up()
 
+## Get the adjacent cells
+
+
+## Do stuff with adjacent cells
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept") and current_cell:
 		current_cell.rotate_ray()

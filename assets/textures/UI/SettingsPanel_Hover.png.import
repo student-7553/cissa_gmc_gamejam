@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7m12nrxq1r08"
-path="res://.godot/imported/Sprite-ground.png-9a20226c8fb3bf12a8afb1636b0f9437.ctex"
+uid="uid://f4u25n8qphd4"
+path="res://.godot/imported/SettingsPanel_Hover.png-b2c0e9417b19e9b684765b5bbb61a9ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Cards/Sprite-ground.png"
-dest_files=["res://.godot/imported/Sprite-ground.png-9a20226c8fb3bf12a8afb1636b0f9437.ctex"]
+source_file="res://assets/textures/UI/SettingsPanel_Hover.png"
+dest_files=["res://.godot/imported/SettingsPanel_Hover.png-b2c0e9417b19e9b684765b5bbb61a9ea.ctex"]
 
 [params]
 
