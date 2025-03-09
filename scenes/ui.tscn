@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=26 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://bsekmqr2wkbme" path="res://scripts/ui/total_life_energy.gd" id="1_yev5y"]
@@ -7,11 +7,13 @@
 [ext_resource type="Script" uid="uid://yrb1khsfclgs" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
+[ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Script" uid="uid://wlmyh71pqgiu" path="res://scenes/player's_progress.gd" id="7_fyfsq"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 [ext_resource type="Texture2D" uid="uid://dsy3ji5hb5ghq" path="res://assets/textures/cards/Sprite-beach.png" id="9_cgfq5"]
 [ext_resource type="Texture2D" uid="uid://de82l6h2lf4ac" path="res://assets/textures/cards/Sprite-lava.png" id="9_vdcm2"]
 [ext_resource type="Texture2D" uid="uid://cji68fvdanb8u" path="res://assets/textures/cards/water-card.png" id="10_6rmj2"]
+[ext_resource type="Texture2D" uid="uid://cwufgwrucgiv8" path="res://assets/textures/cards/Sprite-ground.png" id="10_8k7j3"]
 [ext_resource type="Texture2D" uid="uid://0lbefvklfw1w" path="res://assets/textures/cards/Sprite-mountain.png" id="11_vsj0x"]
 [ext_resource type="Texture2D" uid="uid://bmso0wc058cy6" path="res://assets/textures/cards/Sprite-forest.png" id="12_qsv74"]
 [ext_resource type="Texture2D" uid="uid://ch8c7mit2j7pn" path="res://assets/textures/cards/Sprite-snow.png" id="13_h1mc3"]
@@ -162,6 +164,7 @@ script = ExtResource("1_nt7q6")
 [node name="Current-Card" type="Node2D" parent="."]
 z_index = 20
 position = Vector2(605, 645)
+script = ExtResource("7_cof4p")
 
 [node name="Card Holder" type="Control" parent="Current-Card"]
 z_index = 100
@@ -179,7 +182,7 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("7_7dvkv")
 
-[node name="Card-Beach" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Forest" type="TextureRect" parent="Current-Card/Card Holder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -189,14 +192,14 @@ anchor_left = 0.5
 anchor_top = 0.949
 anchor_right = 0.5
 anchor_bottom = 0.949
-offset_left = -181.5
-offset_top = -311.272
-offset_right = 458.5
-offset_bottom = 328.728
+offset_left = -321.5
+offset_top = 98.329
+offset_right = 318.5
+offset_bottom = 738.329
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_cgfq5")
+texture = ExtResource("12_qsv74")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
+[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Forest"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -211,10 +214,10 @@ offset_bottom = -260.798
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
-text = "						Beach"
+text = "Forest"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
+[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Forest"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -231,8 +234,61 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 text = "Location: Ground
 Effect:	 
-*   If placed next to ocean, 
-	gives every adjacent ocean +1 life"
+* +1 life"
+autowrap_mode = 3
+
+[node name="Card-Ground" type="TextureRect" parent="Current-Card/Card Holder"]
+clip_children = 2
+z_index = 1
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.949
+anchor_right = 0.5
+anchor_bottom = 0.949
+offset_left = -596.5
+offset_top = 102.329
+offset_right = 43.5
+offset_bottom = 742.329
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_8k7j3")
+
+[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Ground"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -320.798
+offset_right = 222.0
+offset_bottom = -260.798
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Ground"
+horizontal_alignment = 1
+
+[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Ground"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -268.798
+offset_right = 224.0
+offset_bottom = -43.798
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Effect:	 
+* Forest, Mountain, Lava, and Beach can be placed on this node"
 autowrap_mode = 3
 
 [node name="Card-Lava" type="TextureRect" parent="Current-Card/Card Holder"]
@@ -401,61 +457,6 @@ Effect:
 *   If placed next to Forest, gives every adjacent forest +1 life"
 autowrap_mode = 3
 
-[node name="Card-Forest" type="TextureRect" parent="Current-Card/Card Holder"]
-clip_children = 2
-z_index = 1
-clip_contents = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.949
-anchor_right = 0.5
-anchor_bottom = 0.949
-offset_left = -321.5
-offset_top = 98.329
-offset_right = 318.5
-offset_bottom = 738.329
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_qsv74")
-
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Forest"]
-clip_children = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -120.0
-offset_top = -320.798
-offset_right = 222.0
-offset_bottom = -260.798
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 30
-text = "Forest"
-horizontal_alignment = 1
-
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Forest"]
-clip_children = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -124.0
-offset_top = -268.798
-offset_right = 224.0
-offset_bottom = -43.798
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 25
-text = "Location: Ground
-Effect:	 
-* +1 life"
-autowrap_mode = 3
-
 [node name="Card-Arctic" type="TextureRect" parent="Current-Card/Card Holder"]
 clip_children = 2
 z_index = 1
@@ -509,6 +510,62 @@ theme_override_font_sizes/font_size = 25
 text = "Location: Ocean
 Effect:	 
 * If placed next to Ocean, gives every adjacent Ocean +1 life"
+autowrap_mode = 3
+
+[node name="Card-Beach" type="TextureRect" parent="Current-Card/Card Holder"]
+clip_children = 2
+z_index = 1
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.949
+anchor_right = 0.5
+anchor_bottom = 0.949
+offset_left = -181.5
+offset_top = -311.272
+offset_right = 458.5
+offset_bottom = 328.728
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_cgfq5")
+
+[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -320.798
+offset_right = 222.0
+offset_bottom = -260.798
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "						Beach"
+horizontal_alignment = 1
+
+[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -268.798
+offset_right = 224.0
+offset_bottom = -43.798
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Location: Ground
+Effect:	 
+*   If placed next to ocean, 
+	gives every adjacent ocean +1 life"
 autowrap_mode = 3
 
 [node name="Progress" type="Node" parent="."]
