@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dxflifp8sebtl" path="res://assets/textures/UI/pov (1).png" id="4_kk0c7"]
 [ext_resource type="Script" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
-[ext_resource type="Script" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
+[ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" path="res://scenes/player's_progress.gd" id="7_fyfsq"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 [ext_resource type="Texture2D" uid="uid://dsy3ji5hb5ghq" path="res://assets/textures/cards/Sprite-beach.png" id="9_cgfq5"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://0lbefvklfw1w" path="res://assets/textures/cards/Sprite-mountain.png" id="11_vsj0x"]
 [ext_resource type="Texture2D" uid="uid://bmso0wc058cy6" path="res://assets/textures/cards/Sprite-forest.png" id="12_qsv74"]
 [ext_resource type="Texture2D" uid="uid://ch8c7mit2j7pn" path="res://assets/textures/cards/Sprite-snow.png" id="13_h1mc3"]
-[ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
+[ext_resource type="Script" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
 

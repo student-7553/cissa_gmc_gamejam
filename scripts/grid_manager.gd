@@ -21,7 +21,7 @@ func _input(event):
 		## Get the top card
 		var new_card: Card = cardManager.getTopCard()
 		## Check if it is valid to place
-		if not current_cell.check_node.valid_placement(new_card):
+		if not current_cell.check_node.valid_placement(new_card.cellKey):
 			print("Cannot place ", new_card)
 			return
 		## Replace the current_cell

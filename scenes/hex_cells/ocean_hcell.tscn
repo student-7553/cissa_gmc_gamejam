@@ -24,6 +24,6 @@ ground_card = ExtResource("5_fp5ja")
 
 [node name="check" type="Node" parent="." index="3"]
 script = ExtResource("4_cg5u2")
-valid_cells = Array[int]([5, 6, 2])
+valid_cells = Array[int]([5, 2])
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
