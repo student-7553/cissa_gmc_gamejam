@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
-[ext_resource type="Script" path="res://scenes/texture_progress_bar.gd" id="1_x4jx1"]
+[ext_resource type="Script" uid="uid://1s3esgk43fs5" path="res://scenes/texture_progress_bar.gd" id="1_x4jx1"]
 [ext_resource type="Script" uid="uid://bsekmqr2wkbme" path="res://scripts/ui/total_life_energy.gd" id="1_yev5y"]
 [ext_resource type="PackedScene" uid="uid://clwmii4ww5lc8" path="res://scenes/SettingsPanel.tscn" id="4_gdt2y"]
 
