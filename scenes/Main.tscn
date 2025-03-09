@@ -38,7 +38,6 @@ environment = SubResource("Environment_6wwtl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
 possibleCards = ExtResource("4_nxtc6")
-defaultSpawnCard = 3
 cardStackCount = 20
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]

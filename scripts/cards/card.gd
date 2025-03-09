@@ -9,5 +9,5 @@ class_name Card
 
 
 enum PossibleCell {
-	FOREST, GROUND, LAVA, OCEAN, MOUNTAIN, ARCTIC, BEACH
+	FOREST = 0, GROUND = 1, LAVA = 2, OCEAN = 3, MOUNTAIN = 4, ARCTIC = 5, BEACH = 6
 }

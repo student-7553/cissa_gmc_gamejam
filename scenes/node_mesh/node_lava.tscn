@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpm0ob5msjhne"]
+[gd_scene load_steps=3 format=3 uid="uid://bpm0ob5msjhne"]
 
 [ext_resource type="PackedScene" uid="uid://b2nx03untf7sx" path="res://assets/models/glTF/HexCell_Lava_1.glb" id="1_1x8pm"]
+[ext_resource type="Script" path="res://scripts/cards/check/lava_check.gd" id="2_4vxyl"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="HexCell_Lava_1" parent="." instance=ExtResource("1_1x8pm")]
+
+[node name="check" type="Node3D" parent="."]
+script = ExtResource("2_4vxyl")
