@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de82l6h2lf4ac"
-path.s3tc="res://.godot/imported/Sprite-desert.png-d172503e96fc2d4d821ec903e9d576fe.s3tc.ctex"
+path.s3tc="res://.godot/imported/Sprite-lava.png-15923270476e885b7906bc880b975169.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/cards/Sprite-desert.png"
-dest_files=["res://.godot/imported/Sprite-desert.png-d172503e96fc2d4d821ec903e9d576fe.s3tc.ctex"]
+source_file="res://assets/textures/cards/Sprite-lava.png"
+dest_files=["res://.godot/imported/Sprite-lava.png-15923270476e885b7906bc880b975169.s3tc.ctex"]
 
 [params]
 
