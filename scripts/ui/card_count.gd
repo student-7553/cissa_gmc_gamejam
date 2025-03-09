@@ -7,7 +7,8 @@ func updateUI() -> void:
 	pass
 
 func _ready() -> void:
-	cardManager = get_node("../../CardManager")
-	cardManager.cardStackUpdate.connect(updateUI)
-	updateUI()
+	if cardManager:
+		cardManager = get_node("../../CardManager")
+		cardManager.cardStackUpdate.connect(updateUI)
+		updateUI()
 	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvsl6iabrrppl"]
+[gd_scene load_steps=9 format=3 uid="uid://cvsl6iabrrppl"]
 
 [ext_resource type="Script" uid="uid://7srhvtvbjkyk" path="res://scripts/sfx.gd" id="1_2haqr"]
 [ext_resource type="AudioStream" uid="uid://basqekuri50i0" path="res://assets/sfx/OpenCardStack.mp3" id="2_lccbc"]
@@ -7,8 +7,9 @@
 [ext_resource type="AudioStream" uid="uid://hbqjaale4bxv" path="res://assets/sfx/PlaceNode_1.mp3" id="5_voggf"]
 [ext_resource type="AudioStream" uid="uid://b7keq10gdsg2d" path="res://assets/sfx/PlaceNode_2.mp3" id="6_0jrv7"]
 [ext_resource type="AudioStream" uid="uid://ipvqfulpehop" path="res://assets/sfx/PlaceNode_3.mp3" id="7_1pw5g"]
+[ext_resource type="AudioStream" uid="uid://c0plyb5m6jwsc" path="res://assets/sfx/ViewCard.mp3" id="8_0jrv7"]
 
-[node name="Sfx" type="Node3D"]
+[node name="Sfx" type="Node"]
 script = ExtResource("1_2haqr")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
@@ -40,3 +41,13 @@ bus = &"Placement"
 [node name="PlaceNode_3" type="AudioStreamPlayer" parent="PlaceNodes"]
 stream = ExtResource("7_1pw5g")
 bus = &"Placement"
+
+[node name="ViewCard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0jrv7")
+volume_db = -33.231
+bus = &"Cards"
+
+[node name="LowerCard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0jrv7")
+volume_db = -47.385
+bus = &"Cards"
