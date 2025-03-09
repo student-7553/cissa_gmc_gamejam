@@ -1,18 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=11 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
+[ext_resource type="Resource" uid="uid://bkloj8id3pfu" path="res://scripts/resources/card_list.tres" id="4_nxtc6"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
-[ext_resource type="Resource" uid="uid://bipd1jf56chbp" path="res://scripts/resources/arctic.tres" id="5_c01mt"]
-[ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="5_q8u5g"]
-[ext_resource type="Resource" uid="uid://b675xlo28u8uq" path="res://scripts/resources/forest.tres" id="6_nxtc6"]
-[ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
-[ext_resource type="Resource" uid="uid://c82sy05k4nyy" path="res://scripts/resources/ground.tres" id="7_qmy6f"]
-[ext_resource type="Resource" uid="uid://cffe810tmx7pv" path="res://scripts/resources/lava.tres" id="8_mwfav"]
-[ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="9_3p2gp"]
-[ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="10_cvmbd"]
-[ext_resource type="PackedScene" path="res://scenes/grid_manager.tscn" id="12_bjd11"]
-[ext_resource type="PackedScene" path="res://scenes/SFX.tscn" id="14_mwfav"]
+[ext_resource type="Script" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
+[ext_resource type="PackedScene" uid="uid://b3u6rjnwxgblj" path="res://scenes/grid_manager.tscn" id="12_bjd11"]
+[ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -39,7 +33,7 @@ environment = SubResource("Environment_6wwtl")
 [node name="CardManager" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
-possibleCards = Array[ExtResource("5_q8u5g")]([ExtResource("5_c01mt"), ExtResource("6_nxtc6"), ExtResource("7_qmy6f"), ExtResource("8_mwfav"), ExtResource("9_3p2gp"), ExtResource("10_cvmbd")])
+possibleCards = ExtResource("4_nxtc6")
 defaultSpawnCard = 3
 cardStackCount = 20
 
