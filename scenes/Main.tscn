@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=13 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://etvktktstvu2" path="res://scripts/resources/card_list.tres" id="4_nxtc6"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Script" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
+[ext_resource type="PackedScene" uid="uid://dwnoyrf75g3qu" path="res://scenes/UI_Implentation.tscn" id="9_q8u5g"]
 [ext_resource type="PackedScene" path="res://scenes/player_manager.tscn" id="12_bjd11"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
@@ -55,3 +56,5 @@ omni_range = 30.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.681678, -0.453395, 0.574237, -0.00958151, 0.779251, 0.626639, -0.73159, -0.432668, 0.526854, 35, 15, -8)
+
+[node name="Control" parent="." instance=ExtResource("9_q8u5g")]
