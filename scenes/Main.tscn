@@ -1,25 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=12 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
+[ext_resource type="Texture2D" uid="uid://bsq1oxugt7l2s" path="res://assets/textures/panorama1.jpg" id="1_jlsqs"]
 [ext_resource type="Resource" uid="uid://etvktktstvu2" path="res://scripts/resources/card_list.tres" id="4_nxtc6"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Script" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
 [ext_resource type="PackedScene" path="res://scenes/player_manager.tscn" id="12_bjd11"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
+panorama = ExtResource("1_jlsqs")
 
 [sub_resource type="Sky" id="Sky_m1mpq"]
-sky_material = SubResource("ProceduralSkyMaterial_8wwdc")
+sky_material = SubResource("PanoramaSkyMaterial_nxtc6")
 
 [sub_resource type="Environment" id="Environment_6wwtl"]
 background_mode = 2
-background_energy_multiplier = 1.72
+background_energy_multiplier = 0.47
 sky = SubResource("Sky_m1mpq")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 10.72
 tonemap_mode = 2
+glow_intensity = 2.89
+glow_bloom = 0.08
 
 [node name="Main" type="Node3D"]
 
@@ -44,3 +48,11 @@ script = ExtResource("7_nxtc6")
 grid = NodePath("../HexGrid")
 
 [node name="Sfx" parent="." instance=ExtResource("14_mwfav")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
+light_energy = 12.21
+omni_range = 30.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.681678, -0.453395, 0.574237, -0.00958151, 0.779251, 0.626639, -0.73159, -0.432668, 0.526854, 35, 15, -8)
