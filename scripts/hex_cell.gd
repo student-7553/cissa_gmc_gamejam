@@ -49,7 +49,7 @@ func setCard(_card: Card) -> void:
 	cardNode = _card.nodeMeshScene.instantiate()
 	
 	add_child(cardNode)
-
+	Globals.sound_manager.sfx_place_node()
 	# todo the bottom y positon should be dynamic
 	cardNode.translate(Vector3(0, 0.25, 0))
 

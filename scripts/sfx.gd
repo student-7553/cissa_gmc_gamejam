@@ -14,6 +14,13 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("TEMP_SfxTrigger"):
 		if not sfx_OpenCards.is_playing():
 			sfx_OpenCards.play()
-	if Input.is_action_just_pressed("TEMP_SFX_PlaceNode_Trigger"):
-		if not sfx_PlaceNode_1.is_playing():
+
+func sfx_place_node():
+	var rng = randi_range(0, 2)
+	match rng:
+		0:
 			sfx_PlaceNode_1.play()
+		1:
+			sfx_PlaceNode_2.play()
+		2:
+			sfx_PlaceNode_3.play()
