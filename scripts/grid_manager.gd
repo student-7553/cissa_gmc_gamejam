@@ -19,10 +19,12 @@ func select_new_cell(cell: Hex_Cell):
 	if current_cell == null:
 		current_cell = cell
 		current_cell.pop_up()
+		Globals.sound_manager.sfx_Hover.play()
 		return
 	current_cell.pop_down()
 	current_cell = cell
 	current_cell.pop_up()
+	Globals.sound_manager.sfx_Hover.play()
 
 ## Get the adjacent cells
 
