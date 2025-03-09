@@ -157,6 +157,7 @@ position = Vector2(605, 645)
 [node name="Card Holder" type="Control" parent="Current-Card"]
 z_index = 100
 layout_mode = 3
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -169,6 +170,7 @@ script = ExtResource("7_7dvkv")
 
 [node name="Card-Beach" type="TextureRect" parent="Current-Card/Card Holder"]
 clip_children = 2
+z_index = 1
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
@@ -183,7 +185,7 @@ offset_bottom = 328.728
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_cgfq5")
 
-[node name="RichText" type="RichTextLabel" parent="Current-Card/Card Holder/Card-Beach"]
+[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -191,19 +193,37 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -136.0
-offset_top = -286.0
+offset_left = -120.0
+offset_top = -320.798
 offset_right = 222.0
-offset_bottom = -28.0
+offset_bottom = -260.798
 grow_horizontal = 2
 grow_vertical = 0
-text = "						Desert
+theme_override_font_sizes/font_size = 30
+text = "						Beach"
+horizontal_alignment = 1
 
-Location: Ground
+[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -268.798
+offset_right = 224.0
+offset_bottom = -43.798
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Location: Ground
 Effect:	 
-	+1 life
-	If placed next to ocean, 
-	give every adjacent ocean +1 life"
+*   +1 life
+*   If placed next to ocean, 
+	gives every adjacent ocean +1 life"
+autowrap_mode = 3
 
 [node name="Progress" type="Node" parent="."]
 
