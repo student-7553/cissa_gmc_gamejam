@@ -26,7 +26,7 @@ func find_neighbours():
 	"""
 	pass
 
-func mouse_entered() -> void:
+func test() -> void:
 	select_cell.emit(self)
 	print(cube_coord)
 

@@ -6,4 +6,3 @@
 [resource]
 script = ExtResource("2_fcss8")
 nodeMeshScene = ExtResource("1_quprd")
-scoreSynergy = 1
