@@ -1,8 +1,9 @@
 extends BaseCheck
 
-@export var allowedPlaces = []
+@export var allowedPlaces: Array[Card.PossibleCell] = [Card.PossibleCell.OCEAN]
 
 func checkIfValidToPlace(nextCard: Card) -> bool:
-	# if ()
+	if !allowedPlaces.has(nextCard.cellKey):
+		return true
+
 	return false
-# Called when the node enters the scene tree for the first time.

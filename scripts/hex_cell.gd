@@ -13,6 +13,7 @@ var save_pos: Vector3
 var cube_coord: Vector3 ## Position in the hex grid (q, r, s)
 
 var card: Card = null
+var cardNode: Node = null
 
 var isHovered: bool = false
 
@@ -25,20 +26,25 @@ func handleClick(nextCard: Card) -> void:
 	select_cell.emit(self)
 	print(cube_coord)
 
-	# if card != null && checkCardChange(nextCard):
-	# 	print("Card can not be placed here..")
-	# 	return
+	if cardNode != null:
+		var checkNode = cardNode.get_node("check")
+		assert(checkNode != null)
+		if checkNode.checkIfValidToPlace(nextCard):
+			print("Not possible to place this node down on the existing node")
+			return
+
+	print("Success: Placed the node down")
 
 	setCard(nextCard)
 	
 
 func setCard(_card: Card) -> void:
-	var new_node = _card.nodeMeshScene.instantiate()
+	cardNode = _card.nodeMeshScene.instantiate()
 	
-	add_child(new_node)
+	add_child(cardNode)
 
 	# todo the bottom y positon should be dynamic
-	new_node.translate(Vector3(0, 0.25, 0))
+	cardNode.translate(Vector3(0, 0.25, 0))
 
 	pass
 

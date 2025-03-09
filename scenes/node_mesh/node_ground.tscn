@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://chgfq28rtorg1"]
+[gd_scene load_steps=3 format=3 uid="uid://chgfq28rtorg1"]
 
 [ext_resource type="PackedScene" uid="uid://vuh0synlc0oi" path="res://assets/models/glTF/HexCell_Ground_1.glb" id="1_ej64n"]
+[ext_resource type="Script" path="res://scripts/cards/check/ground_check.gd" id="2_fhelx"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="HexCell_Ground_1" parent="." instance=ExtResource("1_ej64n")]
+
+[node name="check" type="Node3D" parent="."]
+script = ExtResource("2_fhelx")
