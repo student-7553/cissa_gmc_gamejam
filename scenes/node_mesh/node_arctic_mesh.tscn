@@ -7,3 +7,5 @@
 [node name="HexCell_Arctic_12" parent="." instance=ExtResource("1_8bnxa")]
 
 [node name="SynergyLogic" type="Node3D" parent="."]
+
+[node name="arctic_check" type="Node3D" parent="."]
