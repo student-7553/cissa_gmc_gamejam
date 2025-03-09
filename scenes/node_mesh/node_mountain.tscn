@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ct2y38tuh4e3x"]
 
-[ext_resource type="PackedScene" uid="uid://b16o52bj57yoi" path="res://assets/models/glTF/HexCell_Mountain_1.glb" id="1_vop1k"]
+[ext_resource type="PackedScene" uid="uid://dn0o8fb7kg06s" path="res://assets/models/glTF/HexCell_Mountain_1.glb" id="1_vop1k"]
 
 [node name="Node3D" type="Node3D"]
 

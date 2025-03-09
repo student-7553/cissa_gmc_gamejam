@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cc4v8jnx14h83"]
 
-[ext_resource type="PackedScene" uid="uid://cxir7wnrim4cp" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_d1woj"]
+[ext_resource type="PackedScene" uid="uid://bdgmgi6abxfj8" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_d1woj"]
 [ext_resource type="Script" uid="uid://nnc4xsoliy1b" path="res://scenes/node_mesh/node_forest_mesh.gd" id="1_ka5kc"]
 
 [node name="Node3D" type="Node3D"]
