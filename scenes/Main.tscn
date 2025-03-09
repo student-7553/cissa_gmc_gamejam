@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=17 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="9_3p2gp"]
 [ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="10_cvmbd"]
 [ext_resource type="PackedScene" path="res://scenes/grid_manager.tscn" id="12_bjd11"]
+[ext_resource type="PackedScene" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8wwdc"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -47,3 +48,5 @@ script = ExtResource("7_nxtc6")
 
 [node name="grid_manager" parent="." node_paths=PackedStringArray("grid") instance=ExtResource("12_bjd11")]
 grid = NodePath("../HexGrid")
+
+[node name="Sfx" parent="." instance=ExtResource("14_mwfav")]
