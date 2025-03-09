@@ -13,7 +13,7 @@ var zoom = 1.5
 
 func _process(delta: float) -> void:
 	get_keyboard_input(delta)
-	gimbal_x.rotation.x = clamp(gimbal_x.rotation.x, -0.5,.5) # Rotation
+	gimbal_x.rotation.x = clamp(gimbal_x.rotation.x, -0.5, .5) # Rotation
 	scale = lerp(scale, Vector3.ONE * zoom, zoomSpeed * delta) # Zoom
 
 func _unhandled_input(event: InputEvent) -> void:

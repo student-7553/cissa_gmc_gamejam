@@ -7,7 +7,7 @@ class_name Hex_Cell
 const ANGLE: float = 60
 const CELL_WIDTH: float = 2
 const SIDES: int = 6
-const HEX_DIRECTIONS : Array[Vector3] = [Vector3(0,1,0), Vector3(0,0,1), Vector3(1,0,0), Vector3(0,-1,0), Vector3(0,0,-1), Vector3(-1,0,0)]
+const HEX_DIRECTIONS: Array[Vector3] = [Vector3(0, 1, 0), Vector3(0, 0, 1), Vector3(1, 0, 0), Vector3(0, -1, 0), Vector3(0, 0, -1), Vector3(-1, 0, 0)]
 
 var current_score = 0
 var base_score = 0
@@ -26,7 +26,7 @@ func find_neighbours():
 	"""
 	pass
 
-func mouse_entered() -> void:
+func test() -> void:
 	select_cell.emit(self)
 	print(cube_coord)
 

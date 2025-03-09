@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwnoyrf75g3qu"]
+
+[ext_resource type="Script" path="res://scenes/ui_implentation.gd" id="1_ni0ms"]
+[ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="2_1v0uc"]
+[ext_resource type="Texture2D" uid="uid://ck0kdo4jx6yb" path="res://assets/textures/cards/Sprite-asteroid.png" id="2_7ia38"]
+[ext_resource type="Texture2D" uid="uid://dsy3ji5hb5ghq" path="res://assets/textures/cards/Sprite-beach.png" id="3_wd8ij"]
+[ext_resource type="Texture2D" uid="uid://de82l6h2lf4ac" path="res://assets/textures/cards/Sprite-desert.png" id="4_0m1i7"]
+[ext_resource type="Texture2D" path="res://assets/Cards/Sprite-top-of-deck.png" id="6_ogau0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmwtj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eujtv"]
+bg_color = Color(0.0392157, 0.027451, 0.0117647, 0.47451)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ssn2b"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 5.0
+offset_right = -2.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ni0ms")
+
+[node name="Pov UI" type="Sprite2D" parent="."]
+position = Vector2(576, 318)
+texture = ExtResource("2_1v0uc")
+
+[node name="Card Deck" type="Node" parent="."]
+
+[node name="Sprite-top-of-deck" type="Sprite2D" parent="Card Deck"]
+z_index = 1
+position = Vector2(1059, 555)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_ogau0")
+
+[node name="Sprite-asteroid" type="Sprite2D" parent="Card Deck"]
+position = Vector2(1061, 550)
+rotation = 0.254401
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_7ia38")
+
+[node name="Sprite-beach" type="Sprite2D" parent="Card Deck"]
+position = Vector2(1045, 561)
+rotation = -0.490582
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_wd8ij")
+
+[node name="Sprite-Lava" type="Sprite2D" parent="Card Deck"]
+position = Vector2(1073, 563)
+rotation = 0.181586
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_0m1i7")
+
+[node name="Deck Button" type="Button" parent="Card Deck"]
+z_index = 9
+offset_left = 1025.0
+offset_top = 495.0
+offset_right = 1116.0
+offset_bottom = 623.0
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vmwtj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eujtv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ssn2b")
+toggle_mode = true
+
+[connection signal="pressed" from="Card Deck/Deck Button" to="." method="_on_deck_button_pressed"]

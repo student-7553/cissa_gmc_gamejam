@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc4v8jnx14h83"]
+
+[ext_resource type="PackedScene" uid="uid://cxir7wnrim4cp" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_d1woj"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="HexCell_Forest_1" parent="." instance=ExtResource("1_d1woj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)

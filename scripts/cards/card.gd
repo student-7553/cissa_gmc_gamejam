@@ -1,5 +1,9 @@
 extends Resource
 class_name Card
 
-@export var texture : Texture2D
-@export var score : int = 1
+@export var cardSprite: Texture2D
+
+@export var nodeMeshScene: PackedScene
+
+
+# @export var scoreSynergy: int = 1
