@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dwnoyrf75g3qu"]
 
 [ext_resource type="Script" path="res://scenes/ui_implentation.gd" id="1_ni0ms"]
-[ext_resource type="Texture2D" path="res://assets/UI/pov (1).png" id="1_vis4x"]
+[ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="2_1v0uc"]
 [ext_resource type="Texture2D" uid="uid://ck0kdo4jx6yb" path="res://assets/textures/cards/Sprite-asteroid.png" id="2_7ia38"]
 [ext_resource type="Texture2D" uid="uid://dsy3ji5hb5ghq" path="res://assets/textures/cards/Sprite-beach.png" id="3_wd8ij"]
 [ext_resource type="Texture2D" uid="uid://de82l6h2lf4ac" path="res://assets/textures/cards/Sprite-desert.png" id="4_0m1i7"]
@@ -29,7 +29,7 @@ script = ExtResource("1_ni0ms")
 
 [node name="Pov UI" type="Sprite2D" parent="."]
 position = Vector2(576, 318)
-texture = ExtResource("1_vis4x")
+texture = ExtResource("2_1v0uc")
 
 [node name="Card Deck" type="Node" parent="."]
 
