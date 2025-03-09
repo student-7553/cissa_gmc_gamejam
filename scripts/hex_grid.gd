@@ -6,10 +6,14 @@ class_name Hex_Grid
 @export var tile_scene: PackedScene
 
 var RAY_LENGTH = 50
+var cardManager: CardManager
 
 var grid: Dictionary[Vector3, Hex_Cell] = {} ## dictionary with key value pair of - (q, r, s) : HEX_CELL
 
 func _ready() -> void:
+	cardManager = get_node("../CardManager")
+	assert(cardManager != null, "CardManager could not be found")
+
 	generate_map()
 
 ## --- LOGIC FOR HEX GRID GENERATION ---
@@ -21,14 +25,14 @@ func generate_map():
 		for y in range(- map_size, map_size):
 			if in_map(x, y):
 				add_tile(x, y)
-	print(grid)
-
+# 
 func add_tile(x, y):
 	var new_tile: Hex_Cell = tile_scene.instantiate()
 	var offset: float = 0.0 if !(x % 2) else tile_size / 2.0
 	
 	add_child(new_tile)
-	new_tile.cube_coord = oddq_to_cube(Vector2(x, y))
+	new_tile.initCell(oddq_to_cube(Vector2(x, y)), cardManager.possibleCards[cardManager.defaultSpawnCard])
+
 	grid[new_tile.cube_coord] = new_tile
 	
 	new_tile.translate(Vector3(x * tile_size, 0, y * tile_size + offset))
@@ -49,37 +53,3 @@ func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_ESCAPE:
 			get_tree().quit()
-
-func _input(event):
-	if event.is_action_pressed("click"):
-		handleClick()
-
-
-func handleClick():
-	var space_state = get_world_3d().direct_space_state
-	var cam = get_node("../CameraGimbal/CameraGimbalY/CameraGimbalX/Camera3D")
-
-
-	var mousepos = get_viewport().get_mouse_position()
-
-	# Todo add layer and mask so that the ray only hits the hex cell
-	var origin = cam.project_ray_origin(mousepos)
-	var end = origin + cam.project_ray_normal(mousepos) * RAY_LENGTH
-	var query = PhysicsRayQueryParameters3D.create(origin, end)
-	query.collide_with_areas = true
-
-	var result = space_state.intersect_ray(query)
-
-	if !result.has("collider") || result.collider.get_class() != "Area3D":
-		print("empty")
-		return
-
-
-	var area3D: Area3D = result.collider
-	var parentArea: Hex_Cell = area3D.get_parent()
-
-	if !parentArea.is_in_group("hex_cell"):
-		print("not in group...")
-		return
-
-	parentArea.test()
