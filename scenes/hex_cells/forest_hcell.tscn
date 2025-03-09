@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://gcmj6b7jl0mq"]
+[gd_scene load_steps=6 format=3 uid="uid://p8sbiy7ewy4g"]
 
 [ext_resource type="PackedScene" uid="uid://bdgmgi6abxfj8" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_x2i4u"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_u5ggj"]
-[ext_resource type="Script" path="res://scripts/cards/check/forest_check.gd" id="3_nysdi"]
-[ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="4_o81qx"]
+[ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_nysdi"]
+[ext_resource type="Script" uid="uid://domgxwhn6rurf" path="res://scripts/synergy/forest_synergy.gd" id="4_denpu"]
+[ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_o81qx"]
 
 [node name="forest_hcell" instance=ExtResource("1_x2i4u")]
 script = ExtResource("2_u5ggj")
@@ -11,11 +12,14 @@ script = ExtResource("2_u5ggj")
 [node name="HexCell_Base_Forest" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
 
-[node name="check" type="Node" parent="." index="1"]
-script = ExtResource("3_nysdi")
+[node name="Area3D" type="Area3D" parent="." index="1"]
 
-[node name="Area3D" type="Area3D" parent="." index="2"]
+[node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("3_nysdi")]
 
-[node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("4_o81qx")]
+[node name="synergy" type="Node" parent="." index="2"]
+script = ExtResource("4_denpu")
+
+[node name="check" type="Node" parent="." index="3"]
+script = ExtResource("4_o81qx")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

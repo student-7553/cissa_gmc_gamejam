@@ -20,7 +20,7 @@ func _ready() -> void:
 	var my_random_number: int = rng.randi_range(0, possibleCards.cards.size() - 1)
 
 	for cardIndex in cardStackCount:
-		currentStackCards[cardIndex] = possibleCards.cards[my_random_number]
+		currentStackCards[cardIndex] = possibleCards.cards[0]
 	
 	cardStackUpdate.emit()
 

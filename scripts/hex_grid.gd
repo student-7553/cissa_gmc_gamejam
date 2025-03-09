@@ -25,7 +25,6 @@ func generate_map():
 		for y in range(- map_size, map_size):
 			if in_map(x, y):
 				add_tile(x, y)
-	print(grid)
 # 
 func add_tile(x, y):
 	var new_tile: Hex_Cell = tile_scene.instantiate()
@@ -33,7 +32,7 @@ func add_tile(x, y):
 	
 	add_child(new_tile)
 	var cube_coord: Vector3 = oddq_to_cube(Vector2(x, y))
-	new_tile.init_cell(cube_coord, cardManager.possibleCards.cards[cardManager.defaultSpawnCard])
+	new_tile.cube_coord = cube_coord
 	
 	grid[cube_coord] = new_tile
 	
@@ -50,8 +49,3 @@ func oddq_to_cube(hex: Vector2) -> Vector3:
 	var q = hex.x
 	var r = hex.y - (hex.x - (int(q) & 1)) / 2
 	return Vector3(q, r, -q - r)
-
-func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.pressed and event.keycode == KEY_ESCAPE:
-			get_tree().quit()

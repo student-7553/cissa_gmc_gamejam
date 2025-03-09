@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://bipd1jf56chbp"]
 
-[ext_resource type="PackedScene" uid="uid://0lua3araahhy" path="res://scenes/hex_cells/arctic_hcell.tscn" id="1_quprd"]
+[ext_resource type="PackedScene" uid="uid://dmgqf6t1jt27l" path="res://scenes/hex_cells/arctic_hcell.tscn" id="1_quprd"]
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="2_fcss8"]
 
 [resource]
 script = ExtResource("2_fcss8")
 scene = ExtResource("1_quprd")
-cellKey = 0
+cellKey = 5

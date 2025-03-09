@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_4wro4"]
 [ext_resource type="Texture2D" uid="uid://cji68fvdanb8u" path="res://assets/textures/cards/water-card.png" id="1_vtk2p"]
-[ext_resource type="PackedScene" uid="uid://cff51cqo10bdx" path="res://scenes/hex_cells/ocean_hcell.tscn" id="2_vtk2p"]
+[ext_resource type="PackedScene" uid="uid://ux7gh38v7tss" path="res://scenes/hex_cells/ocean_hcell.tscn" id="2_vtk2p"]
 
 [resource]
 script = ExtResource("1_4wro4")
 cardSprite = ExtResource("1_vtk2p")
 scene = ExtResource("2_vtk2p")
-cellKey = 0
+cellKey = 3
 metadata/_custom_type_script = "uid://cx0txkira3or2"
