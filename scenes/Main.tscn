@@ -38,14 +38,17 @@ environment = SubResource("Environment_6wwtl")
 [node name="HexGrid" parent="." instance=ExtResource("1_1x53f")]
 
 [node name="CardManager" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
 possibleCards = Array[ExtResource("5_q8u5g")]([ExtResource("5_c01mt"), ExtResource("6_nxtc6"), ExtResource("7_qmy6f"), ExtResource("8_mwfav"), ExtResource("9_3p2gp"), ExtResource("10_cvmbd")])
+defaultSpawnCard = 3
 cardStackCount = 20
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]
 script = ExtResource("7_nxtc6")
 
 [node name="Control" parent="." instance=ExtResource("9_lhr70")]
+mouse_filter = 2
 
 [node name="player_manager" parent="." node_paths=PackedStringArray("grid") instance=ExtResource("3_0bbpv")]
 grid = NodePath("../HexGrid")
