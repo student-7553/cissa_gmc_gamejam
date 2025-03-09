@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=17 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
@@ -6,8 +6,10 @@
 [ext_resource type="Resource" uid="uid://etvktktstvu2" path="res://scripts/resources/card_list.tres" id="4_nxtc6"]
 [ext_resource type="PackedScene" uid="uid://cnx2iulwpuq1k" path="res://scenes/hex_cells/lava_hcell.tscn" id="4_q8u5g"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
-[ext_resource type="Script" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
+[ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
+[ext_resource type="Script" path="res://scripts/cards/card_stack_forced.gd" id="8_bjd11"]
 [ext_resource type="PackedScene" uid="uid://dt6gvl36cu631" path="res://scenes/ui.tscn" id="9_lhr70"]
+[ext_resource type="Resource" uid="uid://bb1new86y1byr" path="res://scripts/resources/forcedStackEntry/ocean_force_entry.tres" id="9_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://ggxwtq4sadur" path="res://scenes/player_manager.tscn" id="12_bjd11"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
@@ -27,6 +29,13 @@ tonemap_mode = 2
 glow_intensity = 2.89
 glow_bloom = 0.08
 
+[sub_resource type="Resource" id="Resource_bjd11"]
+script = ExtResource("8_bjd11")
+forcedPercentage = 0.35
+forcedIndexStart = 5
+forcedIndexEnd = 10
+forcedCard = 3
+
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -44,6 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
 possibleCards = ExtResource("4_nxtc6")
 cardStackCount = 20
+forcedEntries = Array[ExtResource("8_bjd11")]([ExtResource("9_qmy6f"), SubResource("Resource_bjd11")])
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]
 script = ExtResource("7_nxtc6")

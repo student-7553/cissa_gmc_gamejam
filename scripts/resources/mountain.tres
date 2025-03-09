@@ -8,5 +8,5 @@
 script = ExtResource("1_n1vno")
 cardSprite = ExtResource("1_4rrhs")
 scene = ExtResource("2_4rrhs")
-cellKey = 0
+cellKey = 4
 metadata/_custom_type_script = "uid://cx0txkira3or2"

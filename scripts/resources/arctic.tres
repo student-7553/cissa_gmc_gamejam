@@ -6,4 +6,4 @@
 [resource]
 script = ExtResource("2_fcss8")
 scene = ExtResource("1_quprd")
-cellKey = 0
+cellKey = 5

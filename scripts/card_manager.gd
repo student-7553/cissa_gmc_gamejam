@@ -10,20 +10,38 @@ signal cardStackUpdate
 
 @export var cardStackCount: int = 10
 
+@export var forcedEntries: Array[CardStackForceEntry]
+
 var rng = RandomNumberGenerator.new()
 
 var currentStackCards: Array[Card] = []
 
 func _ready() -> void:
-	currentStackCards.resize(cardStackCount);
+	currentStackCards.resize(cardStackCount)
 
-	var my_random_number: int = rng.randi_range(0, possibleCards.cards.size() - 1)
-
-	for cardIndex in cardStackCount:
-		currentStackCards[cardIndex] = possibleCards.cards[my_random_number]
+	handleStackCardInit()
 	
 	cardStackUpdate.emit()
 
+	pass
+
+func handleStackCardInit() -> void:
+	for index in cardStackCount:
+		var chosenIndex: int = rng.randi_range(0, possibleCards.cards.size() - 1)
+
+		var randomFloat: float = rng.randf_range(0.0, 1.0)
+		var percentageCounter = 0.0
+
+		for entry in forcedEntries:
+			if entry.forcedIndexStart <= index && entry.forcedIndexEnd > index:
+				percentageCounter = percentageCounter + entry.forcedPercentage
+				if percentageCounter > randomFloat:
+					chosenIndex = possibleCards.cards.find_custom(func(card): return card.cellKey == entry.forcedCard)
+					break
+				pass
+
+		print(chosenIndex)
+		currentStackCards.append(possibleCards.cards[chosenIndex])
 	pass
 
 func getTopCard() -> Card:

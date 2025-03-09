@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_64k41"]
 [ext_resource type="Resource" uid="uid://bipd1jf56chbp" path="res://scripts/resources/arctic.tres" id="2_g1aeo"]
 [ext_resource type="Script" uid="uid://bghi0wij0p1a1" path="res://scripts/card_list.gd" id="2_qusay"]
-[ext_resource type="Resource" path="res://scripts/resources/forest.tres" id="3_tdvvn"]
+[ext_resource type="Resource" uid="uid://b675xlo28u8uq" path="res://scripts/resources/forest.tres" id="3_tdvvn"]
 [ext_resource type="Resource" uid="uid://c82sy05k4nyy" path="res://scripts/resources/ground.tres" id="4_05e7s"]
 [ext_resource type="Resource" uid="uid://cffe810tmx7pv" path="res://scripts/resources/lava.tres" id="5_fqi07"]
 [ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="6_o1dft"]
