@@ -4,7 +4,7 @@ class_name CardManager
 
 signal cardStackUpdate
 
-@export var possibleCards: Array[Card]
+@export var possibleCards: Card_List
 
 @export var defaultSpawnCard: int = 0
 
@@ -17,10 +17,10 @@ var currentStackCards: Array[Card] = []
 func _ready() -> void:
 	currentStackCards.resize(cardStackCount);
 
-	var my_random_number: int = rng.randi_range(0, possibleCards.size() - 1)
+	var my_random_number: int = rng.randi_range(0, possibleCards.cards.size() - 1)
 
 	for cardIndex in cardStackCount:
-		currentStackCards[cardIndex] = possibleCards[my_random_number]
+		currentStackCards[cardIndex] = possibleCards.cards[my_random_number]
 	
 	cardStackUpdate.emit()
 

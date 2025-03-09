@@ -31,7 +31,7 @@ func add_tile(x, y):
 	var offset: float = 0.0 if !(x % 2) else tile_size / 2.0
 	
 	add_child(new_tile)
-	new_tile.initCell(oddq_to_cube(Vector2(x, y)), cardManager.possibleCards[cardManager.defaultSpawnCard])
+	new_tile.initCell(oddq_to_cube(Vector2(x, y)), cardManager.possibleCards.cards[cardManager.defaultSpawnCard])
 
 	grid[new_tile.cube_coord] = new_tile
 	
