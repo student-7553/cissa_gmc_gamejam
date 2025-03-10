@@ -16,6 +16,7 @@ func present_choices():
 	var choices: Array[Card] = levels[cur_level].card_choices
 	if left_over_card:
 		choices.append(left_over_card)
+		left_over_card = null
 	Globals.card_choice_window.present_choices(choices)
 
 func current_level()->Level:
