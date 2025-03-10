@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://jkirbq8yfswi"]
 
-[ext_resource type="Texture2D" uid="uid://fy43y3qjg5et" path="res://assets/textures/new card/Sprite-Ocean.png" id="1_8ichh"]
+[ext_resource type="Texture2D" uid="uid://blopq8ff6mc18" path="res://assets/textures/new card/Sprite-Ocean.png" id="1_8ichh"]
 
 [node name="Control" type="TextureRect"]
 offset_right = 430.0
