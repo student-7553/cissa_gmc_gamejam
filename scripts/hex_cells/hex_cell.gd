@@ -40,4 +40,3 @@ func pop_down():
 
 func mouse_entered() -> void:
 	select_cell.emit(self)
-	print("mouse entered")

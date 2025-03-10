@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://ggmoghus375f"]
+
+[ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="1_ocqp4"]
+
+[node name="Control" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -512.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ocqp4")
+stretch_mode = 2
+
+[node name="Card Title" type="Label" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -319.0
+offset_right = 219.0
+offset_bottom = -259.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "						Beach"
+horizontal_alignment = 1
+
+[node name="Card Text" type="Label" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -293.0
+offset_right = 223.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Location: Ground
+Effect:	 
+*   If placed next to ocean, 
+	gives every adjacent ocean +1 life"
+autowrap_mode = 3

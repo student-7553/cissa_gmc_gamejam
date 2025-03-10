@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://csrwcqtn4ggye"]
+
+[ext_resource type="Texture2D" uid="uid://ddrawl5np0708" path="res://assets/Cards/Sprite-mountain.png" id="1_2xfbq"]
+
+[node name="Control" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -512.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2xfbq")
+stretch_mode = 2
+
+[node name="Card Title" type="Label" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -323.0
+offset_right = 224.0
+offset_bottom = -263.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Mountain"
+horizontal_alignment = 1
+
+[node name="Card Text" type="Label" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -297.0
+offset_right = 228.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Location: Ground
+Effect:	 
+*   If placed next to Forest, gives every adjacent forest +1 life"
+autowrap_mode = 3

@@ -1,14 +1,14 @@
-[gd_scene load_steps=27 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=28 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://bsekmqr2wkbme" path="res://scripts/ui/total_life_energy.gd" id="1_yev5y"]
 [ext_resource type="PackedScene" uid="uid://clwmii4ww5lc8" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
 [ext_resource type="Texture2D" uid="uid://xkeirwhipm1r" path="res://assets/Cards/Sprite-forest.png" id="3_toj4d"]
-[ext_resource type="Script" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
+[ext_resource type="Script" uid="uid://yrb1khsfclgs" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
-[ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
-[ext_resource type="Script" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
+[ext_resource type="Script" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
+[ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Script" path="res://scenes/player's_progress.gd" id="7_fyfsq"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 [ext_resource type="Texture2D" uid="uid://dsy3ji5hb5ghq" path="res://assets/textures/cards/Sprite-beach.png" id="9_cgfq5"]
@@ -18,7 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://0lbefvklfw1w" path="res://assets/textures/cards/Sprite-mountain.png" id="11_vsj0x"]
 [ext_resource type="Texture2D" uid="uid://bmso0wc058cy6" path="res://assets/textures/cards/Sprite-forest.png" id="12_qsv74"]
 [ext_resource type="Texture2D" uid="uid://ch8c7mit2j7pn" path="res://assets/textures/cards/Sprite-snow.png" id="13_h1mc3"]
-[ext_resource type="Script" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
+[ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
+[ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
 
@@ -171,7 +172,7 @@ z_index = 20
 position = Vector2(605, 645)
 script = ExtResource("7_cof4p")
 
-[node name="Card Holder" type="Control" parent="Current-Card"]
+[node name="CardHolder" type="Control" parent="Current-Card"]
 z_index = 100
 layout_mode = 3
 anchors_preset = 7
@@ -187,7 +188,7 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("7_7dvkv")
 
-[node name="Card-Forest" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Forest" type="TextureRect" parent="Current-Card/CardHolder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -204,7 +205,7 @@ offset_bottom = 738.329
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("12_qsv74")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Forest"]
+[node name="Card Title" type="Label" parent="Current-Card/CardHolder/Card-Forest"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -222,7 +223,7 @@ theme_override_font_sizes/font_size = 30
 text = "Forest"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Forest"]
+[node name="Card Text" type="Label" parent="Current-Card/CardHolder/Card-Forest"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -242,7 +243,7 @@ Effect:
 * +1 life"
 autowrap_mode = 3
 
-[node name="Card-Ground" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Ground" type="TextureRect" parent="Current-Card/CardHolder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -259,7 +260,7 @@ offset_bottom = 742.329
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_8k7j3")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Ground"]
+[node name="Card Title" type="Label" parent="Current-Card/CardHolder/Card-Ground"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -277,7 +278,7 @@ theme_override_font_sizes/font_size = 30
 text = "Ground"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Ground"]
+[node name="Card Text" type="Label" parent="Current-Card/CardHolder/Card-Ground"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -296,7 +297,7 @@ text = "Effect:
 * Forest, Mountain, Lava, and Beach can be placed on this node"
 autowrap_mode = 3
 
-[node name="Card-Lava" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Lava" type="TextureRect" parent="Current-Card/CardHolder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -313,7 +314,7 @@ offset_bottom = 718.329
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_vdcm2")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Lava"]
+[node name="Card Title" type="Label" parent="Current-Card/CardHolder/Card-Lava"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -331,7 +332,7 @@ theme_override_font_sizes/font_size = 30
 text = "Lava"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Lava"]
+[node name="Card Text" type="Label" parent="Current-Card/CardHolder/Card-Lava"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -351,7 +352,7 @@ Effect:
 *   If placed on an ocean, turns the node into a ground node"
 autowrap_mode = 3
 
-[node name="Card-Ocean" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Ocean" type="TextureRect" parent="Current-Card/CardHolder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -368,7 +369,7 @@ offset_bottom = 747.329
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_6rmj2")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Ocean"]
+[node name="Card Title" type="Label" parent="Current-Card/CardHolder/Card-Ocean"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -386,7 +387,7 @@ theme_override_font_sizes/font_size = 30
 text = "Ocean"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Ocean"]
+[node name="Card Text" type="Label" parent="Current-Card/CardHolder/Card-Ocean"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -407,7 +408,7 @@ Effect:
 *   turns the ground node into an ocean"
 autowrap_mode = 3
 
-[node name="Card-Mountain" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Mountain" type="TextureRect" parent="Current-Card/CardHolder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -424,7 +425,7 @@ offset_bottom = 737.329
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_vsj0x")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Mountain"]
+[node name="Card Title" type="Label" parent="Current-Card/CardHolder/Card-Mountain"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -442,7 +443,7 @@ theme_override_font_sizes/font_size = 30
 text = "Mountain"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Mountain"]
+[node name="Card Text" type="Label" parent="Current-Card/CardHolder/Card-Mountain"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -462,7 +463,7 @@ Effect:
 *   If placed next to Forest, gives every adjacent forest +1 life"
 autowrap_mode = 3
 
-[node name="Card-Arctic" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Arctic" type="TextureRect" parent="Current-Card/CardHolder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -479,7 +480,7 @@ offset_bottom = 1091.17
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("13_h1mc3")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Arctic"]
+[node name="Card Title" type="Label" parent="Current-Card/CardHolder/Card-Arctic"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -497,7 +498,7 @@ theme_override_font_sizes/font_size = 30
 text = "Arctic"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Arctic"]
+[node name="Card Text" type="Label" parent="Current-Card/CardHolder/Card-Arctic"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -517,7 +518,7 @@ Effect:
 * If placed next to Ocean, gives every adjacent Ocean +1 life"
 autowrap_mode = 3
 
-[node name="Card-Beach" type="TextureRect" parent="Current-Card/Card Holder"]
+[node name="Card-Beach" type="TextureRect" parent="Current-Card/CardHolder"]
 clip_children = 2
 z_index = 1
 clip_contents = true
@@ -534,7 +535,7 @@ offset_bottom = 328.728
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_cgfq5")
 
-[node name="Card Title" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
+[node name="Card Title" type="Label" parent="Current-Card/CardHolder/Card-Beach"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -552,7 +553,7 @@ theme_override_font_sizes/font_size = 30
 text = "						Beach"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="Current-Card/Card Holder/Card-Beach"]
+[node name="Card Text" type="Label" parent="Current-Card/CardHolder/Card-Beach"]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
@@ -637,6 +638,9 @@ grow_vertical = 2
 text = "Game over"
 label_settings = SubResource("LabelSettings_cof4p")
 
+[node name="Control" parent="." instance=ExtResource("17_f7tlh")]
+visible = false
+
 [connection signal="pressed" from="Card Deck/Panel/Button2" to="Card Deck/Panel/Button2" method="_on_deck_button_pressed"]
-[connection signal="mouse_entered" from="Current-Card/Card Holder" to="Current-Card/Card Holder" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Current-Card/Card Holder" to="Current-Card/Card Holder" method="_on_control_mouse_exited"]
+[connection signal="mouse_entered" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_control_mouse_exited"]
