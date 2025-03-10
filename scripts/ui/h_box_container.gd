@@ -11,5 +11,6 @@ func _ready() -> void:
 
 func handleCardStackUpdate() -> void:
 	for card in cardManager.currentStackCards:
-		break
+		var newSpriteNode = card.cardSpriteScene.instantiate()
+		add_child(newSpriteNode)
 	pass
