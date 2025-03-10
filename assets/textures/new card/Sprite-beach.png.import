@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1b70kw5s5wxl"
-path="res://.godot/imported/Sprite-ground.png-142c9370a2f23727abba5f505f9ddead.ctex"
+uid="uid://bh16ot0edpprr"
+path="res://.godot/imported/Sprite-beach.png-5b49ea10b13bf145864761bd0c5c7d3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cards/new card/Sprite-ground.png"
-dest_files=["res://.godot/imported/Sprite-ground.png-142c9370a2f23727abba5f505f9ddead.ctex"]
+source_file="res://assets/textures/new card/Sprite-beach.png"
+dest_files=["res://.godot/imported/Sprite-beach.png-5b49ea10b13bf145864761bd0c5c7d3e.ctex"]
 
 [params]
 

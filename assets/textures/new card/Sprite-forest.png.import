@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch8c7mit2j7pn"
-path="res://.godot/imported/Sprite-snow.png-71e5e4706c48c868f135085de6f65525.ctex"
+uid="uid://5n6aib4aktal"
+path="res://.godot/imported/Sprite-forest.png-114d4ad5fd9a4afaa3865b8667bf147a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cards/Sprite-snow.png"
-dest_files=["res://.godot/imported/Sprite-snow.png-71e5e4706c48c868f135085de6f65525.ctex"]
+source_file="res://assets/textures/new card/Sprite-forest.png"
+dest_files=["res://.godot/imported/Sprite-forest.png-114d4ad5fd9a4afaa3865b8667bf147a.ctex"]
 
 [params]
 

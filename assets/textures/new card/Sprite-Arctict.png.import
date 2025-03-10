@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp3lr3i05ia46"
-path="res://.godot/imported/Sprite-Arctict.png-e71e17ab3a22f8e0da86b0b21261746f.ctex"
+path="res://.godot/imported/Sprite-Arctict.png-77b4be976c65a8359098e267e3ac89ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cards/new card/Sprite-Arctict.png"
-dest_files=["res://.godot/imported/Sprite-Arctict.png-e71e17ab3a22f8e0da86b0b21261746f.ctex"]
+source_file="res://assets/textures/new card/Sprite-Arctict.png"
+dest_files=["res://.godot/imported/Sprite-Arctict.png-77b4be976c65a8359098e267e3ac89ce.ctex"]
 
 [params]
 
