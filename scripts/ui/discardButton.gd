@@ -1,15 +1,11 @@
 extends Button
+class_name Discard_Button
 
-var cardManager: CardManager
 func _ready() -> void:
-	if !cardManager:
-		cardManager = get_node("../../../CardManager")
-		assert(cardManager != null, "Card Manager is empty")
-	pass
-
+	Globals.discard_button = self
 
 func onPress() -> void:
-	cardManager.draw_card()
+	Globals.card_manager.draw_card()
 	pass
 
 

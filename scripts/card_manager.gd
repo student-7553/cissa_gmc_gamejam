@@ -11,6 +11,7 @@ var count: int = 0
 var current_card: Card
 
 signal drawn_card
+signal chosen_card(card: Card)
 
 func _ready() -> void:
 	Globals.card_manager = self
@@ -23,6 +24,7 @@ func draw_card():
 	drawn_card.emit()
 
 func add_card_to_roulette(card: Card):
+	chosen_card.emit(card)
 	for entry in range(card.roulette_entries):
 		card_roulette.append(card)
 	card_collection.append(card)

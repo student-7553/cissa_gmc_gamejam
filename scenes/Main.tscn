@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=29 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
@@ -14,7 +14,10 @@
 [ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="13_ebg2g"]
 [ext_resource type="Script" uid="uid://co0s6k43jokap" path="res://scripts/game_manager.gd" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
+[ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="16_ft6cd"]
+[ext_resource type="Resource" uid="uid://cffe810tmx7pv" path="res://scripts/resources/lava.tres" id="17_bb450"]
 [ext_resource type="Script" uid="uid://ds8yrk5gkpux7" path="res://scripts/level_manager.gd" id="18_1iba3"]
+[ext_resource type="Resource" uid="uid://bksw347hwtcgt" path="res://scripts/resources/beach.tres" id="18_nfivy"]
 [ext_resource type="Script" uid="uid://c1cqhd4tg2yyd" path="res://scripts/level.gd" id="19_yxlcp"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
@@ -47,7 +50,25 @@ metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
 
 [sub_resource type="Resource" id="Resource_cvmbd"]
 script = ExtResource("19_yxlcp")
+life_energy_max = 900
+card_choices = Array[ExtResource("8_3p2gp")]([ExtResource("16_ft6cd")])
+metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
+
+[sub_resource type="Resource" id="Resource_ft6cd"]
+script = ExtResource("19_yxlcp")
+life_energy_max = 1200
+card_choices = Array[ExtResource("8_3p2gp")]([ExtResource("17_bb450")])
+metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
+
+[sub_resource type="Resource" id="Resource_1nqs0"]
+script = ExtResource("19_yxlcp")
 life_energy_max = 1500
+card_choices = Array[ExtResource("8_3p2gp")]([ExtResource("18_nfivy")])
+metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
+
+[sub_resource type="Resource" id="Resource_nfivy"]
+script = ExtResource("19_yxlcp")
+life_energy_max = 1800
 card_choices = Array[ExtResource("8_3p2gp")]([])
 metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
 
@@ -64,6 +85,7 @@ tile_scene = ExtResource("4_q8u5g")
 [node name="CardManager" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
+deck_size = 88
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]
 script = ExtResource("7_nxtc6")
@@ -81,11 +103,11 @@ omni_range = 30.0
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.681678, -0.453395, 0.574237, -0.00958151, 0.779251, 0.626639, -0.73159, -0.432668, 0.526854, 35, 15, -8)
 
+[node name="UI" parent="." instance=ExtResource("9_lhr70")]
+
 [node name="level_manager" type="Node" parent="."]
 script = ExtResource("18_1iba3")
-levels = Array[ExtResource("19_yxlcp")]([SubResource("Resource_ebg2g"), SubResource("Resource_yxlcp"), SubResource("Resource_cvmbd")])
-
-[node name="UI" parent="." instance=ExtResource("9_lhr70")]
+levels = Array[ExtResource("19_yxlcp")]([SubResource("Resource_ebg2g"), SubResource("Resource_yxlcp"), SubResource("Resource_cvmbd"), SubResource("Resource_ft6cd"), SubResource("Resource_1nqs0"), SubResource("Resource_nfivy")])
 
 [node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("level_manager", "lifeEnergyManager")]
 script = ExtResource("13_qmy6f")
