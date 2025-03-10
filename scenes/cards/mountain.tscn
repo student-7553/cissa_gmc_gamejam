@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://b4l5hn2inacrg" path="res://assets/textures/new card/Sprite-mountain.png" id="1_genw0"]
 
 [node name="Control" type="TextureRect"]
-offset_right = 450.0
-offset_bottom = 640.0
+anchors_preset = -1
+anchor_right = 0.391
+anchor_bottom = 0.988
+offset_right = -0.432037
+offset_bottom = -0.223999
 texture = ExtResource("1_genw0")
 stretch_mode = 2
 

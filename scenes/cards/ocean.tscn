@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://blopq8ff6mc18" path="res://assets/textures/new card/Sprite-Ocean.png" id="1_8ichh"]
 
 [node name="Control" type="TextureRect"]
-offset_right = 430.0
-offset_bottom = 620.0
+anchors_preset = -1
+anchor_right = 0.391
+anchor_bottom = 1.0
+offset_right = -20.432
+offset_bottom = -28.0
 texture = ExtResource("1_8ichh")
 stretch_mode = 2
 

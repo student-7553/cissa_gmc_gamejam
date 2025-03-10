@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=28 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
@@ -246,7 +246,6 @@ show_percentage = false
 
 [node name="Control" parent="." instance=ExtResource("17_f7tlh")]
 visible = false
-z_index = 500
 
 [node name="SettingsPanel" parent="." instance=ExtResource("2_jkdwc")]
 mouse_filter = 2
