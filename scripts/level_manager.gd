@@ -23,6 +23,7 @@ func current_level()->Level:
 
 func next_level():
 	cur_level += 1
+	Globals.level_count.set_level(cur_level + 1, levels.size())
 
 func set_left_over_card(chosen_card: Card):
 	for card_choice in current_level().card_choices:

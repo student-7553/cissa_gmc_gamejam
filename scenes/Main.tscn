@@ -56,19 +56,19 @@ metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
 
 [sub_resource type="Resource" id="Resource_ft6cd"]
 script = ExtResource("19_yxlcp")
-life_energy_max = 1300
+life_energy_max = 800
 card_choices = Array[ExtResource("8_3p2gp")]([ExtResource("17_bb450")])
 metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
 
 [sub_resource type="Resource" id="Resource_1nqs0"]
 script = ExtResource("19_yxlcp")
-life_energy_max = 1600
+life_energy_max = 900
 card_choices = Array[ExtResource("8_3p2gp")]([ExtResource("18_nfivy")])
 metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
 
 [sub_resource type="Resource" id="Resource_nfivy"]
 script = ExtResource("19_yxlcp")
-life_energy_max = 1800
+life_energy_max = 1000
 card_choices = Array[ExtResource("8_3p2gp")]([])
 metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
 

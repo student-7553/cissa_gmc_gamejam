@@ -9,4 +9,4 @@ script = ExtResource("2_fcss8")
 scene = ExtResource("1_quprd")
 cellKey = 5
 cardSpriteScene = ExtResource("1_fcss8")
-roulette_entries = 1
+roulette_entries = 2
