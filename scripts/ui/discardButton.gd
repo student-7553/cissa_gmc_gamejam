@@ -11,3 +11,7 @@ func _ready() -> void:
 func onPress() -> void:
 	cardManager.playCard()
 	pass
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
