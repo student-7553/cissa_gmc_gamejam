@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwufgwrucgiv8"
-path="res://.godot/imported/Sprite-ground.png-f23dbbbc5ff354264e576e99e84e3e45.ctex"
+uid="uid://fy43y3qjg5et"
+path="res://.godot/imported/Sprite-Ocean.png-5fbef3ddbfe52a10492e786a0c0b284a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cards/Sprite-ground.png"
-dest_files=["res://.godot/imported/Sprite-ground.png-f23dbbbc5ff354264e576e99e84e3e45.ctex"]
+source_file="res://assets/textures/new card/Sprite-Ocean.png"
+dest_files=["res://.godot/imported/Sprite-Ocean.png-5fbef3ddbfe52a10492e786a0c0b284a.ctex"]
 
 [params]
 

@@ -9,10 +9,16 @@ const HEX_DIRECTIONS: Array[Vector3] = [Vector3(1, 0, -1), Vector3(1, -1, 0), Ve
 
 var current_cell: Hex_Cell
 var cardManager: CardManager
+var lifeEnergyManager: LifeEnergyManager
 
 func _ready() -> void:
+	lifeEnergyManager = get_node("../LifeEnergyManager")
+	assert(lifeEnergyManager != null, "LifeEnergyManager could not be found")
+
 	for cell in grid.grid.values():
 		cell.select_cell.connect(select_new_cell)
+		cell.cell_score_change.connect(lifeEnergyManager.relativeUpdateLifeEnergy)
+
 	cardManager = get_node("../CardManager")
 	assert(cardManager != null, "CardManager could not be found")
 
@@ -47,6 +53,7 @@ func replace_cell(card: Card):
 	current_cell.queue_free()
 	current_cell.popAnim()
 	current_cell = new_cell
+	current_cell.cell_score_change.connect(lifeEnergyManager.relativeUpdateLifeEnergy)
 
 func select_new_cell(cell: Hex_Cell):
 	Globals.sound_manager.sfx_Hover.play()

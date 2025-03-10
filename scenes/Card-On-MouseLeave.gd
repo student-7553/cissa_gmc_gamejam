@@ -1,12 +1,27 @@
 extends Control
 
+class_name CardHolder
 #slides the card down if the player's mouse leaves the card
 @export var Card_Holder: Control
 
 var save_pos: Vector2
 
+var spawnedCurrentCard: TextureRect
+var cardManager: CardManager
+
 func _ready() -> void:
 	save_pos = position
+
+
+func clearCurrentCard() -> void:
+	if spawnedCurrentCard != null:
+		spawnedCurrentCard.queue_free()
+	pass
+
+func spawnNextCurrentCard(card: Card) -> void:
+	var cardSpriteNode = card.cardSpriteScene.instantiate()
+	add_child(cardSpriteNode)
+	pass
 
 func _on_control_mouse_exited() -> void:
 	Globals.sound_manager.sfx_LowerCard.play()

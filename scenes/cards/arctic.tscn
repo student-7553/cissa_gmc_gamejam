@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://kpj7kopyil0"]
 
-[ext_resource type="Texture2D" uid="uid://by8xnr6esv4tr" path="res://assets/Cards/Sprite-snow.png" id="1_42xyl"]
+[ext_resource type="Texture2D" uid="uid://dp3lr3i05ia46" path="res://assets/textures/new card/Sprite-Arctict.png" id="1_3ohw5"]
 
 [node name="Control" type="TextureRect"]
-texture = ExtResource("1_42xyl")
+texture = ExtResource("1_3ohw5")
 
 [node name="Card Title" type="Label" parent="."]
 clip_children = 2
@@ -13,10 +13,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -120.0
-offset_top = -324.0
-offset_right = 222.0
-offset_bottom = -264.0
+offset_left = -172.0
+offset_top = -330.0
+offset_right = 172.0
+offset_bottom = -270.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
@@ -31,10 +31,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -122.0
-offset_top = -286.0
-offset_right = 226.0
-offset_bottom = -61.0
+offset_left = -174.0
+offset_top = -274.0
+offset_right = 174.0
+offset_bottom = -87.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
