@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func onPress() -> void:
-	cardManager.playCard()
+	cardManager.draw_card()
 	pass
 
 
