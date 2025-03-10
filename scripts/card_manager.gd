@@ -5,7 +5,6 @@ class_name CardManager
 signal cardStackUpdate
 
 @export var possibleCards: Card_List
-# @export var possibleCards2: Array[Card]
 
 @export var defaultSpawnCard: int = 0
 
@@ -18,11 +17,6 @@ var rng = RandomNumberGenerator.new()
 var currentStackCards: Array[Card] = []
 
 func _ready() -> void:
-	
-	
-	
-	
-	# print(possibleCards2)
 	handleStackCardInit()
 	cardStackUpdate.emit()
 
@@ -46,6 +40,7 @@ func handleStackCardInit() -> void:
 func getTopCard() -> Card:
 	if currentStackCards.size() == 0:
 		push_error("currentStackCards size is 0")
+		return null
 	return currentStackCards[0]
 
 func playCard() -> void:

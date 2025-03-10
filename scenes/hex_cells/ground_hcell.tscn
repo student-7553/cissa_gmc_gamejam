@@ -6,8 +6,9 @@
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_penwm"]
 [ext_resource type="Script" uid="uid://bgiegy4du4vj7" path="res://scripts/synergy/ground_synergy.gd" id="4_r6xy3"]
 
-[node name="ground_hcell" instance=ExtResource("1_cu7wa")]
+[node name="ground_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_cu7wa")]
 script = ExtResource("2_ngepc")
+mesh = NodePath("HexCell_Ground")
 cell_type = 1
 
 [node name="HexCell_Ground" parent="." index="0"]
@@ -22,6 +23,7 @@ script = ExtResource("4_r6xy3")
 
 [node name="check" type="Node" parent="." index="3"]
 script = ExtResource("4_penwm")
-valid_cells = Array[int]([2, 0, 3, 4])
+valid_cells = Array[int]([2, 0, 3, 4, 6])
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]

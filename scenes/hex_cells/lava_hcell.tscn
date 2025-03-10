@@ -30,3 +30,4 @@ script = ExtResource("4_1qx7g")
 valid_cells = Array[int]([3])
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]

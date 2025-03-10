@@ -15,6 +15,8 @@ func _ready() -> void:
 
 func handleCardStackUpdate() -> void:
 	var topCard = cardManager.getTopCard()
+	if topCard == null:
+		return
 	switch_CurrentCard(topCard)
 
 func switch_CurrentCard(card: Card) -> void:

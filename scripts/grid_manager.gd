@@ -26,9 +26,9 @@ func _input(event):
 	if event.is_action_pressed("click") && current_cell != null:
 		## Get the top card
 		var new_card: Card = cardManager.getTopCard()
-		print('-------------------------')
-		print(new_card)
-		print(new_card.scene)
+		if new_card == null:
+			print("No new card available")
+			return
 		## Check if it is valid to place
 		if not current_cell.check_node.valid_placement(new_card.cellKey):
 			print("Cannot place ", new_card)
@@ -54,11 +54,16 @@ func replace_cell(card: Card):
 	grid.add_child(new_cell)
 	new_cell.copy_cell_data(current_cell)
 	current_cell.queue_free()
-	current_cell.popAnim()
+	grid.grid[current_cell.cube_coord] = new_cell
 	current_cell = new_cell
 	current_cell.cell_score_change.connect(lifeEnergyManager.relativeUpdateLifeEnergy)
 
 func select_new_cell(cell: Hex_Cell):
+	if cell == null:
+		current_cell.pop_down()
+		current_cell = null
+		return
+	
 	Globals.sound_manager.sfx_Hover.play()
 	if current_cell == null:
 		current_cell = cell

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=26 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
@@ -14,10 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://dt6gvl36cu631" path="res://scenes/ui.tscn" id="9_lhr70"]
 [ext_resource type="Resource" uid="uid://bb1new86y1byr" path="res://scripts/resources/forcedStackEntry/ocean_force_entry.tres" id="9_qmy6f"]
 [ext_resource type="Resource" uid="uid://cffe810tmx7pv" path="res://scripts/resources/lava.tres" id="11_1iba3"]
+[ext_resource type="Resource" uid="uid://bksw347hwtcgt" path="res://scripts/resources/beach.tres" id="12_1nqs0"]
 [ext_resource type="PackedScene" uid="uid://ggxwtq4sadur" path="res://scenes/player_manager.tscn" id="12_bjd11"]
 [ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="12_yxlcp"]
 [ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="13_ebg2g"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="13_qmy6f"]
+[ext_resource type="Script" uid="uid://co0s6k43jokap" path="res://scripts/game_manager.gd" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
@@ -38,7 +39,7 @@ glow_bloom = 0.08
 
 [sub_resource type="Resource" id="Resource_cvmbd"]
 script = ExtResource("9_3p2gp")
-cards = Array[ExtResource("8_3p2gp")]([ExtResource("13_ebg2g"), ExtResource("9_cvmbd"), ExtResource("9_ft6cd"), ExtResource("11_1iba3"), ExtResource("12_yxlcp")])
+cards = Array[ExtResource("8_3p2gp")]([ExtResource("13_ebg2g"), ExtResource("9_cvmbd"), ExtResource("9_ft6cd"), ExtResource("11_1iba3"), ExtResource("12_yxlcp"), ExtResource("12_1nqs0")])
 metadata/_custom_type_script = "uid://bghi0wij0p1a1"
 
 [sub_resource type="Resource" id="Resource_bjd11"]
@@ -62,7 +63,7 @@ tile_scene = ExtResource("4_q8u5g")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
 possibleCards = SubResource("Resource_cvmbd")
-cardStackCount = 20
+cardStackCount = 100
 forcedEntries = Array[ExtResource("8_bjd11")]([ExtResource("9_qmy6f"), SubResource("Resource_bjd11")])
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]

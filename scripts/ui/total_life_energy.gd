@@ -8,3 +8,4 @@ func updateUI() -> void:
 func _ready() -> void:
 	Globals.life_energy_manager.update.connect(updateUI)
 	updateUI()
+# 
