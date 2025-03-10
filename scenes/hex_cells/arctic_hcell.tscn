@@ -8,14 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_mdqpg"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="7_xyjdm"]
 
-[node name="arctic_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_tnm24")]
+[node name="arctic_hcell" node_paths=PackedStringArray("score_indicator") instance=ExtResource("1_tnm24")]
 script = ExtResource("2_gxjut")
-mesh = NodePath("HexCell_Arctic_1")
 cell_type = 5
 score_indicator = NodePath("score_indicator")
-
-[node name="HexCell_Arctic_1" parent="." index="0"]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="." index="1"]
 
@@ -28,9 +24,9 @@ script = ExtResource("4_16vo3")
 script = ExtResource("4_r3cpd")
 valid_cells = Array[int]([2])
 
-[node name="score_indicator" parent="." index="5" instance=ExtResource("6_mdqpg")]
+[node name="score_indicator" parent="." index="4" instance=ExtResource("6_mdqpg")]
 
-[node name="invalid_indicator" parent="." index="6" instance=ExtResource("7_xyjdm")]
+[node name="invalid_indicator" parent="." index="5" instance=ExtResource("7_xyjdm")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]

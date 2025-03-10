@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://diym7tobv6gx8"
-path="res://.godot/imported/hex_cell.glb-4167f8a4cf7a97377c65078387cd96a0.scn"
+uid="uid://c6poawfymail6"
+path="res://.godot/imported/HexCell_Beach_Connect_2.glb-b14627736ef93064553828e9c12d1211.scn"
 
 [deps]
 
-source_file="res://assets/models/glTF/hex_cell.glb"
-dest_files=["res://.godot/imported/hex_cell.glb-4167f8a4cf7a97377c65078387cd96a0.scn"]
+source_file="res://assets/models/glTF/HexCell_Beach_Connect_2.glb"
+dest_files=["res://.godot/imported/HexCell_Beach_Connect_2.glb-b14627736ef93064553828e9c12d1211.scn"]
 
 [params]
 
@@ -22,7 +22,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=3
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
