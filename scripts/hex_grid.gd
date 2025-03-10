@@ -1,7 +1,7 @@
 extends Node3D
 class_name Hex_Grid
 
-@export var map_size = 8
+@export var map_size = 6
 @export var tile_size = 2
 @export var tile_scene: PackedScene ## The tile to start with
 
@@ -36,7 +36,7 @@ func add_tile(x, y):
 	
 	grid[cube_coord] = new_tile
 	
-	new_tile.translate(Vector3(x * tile_size - x * 0.3, 0, y * tile_size + offset))
+	new_tile.translate(Vector3(x * tile_size - x * .45, 0, y * tile_size * (0.875) + offset))
 
 func in_map(x, y):
 	var r = ceil(map_size / 2)

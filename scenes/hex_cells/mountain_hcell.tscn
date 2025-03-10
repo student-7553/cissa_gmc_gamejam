@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbjnbrxn8lp8c"]
+[gd_scene load_steps=8 format=3 uid="uid://cbjnbrxn8lp8c"]
 
 [ext_resource type="PackedScene" uid="uid://dn0o8fb7kg06s" path="res://assets/models/glTF/HexCell_Mountain_1.glb" id="1_x88t0"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_flkdx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dnix3j8esfofl" path="res://scripts/synergy/mountain_synergy.gd" id="4_dx26d"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_kf45k"]
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_ifeoy"]
+[ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="7_613gi"]
 
 [node name="mountain_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_x88t0")]
 script = ExtResource("2_flkdx")
@@ -28,5 +29,7 @@ script = ExtResource("4_kf45k")
 valid_cells = Array[int]([2])
 
 [node name="score_indicator" parent="." index="5" instance=ExtResource("6_ifeoy")]
+
+[node name="invalid_indicator" parent="." index="6" instance=ExtResource("7_613gi")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

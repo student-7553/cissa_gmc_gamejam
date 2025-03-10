@@ -5,6 +5,7 @@ class_name Hex_Cell
 @export var cell_type: Card.PossibleCell
 @export var score_indicator: Score_Indicator
 
+@onready var invalid_indicator: Invalid_Indicator = $invalid_indicator
 @onready var check_node: BaseCheck = $check
 @onready var synergy: Synergy = $synergy
 
@@ -20,6 +21,7 @@ signal select_cell(cell: Hex_Cell)
 signal cell_score_change(scoreUpdate: int)
 
 func _ready() -> void:
+	mesh.rotation_degrees.y += randi_range(0, 6) * 60 ## Random rotation for the cell placement
 	save_pos = position
 	synergy.increase_score.connect(increase_score)
 	synergy.type = cell_type
