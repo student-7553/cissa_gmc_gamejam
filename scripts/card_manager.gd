@@ -40,6 +40,7 @@ func handleStackCardInit() -> void:
 func getTopCard() -> Card:
 	if currentStackCards.size() == 0:
 		push_error("currentStackCards size is 0")
+		return null
 	return currentStackCards[0]
 
 func playCard() -> void:

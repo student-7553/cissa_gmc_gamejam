@@ -1,7 +1,7 @@
 extends Panel
 
 @export var gameOverTitle = "No Humans were born, the world stayed silent"
-@export var gameFinishedTitle = "The first Human was born, humankind has been successfully nurtured"
+@export var gameFinishedTitle = "The first Human was born, humankind has successfully evolved"
 
 func _ready() -> void:
 	var gameManager = get_node("../../GameManager")

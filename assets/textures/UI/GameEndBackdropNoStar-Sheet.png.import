@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blopq8ff6mc18"
-path="res://.godot/imported/Sprite-Ocean.png-5fbef3ddbfe52a10492e786a0c0b284a.ctex"
+uid="uid://rwtxwc48vgt4"
+path="res://.godot/imported/GameEndBackdropNoStar-Sheet.png-b928806c9bdcc07218856de955d50c30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/new card/Sprite-Ocean.png"
-dest_files=["res://.godot/imported/Sprite-Ocean.png-5fbef3ddbfe52a10492e786a0c0b284a.ctex"]
+source_file="res://assets/textures/UI/GameEndBackdropNoStar-Sheet.png"
+dest_files=["res://.godot/imported/GameEndBackdropNoStar-Sheet.png-b928806c9bdcc07218856de955d50c30.ctex"]
 
 [params]
 

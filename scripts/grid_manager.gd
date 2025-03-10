@@ -26,6 +26,9 @@ func _input(event):
 	if event.is_action_pressed("click") && current_cell != null:
 		## Get the top card
 		var new_card: Card = cardManager.getTopCard()
+		if new_card == null:
+			print("No new card available")
+			return
 		## Check if it is valid to place
 		if not current_cell.check_node.valid_placement(new_card.cellKey):
 			print("Cannot place ", new_card)
