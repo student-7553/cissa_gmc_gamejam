@@ -59,7 +59,8 @@ anchor_right = 1.001
 anchor_bottom = 1.003
 texture = ExtResource("1_8k7j3")
 
-[node name="Button" type="Button" parent="HUD"]
+[node name="Button_Discard" type="Button" parent="HUD"]
+z_index = 70
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 1
 anchors_preset = 2
@@ -77,6 +78,7 @@ script = ExtResource("3_cof4p")
 
 [node name="Panel" type="Panel" parent="Card Deck"]
 visible = false
+z_index = 50
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -91,7 +93,7 @@ grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qrt2e")
 
 [node name="TextureRect2" type="TextureRect" parent="Card Deck/Panel"]
-z_index = 11
+z_index = 50
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.144
@@ -110,7 +112,7 @@ texture = ExtResource("6_4cct8")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="Card Deck/Panel"]
-z_index = 11
+z_index = 50
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.137
@@ -128,7 +130,7 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect4" type="TextureRect" parent="Card Deck/Panel"]
-z_index = 11
+z_index = 50
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.981
@@ -144,8 +146,8 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_x1e8k")
 expand_mode = 1
 
-[node name="Button2" type="Button" parent="Card Deck/Panel"]
-z_index = 51
+[node name="Button_OpenCarousel" type="Button" parent="Card Deck/Panel"]
+z_index = 70
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -163,11 +165,12 @@ action_mode = 0
 script = ExtResource("5_ox6g0")
 
 [node name="PanelDown" type="Sprite2D" parent="."]
+z_index = 40
 position = Vector2(579, 596.5)
 scale = Vector2(0.482422, 0.151562)
 
 [node name="CardCount" type="Label" parent="."]
-z_index = 20
+z_index = 10
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -181,7 +184,7 @@ text = "0000000"
 script = ExtResource("1_nt7q6")
 
 [node name="Current-Card" type="Control" parent="."]
-z_index = 20
+z_index = 60
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -193,7 +196,7 @@ grow_vertical = 0
 script = ExtResource("7_cof4p")
 
 [node name="CardHolder" type="Control" parent="Current-Card"]
-z_index = 100
+z_index = 60
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -212,7 +215,7 @@ script = ExtResource("7_7dvkv")
 script = ExtResource("10_cof4p")
 
 [node name="TotalLifeEnergy" type="Label" parent="Progress"]
-z_index = 10
+z_index = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.071
@@ -229,7 +232,7 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="life_energy_bar" type="ProgressBar" parent="Progress"]
-z_index = 15
+z_index = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.006
@@ -245,16 +248,17 @@ max_value = 1000.0
 step = 1.0
 show_percentage = false
 
-[node name="Control" parent="." instance=ExtResource("17_f7tlh")]
+[node name="CardCarousel" parent="." instance=ExtResource("17_f7tlh")]
 visible = false
-z_index = 500
+z_index = 80
 
 [node name="SettingsPanel" parent="." instance=ExtResource("2_jkdwc")]
+z_index = 90
 mouse_filter = 2
 
 [node name="GameEndScreen" type="Panel" parent="."]
 visible = false
-z_index = 200
+z_index = 100
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -347,8 +351,8 @@ scale = Vector2(5, 5)
 theme = SubResource("Theme_h1mc3")
 texture = ExtResource("13_h1mc3")
 
-[connection signal="pressed" from="HUD/Button" to="HUD/Button" method="onPress"]
-[connection signal="pressed" from="Card Deck/Panel/Button2" to="Card Deck/Panel/Button2" method="_on_deck_button_pressed"]
-[connection signal="toggleVisibility" from="Card Deck/Panel/Button2" to="Control" method="_on_button_2_toggle_visibility"]
+[connection signal="pressed" from="HUD/Button_Discard" to="HUD/Button_Discard" method="onPress"]
+[connection signal="pressed" from="Card Deck/Panel/Button_OpenCarousel" to="Card Deck/Panel/Button_OpenCarousel" method="_on_deck_button_pressed"]
+[connection signal="toggleVisibility" from="Card Deck/Panel/Button_OpenCarousel" to="CardCarousel" method="_on_button_2_toggle_visibility"]
 [connection signal="mouse_entered" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_control_mouse_exited"]
