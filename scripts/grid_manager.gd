@@ -56,6 +56,11 @@ func replace_cell(card: Card):
 	current_cell.cell_score_change.connect(lifeEnergyManager.relativeUpdateLifeEnergy)
 
 func select_new_cell(cell: Hex_Cell):
+	if cell == null:
+		current_cell.pop_down()
+		current_cell = null
+		return
+	
 	Globals.sound_manager.sfx_Hover.play()
 	if current_cell == null:
 		current_cell = cell

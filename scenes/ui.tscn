@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
 [ext_resource type="Texture2D" uid="uid://xvf2vva5c5c8" path="res://assets/textures/UI/GameWin.png" id="14_cof4p"]
 [ext_resource type="Texture2D" uid="uid://beshk4dkwg7ft" path="res://assets/textures/UI/GameEndBackdrop.png" id="15_f7tlh"]
-[ext_resource type="Script" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
+[ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
@@ -233,6 +233,7 @@ step = 1.0
 show_percentage = false
 
 [node name="GameEndScreen" type="Panel" parent="."]
+visible = false
 z_index = 200
 anchors_preset = 15
 anchor_right = 1.0

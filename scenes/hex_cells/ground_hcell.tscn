@@ -25,3 +25,4 @@ script = ExtResource("4_penwm")
 valid_cells = Array[int]([2, 0, 3, 4])
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]

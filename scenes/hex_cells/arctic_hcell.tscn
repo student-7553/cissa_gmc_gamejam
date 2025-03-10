@@ -24,3 +24,4 @@ script = ExtResource("4_16vo3")
 script = ExtResource("4_r3cpd")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]
