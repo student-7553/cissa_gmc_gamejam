@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ggmoghus375f" path="res://scenes/cards/beach.tscn" id="1_1uar8"]
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_p4mie"]
-[ext_resource type="PackedScene" uid="uid://dfnetk0ayi3vq" path="res://scenes/hex_cells/beach_hcell.tscn" id="2_e5d3l"]
+[ext_resource type="PackedScene" uid="uid://b4x17dpp25op7" path="res://scenes/hex_cells/beach_hcell.tscn" id="2_e5d3l"]
 
 [resource]
 script = ExtResource("1_p4mie")
