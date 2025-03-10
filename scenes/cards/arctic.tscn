@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://kpj7kopyil0"]
 
-[ext_resource type="Texture2D" uid="uid://dp3lr3i05ia46" path="res://assets/textures/new card/Sprite-Arctict.png" id="1_3ohw5"]
+[ext_resource type="Texture2D" uid="uid://dp3lr3i05ia46" path="res://assets/textures/new card/Sprite-Arctic.png" id="1_3ohw5"]
 
 [node name="Control" type="TextureRect"]
 anchors_preset = -1
