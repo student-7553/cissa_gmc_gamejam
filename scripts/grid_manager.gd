@@ -52,6 +52,7 @@ func replace_cell(card: Card):
 	new_cell.copy_cell_data(current_cell)
 	current_cell.queue_free()
 	current_cell.popAnim()
+	grid.grid[current_cell.cube_coord] = new_cell
 	current_cell = new_cell
 	current_cell.cell_score_change.connect(lifeEnergyManager.relativeUpdateLifeEnergy)
 

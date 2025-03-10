@@ -5,7 +5,7 @@ class_name Forest_Synergy
 func attempt_synergy_adj(type: Card.PossibleCell):
 	# Add 1 if mountain is placed next to this forest
 	if type == Card.PossibleCell.MOUNTAIN:
-		increase_score.emit(1)
+		increase_score.emit(100)
 
 func attempt_synergy_self(prev_type: Card.PossibleCell):
-	increase_score.emit(1)
+	increase_score.emit(100)

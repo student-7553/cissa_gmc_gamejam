@@ -22,6 +22,7 @@ signal cell_score_change(scoreUpdate: int)
 func _ready() -> void:
 	save_pos = position
 	synergy.increase_score.connect(increase_score)
+	synergy.type = cell_type
 	squash()
 
 func increase_score(amount: int):
@@ -29,8 +30,7 @@ func increase_score(amount: int):
 	current_score += amount
 	if score_indicator:
 		score_indicator.indicate(amount)
-	if mesh:
-		squash()
+	squash()
 
 ## Called when a cell is being replaced
 func copy_cell_data(cell: Hex_Cell):

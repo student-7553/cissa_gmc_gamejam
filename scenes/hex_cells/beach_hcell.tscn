@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfnetk0ayi3vq"]
+[gd_scene load_steps=5 format=3 uid="uid://b4x17dpp25op7"]
 
 [ext_resource type="PackedScene" uid="uid://ca27i37n8tyl3" path="res://assets/models/glTF/HexCell_Beach_1.glb" id="1_pq5na"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_7xwds"]
