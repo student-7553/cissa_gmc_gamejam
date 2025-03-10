@@ -62,3 +62,6 @@ func mouse_entered() -> void:
 
 func popAnim() -> void:
 	$AnimationPlayer.play("HexCell_Pop")
+
+func mouse_exited() -> void:
+	select_cell.emit(null)

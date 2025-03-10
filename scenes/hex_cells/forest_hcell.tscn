@@ -28,3 +28,4 @@ script = ExtResource("4_o81qx")
 [node name="score_indicator" parent="." index="5" instance=ExtResource("6_qh04n")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]
