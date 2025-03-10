@@ -32,6 +32,7 @@ func _input(event):
 		## Check if it is valid to place
 		if not current_cell.check_node.valid_placement(new_card.cellKey):
 			print("Cannot place ", new_card)
+			current_cell.invalid_indicator.indicate()
 			return
 		cardManager.playCard()
 		## Replace the current_cell

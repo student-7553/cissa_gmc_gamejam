@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ux7gh38v7tss"]
+[gd_scene load_steps=9 format=3 uid="uid://ux7gh38v7tss"]
 
 [ext_resource type="PackedScene" uid="uid://b0n7kew1266pq" path="res://assets/models/glTF/HexCell_Ocean_1.glb" id="1_xor61"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_018vy"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_cg5u2"]
 [ext_resource type="Resource" uid="uid://c82sy05k4nyy" path="res://scripts/resources/ground.tres" id="5_fp5ja"]
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="7_gwixi"]
+[ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="8_mfon1"]
 
 [node name="ocean_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_xor61")]
 script = ExtResource("2_018vy")
@@ -27,8 +28,10 @@ ground_card = ExtResource("5_fp5ja")
 
 [node name="check" type="Node" parent="." index="3"]
 script = ExtResource("4_cg5u2")
-valid_cells = Array[int]([5, 2])
+valid_cells = Array[int]([5, 2, 6])
 
 [node name="score_indicator" parent="." index="4" instance=ExtResource("7_gwixi")]
+
+[node name="invalid_indicator" parent="." index="6" instance=ExtResource("8_mfon1")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

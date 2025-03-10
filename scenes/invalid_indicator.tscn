@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dejhudydw747x"]
+
+[ext_resource type="Script" uid="uid://b1enkgxiryxie" path="res://scripts/invalid_indicator.gd" id="2_1hnap"]
+[ext_resource type="FontFile" uid="uid://cbeu33dojv7ib" path="res://assets/fonts/Habbo.ttf" id="2_b7jjb"]
+
+[node name="invalid_indicator" type="Node3D"]
+script = ExtResource("2_1hnap")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+modulate = Color(1, 0, 0, 1)
+text = "X"
+font = ExtResource("2_b7jjb")
+font_size = 200
+outline_size = 50

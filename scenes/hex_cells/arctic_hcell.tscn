@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmgqf6t1jt27l"]
+[gd_scene load_steps=8 format=3 uid="uid://dmgqf6t1jt27l"]
 
 [ext_resource type="PackedScene" uid="uid://bsygi7f3u4c11" path="res://assets/models/glTF/HexCell_Arctic_1.glb" id="1_tnm24"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_gxjut"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bjj3l2fp4ech3" path="res://scripts/synergy/arctic_synergy.gd" id="4_16vo3"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_r3cpd"]
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_mdqpg"]
+[ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="7_xyjdm"]
 
 [node name="arctic_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_tnm24")]
 script = ExtResource("2_gxjut")
@@ -28,6 +29,8 @@ script = ExtResource("4_r3cpd")
 valid_cells = Array[int]([2])
 
 [node name="score_indicator" parent="." index="5" instance=ExtResource("6_mdqpg")]
+
+[node name="invalid_indicator" parent="." index="6" instance=ExtResource("7_xyjdm")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]

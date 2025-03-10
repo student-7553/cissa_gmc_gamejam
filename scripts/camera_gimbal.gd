@@ -8,8 +8,12 @@ extends Node3D
 
 @onready var gimbal_x: Node3D = $CameraGimbalY/CameraGimbalX
 @onready var gimbal_y: Node3D = $CameraGimbalY
+@onready var camera: Camera3D = $CameraGimbalY/CameraGimbalX/Camera3D
 
 var zoom = 1.5
+
+func _ready() -> void:
+	Globals.camera = camera
 
 func _process(delta: float) -> void:
 	get_keyboard_input(delta)

@@ -1,6 +1,6 @@
 extends Synergy
 class_name Ground_Synergy
 
-# another cell will try to call this function. if the synergy is the right type then call this function
-func attempt_synergy(adj_cell: Hex_Cell):
-	pass
+func attempt_synergy_adj(adj_type: Card.PossibleCell):
+	if adj_type == Card.PossibleCell.BEACH:
+		increase_score.emit(100)
