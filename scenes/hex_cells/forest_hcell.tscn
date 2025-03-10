@@ -27,9 +27,9 @@ script = ExtResource("4_denpu")
 script = ExtResource("4_o81qx")
 valid_cells = Array[int]([2])
 
-[node name="score_indicator" parent="." index="5" instance=ExtResource("6_qh04n")]
+[node name="score_indicator" parent="." index="4" instance=ExtResource("6_qh04n")]
 
-[node name="invalid_indicator" parent="." index="6" instance=ExtResource("7_7n15e")]
+[node name="invalid_indicator" parent="." index="5" instance=ExtResource("7_7n15e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13367, 0)
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkqd76rkx1smn"]
+[gd_scene load_steps=4 format=3 uid="uid://bkqd76rkx1smn"]
 
 [ext_resource type="Texture2D" uid="uid://5n6aib4aktal" path="res://assets/textures/new card/Sprite-forest.png" id="1_wrctd"]
+[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="2_a4eov"]
+[ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="3_usu7u"]
 
 [node name="Control" type="TextureRect"]
 anchors_preset = -1
@@ -11,40 +13,43 @@ offset_bottom = -0.223999
 texture = ExtResource("1_wrctd")
 stretch_mode = 2
 
-[node name="Card Title" type="Label" parent="."]
-clip_children = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.553
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.553
-offset_left = -172.0
-offset_top = -43.92
-offset_right = 172.0
-offset_bottom = -1.92001
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -29.888
+offset_right = 200.0
+offset_bottom = 196.112
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 30
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Card Title" type="Label" parent="VBoxContainer"]
+clip_children = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_a4eov")
+theme_override_font_sizes/font_size = 64
 text = "Forest"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="."]
+[node name="Card Text" type="Label" parent="VBoxContainer"]
 clip_children = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.806
-anchor_right = 0.5
-anchor_bottom = 0.806
-offset_left = -174.0
-offset_top = -132.84
-offset_right = 174.0
-offset_bottom = 0.159973
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 25
-text = "Location: Ground
-Effect:	 
-* +1 life"
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_usu7u")
+theme_override_font_sizes/font_size = 36
+text = "Place On: Ground
+"
+autowrap_mode = 3
+
+[node name="Card Text2" type="Label" parent="VBoxContainer"]
+clip_children = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_usu7u")
+theme_override_font_sizes/font_size = 36
+text = "+100 Life"
+horizontal_alignment = 1
 autowrap_mode = 3
