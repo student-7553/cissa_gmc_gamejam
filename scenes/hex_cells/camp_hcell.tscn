@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="1_waewo"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="2_k0eq1"]
-[ext_resource type="Script" uid="uid://mle6gepwk3s3" path="res://scripts/synergy/camp_synergy.gd" id="3_waewo"]
+[ext_resource type="Script" path="res://scripts/synergy/camp_synergy.gd" id="3_waewo"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_tvt0v"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="5_hbujq"]
 
