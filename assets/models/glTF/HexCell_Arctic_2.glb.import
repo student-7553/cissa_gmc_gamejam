@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://diym7tobv6gx8"
-path="res://.godot/imported/hex_cell.glb-4167f8a4cf7a97377c65078387cd96a0.scn"
+uid="uid://dkiuto8bgmfyg"
+path="res://.godot/imported/HexCell_Arctic_2.glb-6bdc7217192631d460ab66ec528620f9.scn"
 
 [deps]
 
-source_file="res://assets/models/glTF/hex_cell.glb"
-dest_files=["res://.godot/imported/hex_cell.glb-4167f8a4cf7a97377c65078387cd96a0.scn"]
+source_file="res://assets/models/glTF/HexCell_Arctic_2.glb"
+dest_files=["res://.godot/imported/HexCell_Arctic_2.glb-6bdc7217192631d460ab66ec528620f9.scn"]
 
 [params]
 
