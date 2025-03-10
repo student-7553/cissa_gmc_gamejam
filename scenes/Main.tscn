@@ -84,5 +84,6 @@ transform = Transform3D(0.681678, -0.453395, 0.574237, -0.00958151, 0.779251, 0.
 
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("13_qmy6f")
+winConditionLifeEnergy = 100
 
 [node name="UI" parent="." instance=ExtResource("9_lhr70")]
