@@ -11,6 +11,8 @@ var current_cell: Hex_Cell
 var lifeEnergyManager: LifeEnergyManager
 
 func _ready() -> void:
+	Globals.grid_manager = self
+	
 	lifeEnergyManager = get_node("../LifeEnergyManager")
 	assert(lifeEnergyManager != null, "LifeEnergyManager could not be found")
 
@@ -57,6 +59,8 @@ func replace_cell(card: Card):
 
 func select_new_cell(cell: Hex_Cell):
 	if cell == null:
+		if current_cell == null:
+			return
 		current_cell.pop_down()
 		current_cell = null
 		return

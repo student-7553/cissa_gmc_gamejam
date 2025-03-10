@@ -13,5 +13,5 @@ func onPress() -> void:
 	pass
 
 
-func _on_button_pressed() -> void:
-	pass # Replace with function body.
+func _on_mouse_entered() -> void:
+	Globals.grid_manager.select_new_cell(null)

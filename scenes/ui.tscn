@@ -1,15 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=22 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
 [ext_resource type="PackedScene" uid="uid://715os2dhpmfu" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
 [ext_resource type="Script" uid="uid://dgkhpjluyh7eg" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
-[ext_resource type="Texture2D" uid="uid://xkeirwhipm1r" path="res://assets/Cards/Sprite-forest.png" id="3_toj4d"]
-[ext_resource type="Script" uid="uid://yrb1khsfclgs" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
-[ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
-[ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 [ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
 [ext_resource type="Texture2D" uid="uid://d0y7r2cfw116e" path="res://assets/textures/UI/Progress_Under.png" id="11_ycmcx"]
 [ext_resource type="Texture2D" uid="uid://duplir55kx0ww" path="res://assets/textures/UI/Progress_Complete.png" id="12_ycmcx"]
@@ -22,14 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 [ext_resource type="Script" uid="uid://285hy56rt4m8" path="res://scripts/gameRestart.gd" id="19_jkdwc"]
 [ext_resource type="PackedScene" uid="uid://cnyorwollarn7" path="res://scenes/card_choice_window.tscn" id="22_kupmu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfdtt"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wid3i"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jei0d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qsv74"]
 
@@ -49,6 +37,7 @@ texture = ExtResource("1_8k7j3")
 
 [node name="Button_Discard" type="Button" parent="HUD"]
 z_index = 70
+texture_filter = 1
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 1
 anchors_preset = 2
@@ -59,98 +48,10 @@ offset_top = -224.944
 offset_right = 200.0
 offset_bottom = -174.944
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("13_f7tlh")
+theme_override_font_sizes/font_size = 64
 text = "Discard"
 script = ExtResource("3_cof4p")
-
-[node name="Card Deck" type="Node" parent="."]
-
-[node name="Panel" type="Panel" parent="Card Deck"]
-visible = false
-z_index = 50
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -147.0
-offset_top = -165.0
-offset_right = -29.0
-offset_bottom = -17.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_qrt2e")
-
-[node name="TextureRect2" type="TextureRect" parent="Card Deck/Panel"]
-z_index = 50
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.144
-anchor_top = 0.643
-anchor_right = 1.144
-anchor_bottom = 0.643
-offset_left = -148.992
-offset_top = -64.164
-offset_right = 491.008
-offset_bottom = 575.836
-grow_horizontal = 0
-grow_vertical = 0
-rotation = -0.255385
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("6_4cct8")
-expand_mode = 1
-
-[node name="TextureRect3" type="TextureRect" parent="Card Deck/Panel"]
-z_index = 50
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.137
-anchor_top = 0.667
-anchor_right = 1.137
-anchor_bottom = 0.667
-offset_left = -134.166
-offset_top = -98.716
-offset_right = 505.834
-offset_bottom = 541.284
-rotation = 0.317316
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_toj4d")
-expand_mode = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect4" type="TextureRect" parent="Card Deck/Panel"]
-z_index = 50
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.981
-anchor_top = 0.772
-anchor_right = 0.996
-anchor_bottom = 0.772
-offset_left = -137.758
-offset_top = -103.256
-offset_right = 500.472
-offset_bottom = 536.744
-rotation = -0.0152121
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_x1e8k")
-expand_mode = 1
-
-[node name="Button_OpenCarousel" type="Button" parent="Card Deck/Panel"]
-z_index = 70
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 0.822
-anchor_right = 1.0
-anchor_bottom = 0.822
-offset_left = -122.0
-offset_top = -116.656
-offset_right = -12.0
-offset_bottom = 27.344
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_qfdtt")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_wid3i")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_jei0d")
-action_mode = 0
-script = ExtResource("5_ox6g0")
 
 [node name="PanelDown" type="Sprite2D" parent="."]
 z_index = 40
@@ -372,9 +273,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 
+[connection signal="mouse_entered" from="HUD/Button_Discard" to="HUD/Button_Discard" method="_on_mouse_entered"]
 [connection signal="pressed" from="HUD/Button_Discard" to="HUD/Button_Discard" method="onPress"]
-[connection signal="pressed" from="Card Deck/Panel/Button_OpenCarousel" to="Card Deck/Panel/Button_OpenCarousel" method="_on_deck_button_pressed"]
-[connection signal="toggleVisibility" from="Card Deck/Panel/Button_OpenCarousel" to="CardCarousel" method="_on_button_2_toggle_visibility"]
 [connection signal="mouse_entered" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_control_mouse_exited"]
 [connection signal="pressed" from="GameEndScreen/GameWinBackdrop/Button" to="GameEndScreen/GameWinBackdrop/Button" method="_on_pressed"]
