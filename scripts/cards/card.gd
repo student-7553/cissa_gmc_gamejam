@@ -6,7 +6,7 @@ class_name Card
 
 @export var cellKey: PossibleCell
 
-@export var cardSpriteScene: PackedScene
+@export var cardSpriteScene: PackedScene = null
 
 
 enum PossibleCell {
