@@ -45,6 +45,7 @@ func replace_cell(card: Card):
 	grid.add_child(new_cell)
 	new_cell.copy_cell_data(current_cell)
 	current_cell.queue_free()
+	current_cell.popAnim()
 	current_cell = new_cell
 
 func select_new_cell(cell: Hex_Cell):
