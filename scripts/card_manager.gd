@@ -17,8 +17,6 @@ var rng = RandomNumberGenerator.new()
 var currentStackCards: Array[Card] = []
 
 func _ready() -> void:
-	currentStackCards.resize(cardStackCount)
-
 	handleStackCardInit()
 	
 	cardStackUpdate.emit()
@@ -39,7 +37,6 @@ func handleStackCardInit() -> void:
 					chosenIndex = possibleCards.cards.find_custom(func(card): return card.cellKey == entry.forcedCard)
 					break
 				pass
-
 		currentStackCards.append(possibleCards.cards[chosenIndex])
 	pass
 

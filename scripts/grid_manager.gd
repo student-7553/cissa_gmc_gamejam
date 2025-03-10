@@ -3,7 +3,7 @@
 extends Node
 class_name Grid_Manager
 
-const HEX_DIRECTIONS: Array[Vector3] = [Vector3(1,0,-1), Vector3(1,-1,0), Vector3(0,-1,1), Vector3(-1,0,1), Vector3(-1,1,0), Vector3(0,1,-1)]
+const HEX_DIRECTIONS: Array[Vector3] = [Vector3(1, 0, -1), Vector3(1, -1, 0), Vector3(0, -1, 1), Vector3(-1, 0, 1), Vector3(-1, 1, 0), Vector3(0, 1, -1)]
 
 @export var grid: Hex_Grid
 
