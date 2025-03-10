@@ -1,7 +1,6 @@
 extends Resource
 class_name Card
 
-@export var cardSprite: Texture2D
 
 @export var scene: PackedScene
 
