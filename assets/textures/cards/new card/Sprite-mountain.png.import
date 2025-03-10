@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxflifp8sebtl"
-path="res://.godot/imported/pov (1).png-5f30e4cc5b12f3bfb98e9f73c78ad77a.ctex"
+uid="uid://bj8btrdrc6wi5"
+path="res://.godot/imported/Sprite-mountain.png-87098ebce0ff3f1c058f0a6b50db2007.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/UI/pov (1).png"
-dest_files=["res://.godot/imported/pov (1).png-5f30e4cc5b12f3bfb98e9f73c78ad77a.ctex"]
+source_file="res://assets/textures/cards/new card/Sprite-mountain.png"
+dest_files=["res://.godot/imported/Sprite-mountain.png-87098ebce0ff3f1c058f0a6b50db2007.ctex"]
 
 [params]
 

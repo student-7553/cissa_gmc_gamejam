@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db1mrnthcchy7"
-path="res://.godot/imported/pov (1).png-ee3ba21d1902a185abc508343e353348.ctex"
+uid="uid://dp3lr3i05ia46"
+path="res://.godot/imported/Sprite-Arctict.png-e71e17ab3a22f8e0da86b0b21261746f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pov (1).png"
-dest_files=["res://.godot/imported/pov (1).png-ee3ba21d1902a185abc508343e353348.ctex"]
+source_file="res://assets/textures/cards/new card/Sprite-Arctict.png"
+dest_files=["res://.godot/imported/Sprite-Arctict.png-e71e17ab3a22f8e0da86b0b21261746f.ctex"]
 
 [params]
 
