@@ -24,6 +24,7 @@ func _input(event):
 		if not current_cell.check_node.valid_placement(new_card.cellKey):
 			print("Cannot place ", new_card)
 			return
+		cardManager.playCard()
 		## Replace the current_cell
 		# get the hex cell data - position
 		var save_coord: Vector3 = current_cell.cube_coord

@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://cj0q2y1fq7awm" path="res://scenes/hex_cells/lava_hcell.tscn" id="4_q8u5g"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
-[ext_resource type="Script" uid="uid://dco4xncgjogd6" path="res://scripts/cards/card_stack_forced.gd" id="8_bjd11"]
+[ext_resource type="Script" path="res://scripts/cards/card_stack_forced.gd" id="8_bjd11"]
 [ext_resource type="PackedScene" uid="uid://dt6gvl36cu631" path="res://scenes/ui.tscn" id="9_lhr70"]
 [ext_resource type="Resource" uid="uid://bb1new86y1byr" path="res://scripts/resources/forcedStackEntry/ocean_force_entry.tres" id="9_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://ggxwtq4sadur" path="res://scenes/player_manager.tscn" id="12_bjd11"]
-[ext_resource type="Script" uid="uid://co0s6k43jokap" path="res://scripts/game_manager.gd" id="13_qmy6f"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
