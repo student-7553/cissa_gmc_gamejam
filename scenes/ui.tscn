@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=30 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 [ext_resource type="Script" uid="uid://285hy56rt4m8" path="res://scripts/gameRestart.gd" id="19_jkdwc"]
+[ext_resource type="PackedScene" uid="uid://cnyorwollarn7" path="res://scenes/card_choice_window.tscn" id="22_kupmu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
 
@@ -355,6 +356,20 @@ offset_right = 639.0
 offset_bottom = 606.0
 text = "Restart Game"
 script = ExtResource("19_jkdwc")
+
+[node name="card_choice_window" parent="." instance=ExtResource("22_kupmu")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = 103.0
+offset_right = 339.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 
 [connection signal="pressed" from="HUD/Button_Discard" to="HUD/Button_Discard" method="onPress"]
 [connection signal="pressed" from="Card Deck/Panel/Button_OpenCarousel" to="Card Deck/Panel/Button_OpenCarousel" method="_on_deck_button_pressed"]
