@@ -29,7 +29,7 @@ func spawnNextCurrentCard(card: Card) -> void:
 func _on_control_mouse_exited() -> void:
 	Globals.sound_manager.sfx_LowerCard.play()
 	var tw: Tween = get_tree().create_tween()
-	tw.tween_property(self, "position:y", save_pos.y + yPlus, 0.5)
+	tw.tween_property(self, "position:y", save_pos.y + yPlus, 0.2)
 	#print("mouse exited")
 
 func _on_mouse_entered() -> void:
