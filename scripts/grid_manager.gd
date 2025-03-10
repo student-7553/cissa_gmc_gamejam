@@ -39,6 +39,7 @@ func _input(event):
 		current_cell.select_cell.connect(select_new_cell)
 
 func replace_cell(card: Card):
+	Globals.sound_manager.sfx_place_node()
 	var new_cell: Hex_Cell = card.scene.instantiate()
 	grid.add_child(new_cell)
 	new_cell.copy_cell_data(current_cell)
