@@ -10,4 +10,3 @@ func _ready() -> void:
 func updateUI() -> void:
 	life_energy_label.text = str(Globals.life_energy_manager.currentLifeEnergy)
 	life_energy_bar.value = int(Globals.life_energy_manager.currentLifeEnergy)
-	print("updated")

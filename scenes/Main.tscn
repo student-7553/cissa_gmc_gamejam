@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=29 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="13_ebg2g"]
 [ext_resource type="Script" uid="uid://co0s6k43jokap" path="res://scripts/game_manager.gd" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
+[ext_resource type="Resource" uid="uid://csbyk666hipww" path="res://scripts/resources/camp.tres" id="14_yxlcp"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
 panorama = ExtResource("1_jlsqs")
@@ -40,8 +41,16 @@ glow_bloom = 0.08
 
 [sub_resource type="Resource" id="Resource_cvmbd"]
 script = ExtResource("9_3p2gp")
-cards = Array[ExtResource("8_3p2gp")]([ExtResource("13_ebg2g"), ExtResource("9_cvmbd"), ExtResource("9_ft6cd"), ExtResource("11_1iba3"), ExtResource("12_yxlcp"), ExtResource("12_1nqs0")])
+cards = Array[ExtResource("8_3p2gp")]([ExtResource("13_ebg2g"), ExtResource("9_cvmbd"), ExtResource("9_ft6cd"), ExtResource("11_1iba3"), ExtResource("12_yxlcp"), ExtResource("12_1nqs0"), ExtResource("14_yxlcp")])
 metadata/_custom_type_script = "uid://bghi0wij0p1a1"
+
+[sub_resource type="Resource" id="Resource_yxlcp"]
+script = ExtResource("8_bjd11")
+forcedPercentage = 1.0
+forcedIndexStart = 7
+forcedIndexEnd = 10
+forcedCard = 7
+metadata/_custom_type_script = "uid://bjr2phwvc58lc"
 
 [sub_resource type="Resource" id="Resource_bjd11"]
 script = ExtResource("8_bjd11")
@@ -66,7 +75,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
 possibleCards = SubResource("Resource_cvmbd")
 cardStackCount = 40
-forcedEntries = Array[ExtResource("8_bjd11")]([ExtResource("9_qmy6f"), SubResource("Resource_bjd11")])
+forcedEntries = Array[ExtResource("8_bjd11")]([ExtResource("9_qmy6f"), SubResource("Resource_yxlcp"), SubResource("Resource_bjd11")])
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]
 script = ExtResource("7_nxtc6")

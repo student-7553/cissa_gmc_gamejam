@@ -5,7 +5,7 @@ class_name Ocean_Synergy
 
 # another cell will try to call this function. if the synergy is the right type then call this function
 func attempt_synergy_adj(adj_type: Card.PossibleCell):
-	if adj_type == Card.PossibleCell.ARCTIC or adj_type == Card.PossibleCell.BEACH:
+	if adj_type == Card.PossibleCell.ARCTIC or adj_type == Card.PossibleCell.BEACH or adj_type == Card.PossibleCell.CAMP:
 		increase_score.emit(100)
 
 func attempt_synergy_self(prev_type: Card.PossibleCell):
