@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://p43llu6fbe8q"]
+[gd_scene load_steps=2 format=3 uid="uid://d1d8qxrn8iqxk"]
 
-[ext_resource type="Texture2D" uid="uid://dkca34kofqdtu" path="res://assets/textures/new card/Sprite-Gloablt.png" id="1_t4q2p"]
+[ext_resource type="Texture2D" uid="uid://cxrm8hwr0hocs" path="res://assets/textures/new card/Sprite-asteroid.png" id="1_j4qf0"]
 
 [node name="Control" type="TextureRect"]
 texture_filter = 1
@@ -8,7 +8,7 @@ anchors_preset = -1
 anchor_right = 0.391
 anchor_bottom = 1.0
 offset_right = -0.432037
-texture = ExtResource("1_t4q2p")
+texture = ExtResource("1_j4qf0")
 
 [node name="Card Title" type="Label" parent="."]
 clip_children = 2
@@ -25,7 +25,7 @@ offset_bottom = 47.56
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
-text = "Settlement"
+text = "Asteroid"
 horizontal_alignment = 1
 
 [node name="Card Text" type="Label" parent="."]
@@ -43,7 +43,7 @@ offset_bottom = -2.09601
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "Location: Ground
+text = "Location: Anywhere
 Effect:	 
-*   signs of Civilization, gives +1 life to every placed node on the map"
+*   destroys all adjacent nodes and turns them into lava"
 autowrap_mode = 3
