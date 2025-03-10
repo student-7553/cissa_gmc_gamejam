@@ -21,19 +21,15 @@ func clearCurrentCard() -> void:
 
 func spawnNextCurrentCard(card: Card) -> void:
 	var cardSpriteNode: Node = card.cardSpriteScene.instantiate()
-	# cardSpriteNode.scale =
 	add_child(cardSpriteNode)
 	pass
 
 func _on_control_mouse_exited() -> void:
 	Globals.sound_manager.sfx_LowerCard.play()
 	var tw: Tween = get_tree().create_tween()
-	tw.tween_property(self, "position:y", save_pos.y + yPlus, 0.2)
-	#print("mouse exited")
+	tw.tween_property(self, "position:y", save_pos.y, 0.2)
 
 func _on_mouse_entered() -> void:
 	Globals.sound_manager.sfx_ViewCard.play()
-	#print("mouse reentered")
 	var tw: Tween = get_tree().create_tween()
-	tw.tween_property(self, "position:y", save_pos.y, 0.2)
-	#tw.tween_callback(find_neighbours)
+	tw.tween_property(self, "position:y", save_pos.y - yPlus, 0.2)

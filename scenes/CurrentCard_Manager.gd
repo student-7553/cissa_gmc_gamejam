@@ -12,6 +12,7 @@ func _ready() -> void:
 	assert(cardManager != null, "CardManager is empty")
 
 	cardManager.cardStackUpdate.connect(handleCardStackUpdate)
+	handleCardStackUpdate()
 
 func handleCardStackUpdate() -> void:
 	var topCard = cardManager.getTopCard()
