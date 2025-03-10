@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4x17dpp25op7"]
+[gd_scene load_steps=6 format=3 uid="uid://b4x17dpp25op7"]
 
 [ext_resource type="PackedScene" uid="uid://ca27i37n8tyl3" path="res://assets/models/glTF/HexCell_Beach_1.glb" id="1_pq5na"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_7xwds"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_7610s"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_2iycy"]
+[ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="5_jr4kd"]
 
-[node name="beach_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_pq5na")]
+[node name="beach_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_pq5na")]
 script = ExtResource("2_7xwds")
 mesh = NodePath("HexCell_Beach_1")
 cell_type = 6
+score_indicator = NodePath("score_indicator")
 
 [node name="HexCell_Beach_1" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
@@ -21,5 +23,7 @@ transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
 
 [node name="check" type="Node" parent="." index="3"]
 script = ExtResource("4_2iycy")
+
+[node name="score_indicator" parent="." index="5" instance=ExtResource("5_jr4kd")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

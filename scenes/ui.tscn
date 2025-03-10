@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
-[ext_resource type="Script" path="res://scripts/progress_manager.gd" id="10_cof4p"]
+[ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
 [ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
 [ext_resource type="Texture2D" uid="uid://xvf2vva5c5c8" path="res://assets/textures/UI/GameWin.png" id="14_cof4p"]
 [ext_resource type="Texture2D" uid="uid://beshk4dkwg7ft" path="res://assets/textures/UI/GameEndBackdrop.png" id="15_f7tlh"]
@@ -236,6 +236,7 @@ visible = false
 z_index = 500
 
 [node name="GameEndScreen" type="Panel" parent="."]
+visible = false
 z_index = 200
 texture_filter = 1
 anchors_preset = 15

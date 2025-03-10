@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmgqf6t1jt27l"]
+[gd_scene load_steps=7 format=3 uid="uid://dmgqf6t1jt27l"]
 
 [ext_resource type="PackedScene" uid="uid://bsygi7f3u4c11" path="res://assets/models/glTF/HexCell_Arctic_1.glb" id="1_tnm24"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_gxjut"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_rn81e"]
 [ext_resource type="Script" uid="uid://bjj3l2fp4ech3" path="res://scripts/synergy/arctic_synergy.gd" id="4_16vo3"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_r3cpd"]
+[ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_mdqpg"]
 
-[node name="arctic_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_tnm24")]
+[node name="arctic_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_tnm24")]
 script = ExtResource("2_gxjut")
 mesh = NodePath("HexCell_Arctic_1")
 cell_type = 5
+score_indicator = NodePath("score_indicator")
 
 [node name="HexCell_Arctic_1" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
@@ -23,5 +25,7 @@ script = ExtResource("4_16vo3")
 
 [node name="check" type="Node" parent="." index="3"]
 script = ExtResource("4_r3cpd")
+
+[node name="score_indicator" parent="." index="5" instance=ExtResource("6_mdqpg")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
