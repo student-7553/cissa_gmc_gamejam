@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://csrwcqtn4ggye"]
+[gd_scene load_steps=3 format=3 uid="uid://csrwcqtn4ggye"]
 
 [ext_resource type="Texture2D" uid="uid://b4l5hn2inacrg" path="res://assets/textures/new card/Sprite-mountain.png" id="1_genw0"]
+[ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_k6tau"]
 
 [node name="Control" type="TextureRect"]
 anchors_preset = -1
@@ -10,6 +11,13 @@ offset_right = -0.432037
 offset_bottom = -0.223999
 texture = ExtResource("1_genw0")
 stretch_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_k6tau")
 
 [node name="Card Title" type="Label" parent="."]
 clip_children = 2

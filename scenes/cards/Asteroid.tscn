@@ -1,14 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1d8qxrn8iqxk"]
+[gd_scene load_steps=3 format=3 uid="uid://d1d8qxrn8iqxk"]
 
 [ext_resource type="Texture2D" uid="uid://cxrm8hwr0hocs" path="res://assets/textures/new card/Sprite-asteroid.png" id="1_j4qf0"]
+[ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_krgdd"]
 
-[node name="Control" type="TextureRect"]
+[node name="Control2" type="TextureRect"]
 texture_filter = 1
 anchors_preset = -1
 anchor_right = 0.391
 anchor_bottom = 1.0
 offset_right = -0.432037
 texture = ExtResource("1_j4qf0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_krgdd")
 
 [node name="Card Title" type="Label" parent="."]
 clip_children = 2
