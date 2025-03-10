@@ -30,51 +30,61 @@ font_size = 64
 [node name="UI" type="CanvasLayer"]
 follow_viewport_enabled = true
 
-[node name="HUD" type="TextureRect" parent="."]
-anchors_preset = -1
-anchor_right = 1.001
-anchor_bottom = 1.003
-texture = ExtResource("1_8k7j3")
-
-[node name="Button_Discard" type="Button" parent="HUD"]
+[node name="Button_Discard" type="Button" parent="."]
 z_index = 70
 texture_filter = 1
 custom_minimum_size = Vector2(150, 50)
-layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 50.0
-offset_top = -224.944
-offset_right = 200.0
-offset_bottom = -174.944
+offset_top = -240.0
+offset_right = 234.0
+offset_bottom = -173.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("13_f7tlh")
 theme_override_font_sizes/font_size = 64
 text = "Discard"
 script = ExtResource("3_cof4p")
 
+[node name="HUD" type="TextureRect" parent="."]
+visible = false
+anchors_preset = -1
+anchor_right = 1.001
+anchor_bottom = 1.003
+texture = ExtResource("1_8k7j3")
+
 [node name="PanelDown" type="Sprite2D" parent="."]
 z_index = 40
 position = Vector2(579, 596.5)
 scale = Vector2(0.482422, 0.151562)
 
-[node name="CardCount" type="Label" parent="."]
-z_index = 10
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -101.0
-offset_top = -52.0
-offset_right = -37.0
-offset_bottom = -29.0
+offset_left = -356.0
+offset_top = -72.0
+offset_right = -16.0
+offset_bottom = -16.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="text" type="Label" parent="HBoxContainer"]
+z_index = 10
+layout_mode = 2
 theme_override_fonts/font = ExtResource("4_jkdwc")
 theme_override_font_sizes/font_size = 64
-text = "0000000"
+text = "Cards Left: "
+
+[node name="CardCount" type="Label" parent="HBoxContainer"]
+z_index = 10
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_jkdwc")
+theme_override_font_sizes/font_size = 64
+text = "99"
 script = ExtResource("1_nt7q6")
 
 [node name="Current-Card" type="Control" parent="."]
@@ -112,18 +122,20 @@ script = ExtResource("10_cof4p")
 
 [node name="TotalLifeEnergy" type="Label" parent="Progress"]
 z_index = 5
+custom_minimum_size = Vector2(120, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -31.96
-offset_top = 10.495
-offset_right = 32.232
-offset_bottom = 85.495
-text = "0
-
-"
+offset_left = -60.0
+offset_top = 28.0
+offset_right = 60.0
+offset_bottom = 103.0
+grow_horizontal = 2
+pivot_offset = Vector2(60, 30)
+theme_override_fonts/font = ExtResource("4_jkdwc")
+theme_override_font_sizes/font_size = 64
+text = "00000"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="Progress"]
 z_index = 1
@@ -141,10 +153,14 @@ max_value = 1000.0
 texture_under = ExtResource("11_ycmcx")
 texture_progress = ExtResource("12_ycmcx")
 
+[node name="Timer" type="Timer" parent="Progress"]
+one_shot = true
+
 [node name="CardCarousel" parent="." instance=ExtResource("17_f7tlh")]
 visible = false
 
 [node name="SettingsPanel" parent="." instance=ExtResource("2_jkdwc")]
+visible = false
 z_index = 90
 mouse_filter = 2
 
@@ -278,9 +294,10 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 
-[connection signal="mouse_entered" from="HUD/Button_Discard" to="HUD/Button_Discard" method="_on_mouse_entered"]
-[connection signal="pressed" from="HUD/Button_Discard" to="HUD/Button_Discard" method="onPress"]
+[connection signal="mouse_entered" from="Button_Discard" to="Button_Discard" method="_on_mouse_entered"]
+[connection signal="pressed" from="Button_Discard" to="Button_Discard" method="onPress"]
 [connection signal="mouse_entered" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_control_mouse_exited"]
+[connection signal="timeout" from="Progress/Timer" to="Progress" method="_on_timer_timeout"]
 [connection signal="pressed" from="GameEndScreen/GameWinBackdrop/Button" to="GameEndScreen/GameWinBackdrop/Button" method="_on_pressed"]
 [connection signal="pressed" from="GameEndScreen/GameOverBackdrop/Button" to="GameEndScreen/GameOverBackdrop/Button" method="_on_pressed"]
