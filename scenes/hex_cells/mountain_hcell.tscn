@@ -25,6 +25,7 @@ script = ExtResource("4_dx26d")
 
 [node name="check" type="Node" parent="." index="3"]
 script = ExtResource("4_kf45k")
+valid_cells = Array[int]([2])
 
 [node name="score_indicator" parent="." index="5" instance=ExtResource("6_ifeoy")]
 

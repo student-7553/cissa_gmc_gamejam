@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
-[ext_resource type="PackedScene" uid="uid://clwmii4ww5lc8" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
-[ext_resource type="Script" uid="uid://dgkhpjluyh7eg" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
+[ext_resource type="PackedScene" uid="uid://715os2dhpmfu" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
+[ext_resource type="Script" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
 [ext_resource type="Texture2D" uid="uid://xkeirwhipm1r" path="res://assets/Cards/Sprite-forest.png" id="3_toj4d"]
 [ext_resource type="Script" uid="uid://yrb1khsfclgs" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
