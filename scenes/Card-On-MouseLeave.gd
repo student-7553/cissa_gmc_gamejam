@@ -36,5 +36,5 @@ func _on_mouse_entered() -> void:
 	Globals.sound_manager.sfx_ViewCard.play()
 	#print("mouse reentered")
 	var tw: Tween = get_tree().create_tween()
-	tw.tween_property(self, "position:y", save_pos.y, 0.25)
+	tw.tween_property(self, "position:y", save_pos.y, 0.2)
 	#tw.tween_callback(find_neighbours)
