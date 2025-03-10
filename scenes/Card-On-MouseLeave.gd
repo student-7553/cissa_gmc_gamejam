@@ -9,6 +9,8 @@ var save_pos: Vector2
 var spawnedCurrentCard: TextureRect
 var cardManager: CardManager
 
+@export var yPlus = 200
+
 func _ready() -> void:
 	save_pos = position
 
@@ -19,14 +21,15 @@ func clearCurrentCard() -> void:
 	pass
 
 func spawnNextCurrentCard(card: Card) -> void:
-	var cardSpriteNode = card.cardSpriteScene.instantiate()
+	var cardSpriteNode: Node = card.cardSpriteScene.instantiate()
+	# cardSpriteNode.scale =
 	add_child(cardSpriteNode)
 	pass
 
 func _on_control_mouse_exited() -> void:
 	Globals.sound_manager.sfx_LowerCard.play()
 	var tw: Tween = get_tree().create_tween()
-	tw.tween_property(self, "position:y", save_pos.y + 300, 0.5)
+	tw.tween_property(self, "position:y", save_pos.y + yPlus, 0.5)
 	#print("mouse exited")
 
 func _on_mouse_entered() -> void:
