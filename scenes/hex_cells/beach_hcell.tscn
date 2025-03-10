@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_7610s"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_2iycy"]
 
-[node name="beach_hcell" instance=ExtResource("1_pq5na")]
+[node name="beach_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_pq5na")]
 script = ExtResource("2_7xwds")
+mesh = NodePath("HexCell_Beach_1")
 cell_type = 6
 
 [node name="HexCell_Beach_1" parent="." index="0"]

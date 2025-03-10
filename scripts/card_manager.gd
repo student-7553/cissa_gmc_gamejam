@@ -24,10 +24,7 @@ func _ready() -> void:
 	
 	# print(possibleCards2)
 	handleStackCardInit()
-	
 	cardStackUpdate.emit()
-
-	pass
 
 func handleStackCardInit() -> void:
 	for index in cardStackCount:

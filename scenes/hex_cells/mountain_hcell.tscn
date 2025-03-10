@@ -6,8 +6,9 @@
 [ext_resource type="Script" uid="uid://dnix3j8esfofl" path="res://scripts/synergy/mountain_synergy.gd" id="4_dx26d"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_kf45k"]
 
-[node name="mountain_hcell" instance=ExtResource("1_x88t0")]
+[node name="mountain_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_x88t0")]
 script = ExtResource("2_flkdx")
+mesh = NodePath("HexCell_Mountain")
 cell_type = 4
 
 [node name="HexCell_Mountain" parent="." index="0"]
