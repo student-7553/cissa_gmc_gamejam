@@ -50,8 +50,6 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_so4jf")
 theme_override_font_sizes/font_size = 36
-text = "+100 to each adjacent Forest
-
-+100 Life"
+text = "+100 to each adjacent Forest"
 horizontal_alignment = 1
 autowrap_mode = 3
