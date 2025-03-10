@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bkqd76rkx1smn" path="res://scenes/cards/forest.tscn" id="1_0f2r1"]
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_5ygsc"]
-[ext_resource type="PackedScene" uid="uid://gcmj6b7jl0mq" path="res://scenes/hex_cells/forest_hcell.tscn" id="1_eexb2"]
+[ext_resource type="PackedScene" uid="uid://p8sbiy7ewy4g" path="res://scenes/hex_cells/forest_hcell.tscn" id="1_eexb2"]
 
 [resource]
 script = ExtResource("1_5ygsc")

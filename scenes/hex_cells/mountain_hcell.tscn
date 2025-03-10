@@ -1,21 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://c54ukn8exfwdg"]
+[gd_scene load_steps=6 format=3 uid="uid://cbjnbrxn8lp8c"]
 
 [ext_resource type="PackedScene" uid="uid://dn0o8fb7kg06s" path="res://assets/models/glTF/HexCell_Mountain_1.glb" id="1_x88t0"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_flkdx"]
-[ext_resource type="Script" path="res://scripts/cards/check/mountain_check.gd" id="3_k7v7d"]
-[ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="4_kf45k"]
+[ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_k7v7d"]
+[ext_resource type="Script" uid="uid://dnix3j8esfofl" path="res://scripts/synergy/mountain_synergy.gd" id="4_dx26d"]
+[ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_kf45k"]
 
 [node name="mountain_hcell" instance=ExtResource("1_x88t0")]
 script = ExtResource("2_flkdx")
+cell_type = 4
 
 [node name="HexCell_Mountain" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
 
-[node name="check" type="Node" parent="." index="1"]
-script = ExtResource("3_k7v7d")
+[node name="Area3D" type="Area3D" parent="." index="1"]
 
-[node name="Area3D" type="Area3D" parent="." index="2"]
+[node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("3_k7v7d")]
 
-[node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("4_kf45k")]
+[node name="synergy" type="Node" parent="." index="2"]
+script = ExtResource("4_dx26d")
+
+[node name="check" type="Node" parent="." index="3"]
+script = ExtResource("4_kf45k")
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

@@ -1,5 +1,8 @@
 extends Node
 class_name BaseCheck
 
-func checkIfValidToPlace(nextCard: Card) -> bool:
-	return false
+## The list of cells that can be placed on top of this cell
+@export var valid_cells: Array[Card.PossibleCell]
+
+func valid_placement(type: Card.PossibleCell) -> bool:
+	return type in valid_cells

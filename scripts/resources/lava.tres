@@ -8,7 +8,6 @@
 [resource]
 script = ExtResource("1_tyf36")
 cardSprite = ExtResource("1_ugylg")
-scene = ExtResource("2_xvyn2")
 cellKey = 2
 cardSpriteScene = ExtResource("2_4d16j")
 metadata/_custom_type_script = "uid://cx0txkira3or2"

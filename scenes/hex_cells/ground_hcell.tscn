@@ -1,22 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://b38mwc80soeru"]
+[gd_scene load_steps=6 format=3 uid="uid://0whiw1aor87n"]
 
 [ext_resource type="PackedScene" uid="uid://d106yhqjv61ph" path="res://assets/models/glTF/HexCell_Ground_1.glb" id="1_cu7wa"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_ngepc"]
-[ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_penwm"]
-[ext_resource type="Script" path="res://scripts/cards/check/ground_check.gd" id="3_s0w8f"]
+[ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_s0w8f"]
+[ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_penwm"]
+[ext_resource type="Script" uid="uid://bgiegy4du4vj7" path="res://scripts/synergy/ground_synergy.gd" id="4_r6xy3"]
 
 [node name="ground_hcell" instance=ExtResource("1_cu7wa")]
 script = ExtResource("2_ngepc")
+cell_type = 1
 
 [node name="HexCell_Ground" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="." index="1"]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
 
-[node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("3_penwm")]
+[node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("3_s0w8f")]
 
-[node name="check" type="Node" parent="." index="2"]
-script = ExtResource("3_s0w8f")
+[node name="synergy" type="Node" parent="." index="2"]
+script = ExtResource("4_r6xy3")
+
+[node name="check" type="Node" parent="." index="3"]
+script = ExtResource("4_penwm")
+valid_cells = Array[int]([2, 0, 3, 4])
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

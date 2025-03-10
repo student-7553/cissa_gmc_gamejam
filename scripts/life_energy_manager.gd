@@ -7,6 +7,6 @@ signal update
 @export var currentLifeEnergy: int = 0
 
 func updatedLifeEnergy(_currentLifeEnergy: int) -> void:
-    currentLifeEnergy = _currentLifeEnergy
-    update.emit()
-    pass
+	currentLifeEnergy = _currentLifeEnergy
+	update.emit()
+	pass

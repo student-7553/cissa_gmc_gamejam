@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
 [ext_resource type="Texture2D" uid="uid://bsq1oxugt7l2s" path="res://assets/textures/panorama1.jpg" id="1_jlsqs"]
 [ext_resource type="Resource" uid="uid://etvktktstvu2" path="res://scripts/resources/card_list.tres" id="4_nxtc6"]
-[ext_resource type="PackedScene" uid="uid://cnx2iulwpuq1k" path="res://scenes/hex_cells/lava_hcell.tscn" id="4_q8u5g"]
+[ext_resource type="PackedScene" uid="uid://cj0q2y1fq7awm" path="res://scenes/hex_cells/lava_hcell.tscn" id="4_q8u5g"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
 [ext_resource type="Script" path="res://scripts/cards/card_stack_forced.gd" id="8_bjd11"]
