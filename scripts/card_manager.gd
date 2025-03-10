@@ -40,7 +40,6 @@ func handleStackCardInit() -> void:
 					break
 				pass
 
-		print(chosenIndex)
 		currentStackCards.append(possibleCards.cards[chosenIndex])
 	pass
 

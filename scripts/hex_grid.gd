@@ -25,7 +25,6 @@ func generate_map():
 		for y in range(- map_size, map_size):
 			if in_map(x, y):
 				add_tile(x, y)
-	print(grid)
 # 
 func add_tile(x, y):
 	var new_tile: Hex_Cell = tile_scene.instantiate()

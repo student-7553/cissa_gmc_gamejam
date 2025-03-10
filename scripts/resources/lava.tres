@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Card" load_steps=4 format=3 uid="uid://cffe810tmx7pv"]
+[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://cffe810tmx7pv"]
 
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_tyf36"]
 [ext_resource type="Texture2D" uid="uid://ck0kdo4jx6yb" path="res://assets/textures/cards/Sprite-asteroid.png" id="1_ugylg"]
+[ext_resource type="PackedScene" uid="uid://fjudum67ein2" path="res://scenes/cards/lava.tscn" id="2_4d16j"]
 [ext_resource type="PackedScene" uid="uid://cnx2iulwpuq1k" path="res://scenes/hex_cells/lava_hcell.tscn" id="2_xvyn2"]
 
 [resource]
@@ -9,4 +10,5 @@ script = ExtResource("1_tyf36")
 cardSprite = ExtResource("1_ugylg")
 scene = ExtResource("2_xvyn2")
 cellKey = 2
+cardSpriteScene = ExtResource("2_4d16j")
 metadata/_custom_type_script = "uid://cx0txkira3or2"

@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=25 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://bsekmqr2wkbme" path="res://scripts/ui/total_life_energy.gd" id="1_yev5y"]
 [ext_resource type="Texture2D" uid="uid://xkeirwhipm1r" path="res://assets/Cards/Sprite-forest.png" id="3_toj4d"]
 [ext_resource type="Texture2D" uid="uid://dxflifp8sebtl" path="res://assets/textures/UI/pov (1).png" id="4_kk0c7"]
-[ext_resource type="Script" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
+[ext_resource type="Script" uid="uid://yrb1khsfclgs" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
 [ext_resource type="Script" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" path="res://scenes/player's_progress.gd" id="7_fyfsq"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bmso0wc058cy6" path="res://assets/textures/cards/Sprite-forest.png" id="12_qsv74"]
 [ext_resource type="Texture2D" uid="uid://ch8c7mit2j7pn" path="res://assets/textures/cards/Sprite-snow.png" id="13_h1mc3"]
 [ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
+[ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
 
@@ -189,10 +190,10 @@ anchor_left = 0.5
 anchor_top = 0.949
 anchor_right = 0.5
 anchor_bottom = 0.949
-offset_left = -181.5
-offset_top = -311.272
-offset_right = 458.5
-offset_bottom = 328.728
+offset_left = -179.5
+offset_top = -311.671
+offset_right = 460.5
+offset_bottom = 328.329
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_cgfq5")
 
@@ -575,6 +576,8 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Game over"
 label_settings = SubResource("LabelSettings_cof4p")
+
+[node name="Control" parent="." instance=ExtResource("17_f7tlh")]
 
 [connection signal="pressed" from="Card Deck/Panel/Button2" to="Card Deck/Panel/Button2" method="_on_deck_button_pressed"]
 [connection signal="mouse_entered" from="Current-Card/Card Holder" to="Current-Card/Card Holder" method="_on_mouse_entered"]

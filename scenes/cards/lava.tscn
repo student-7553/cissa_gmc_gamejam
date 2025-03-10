@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://fjudum67ein2"]
+
+[ext_resource type="Texture2D" uid="uid://qn5e7c7f4xfx" path="res://assets/Cards/Sprite-desert.png" id="1_vy5ax"]
+
+[node name="Control" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -512.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vy5ax")
+stretch_mode = 2
+
+[node name="Card Title" type="Label" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -322.0
+offset_right = 219.0
+offset_bottom = -262.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Lava"
+horizontal_alignment = 1
+
+[node name="Card Text" type="Label" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -296.0
+offset_right = 223.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Location: Anywhere
+Effect:	 
+*   +1 life
+*   If placed on an ocean, turns the node into a ground node"
+autowrap_mode = 3
