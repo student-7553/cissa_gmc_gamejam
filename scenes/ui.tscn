@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=28 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
@@ -11,9 +11,11 @@
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 [ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
+[ext_resource type="Texture2D" uid="uid://cwjc5gk5pgwr4" path="res://assets/textures/UI/GameEndBackdropNoDither-Sheet.png" id="13_cof4p"]
+[ext_resource type="FontFile" uid="uid://cwcpcjl2b0ejw" path="res://assets/fonts/Born3bSporty.ttf" id="13_f7tlh"]
 [ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
 [ext_resource type="Texture2D" uid="uid://xvf2vva5c5c8" path="res://assets/textures/UI/GameWin.png" id="14_cof4p"]
-[ext_resource type="Texture2D" uid="uid://beshk4dkwg7ft" path="res://assets/textures/UI/GameEndBackdrop.png" id="15_f7tlh"]
+[ext_resource type="Texture2D" uid="uid://rwtxwc48vgt4" path="res://assets/textures/UI/GameEndBackdropNoStar-Sheet.png" id="15_cof4p"]
 [ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 
@@ -264,35 +266,37 @@ script = ExtResource("16_cof4p")
 [node name="MainLabel" type="Label" parent="GameEndScreen"]
 z_index = 20
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.209
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -171.0
-offset_top = -218.0
-offset_right = 165.0
-offset_bottom = -130.0
+anchor_bottom = 0.209
+offset_left = -546.0
+offset_top = -74.432
+offset_right = 546.0
+offset_bottom = 74.568
 grow_horizontal = 2
 grow_vertical = 2
-text = "Game over"
+theme_override_fonts/font = ExtResource("13_f7tlh")
+text = "No Humans were born, the world stayed silent"
 label_settings = SubResource("LabelSettings_cof4p")
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="GameWinBackdrop" type="TextureRect" parent="GameEndScreen"]
 visible = false
 self_modulate = Color(0.574271, 0.879769, 0.766053, 1)
 z_index = 1
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.499
-anchor_top = 0.5
-anchor_right = 0.499
-anchor_bottom = 0.5
-offset_left = -570.848
-offset_top = -324.0
-offset_right = 570.152
-offset_bottom = 320.0
-texture = ExtResource("15_f7tlh")
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.544
+offset_right = -0.0880127
+offset_bottom = -0.112
+texture = ExtResource("13_cof4p")
+expand_mode = 2
 
 [node name="GameWin" type="TextureRect" parent="GameEndScreen/GameWinBackdrop"]
 z_index = 10
@@ -311,23 +315,20 @@ scale = Vector2(5, 5)
 texture = ExtResource("14_cof4p")
 
 [node name="GameOverBackdrop" type="TextureRect" parent="GameEndScreen"]
-visible = false
-self_modulate = Color(0.484294, 0.0378793, 0.141049, 1)
+self_modulate = Color(0.354525, 0.359313, 0.328108, 1)
 z_index = 1
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.499
-anchor_top = 0.5
-anchor_right = 0.499
-anchor_bottom = 0.5
-offset_left = -570.848
-offset_top = -324.0
-offset_right = 570.152
-offset_bottom = 320.0
-texture = ExtResource("15_f7tlh")
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.544
+offset_right = -0.0880127
+offset_bottom = -4.0
+texture = ExtResource("15_cof4p")
 
 [node name="GameOver" type="TextureRect" parent="GameEndScreen/GameOverBackdrop"]
-modulate = Color(0.751881, 0.751881, 0.751881, 0.576471)
+modulate = Color(1, 1, 1, 0.988235)
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
