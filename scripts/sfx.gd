@@ -8,6 +8,7 @@ class_name Sound_Manager
 @onready var sfx_PlaceNode_3: AudioStreamPlayer = $PlaceNodes/PlaceNode_3
 @onready var sfx_ViewCard: AudioStreamPlayer = $ViewCard
 @onready var sfx_LowerCard: AudioStreamPlayer = $LowerCard
+@onready var sfx_ShipHover: AudioStreamPlayer = $SpaceShipHover
 
 func _ready() -> void:
 	Globals.sound_manager = self
