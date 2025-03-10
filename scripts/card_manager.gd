@@ -2,50 +2,35 @@ extends Node3D
 
 class_name CardManager
 
-signal cardStackUpdate
+@export var deck_size: int = 58
 
-@export var possibleCards: Card_List
-
-@export var defaultSpawnCard: int = 0
-
-@export var cardStackCount: int = 10
-
-@export var forcedEntries: Array[CardStackForceEntry]
-
+var card_roulette: Array[Card] = [] # [ocean, ocean, ocean, lava, arctic, arctic]
+var card_collection: Array[Card] # collection of possible cards - [ocean, lava, arctic]
 var rng = RandomNumberGenerator.new()
+var count: int = 0
+var current_card: Card
 
-var currentStackCards: Array[Card] = []
+signal drawn_card
+signal chosen_card(card: Card)
 
 func _ready() -> void:
-	handleStackCardInit()
-	cardStackUpdate.emit()
+	Globals.card_manager = self
 
-func handleStackCardInit() -> void:
-	for index in cardStackCount:
-		var chosenIndex: int = rng.randi_range(0, possibleCards.cards.size() - 1)
+## Get a new random card
+func draw_card():
+	var spin_index: int = rng.randi_range(0, card_roulette.size() - 1)
+	count += 1
+	current_card = card_roulette[spin_index]
+	drawn_card.emit()
 
-		var randomFloat: float = rng.randf_range(0.0, 1.0)
-		var percentageCounter = 0.0
+func add_card_to_roulette(card: Card):
+	chosen_card.emit(card)
+	for entry in range(card.roulette_entries):
+		card_roulette.append(card)
+	card_collection.append(card)
 
-		for entry in forcedEntries:
-			if entry.forcedIndexStart <= index && entry.forcedIndexEnd > index:
-				percentageCounter = percentageCounter + entry.forcedPercentage
-				if percentageCounter > randomFloat:
-					print()
-					chosenIndex = possibleCards.cards.find_custom(func(card): return card.cellKey == entry.forcedCard)
-					break
-				pass
+func remaining_cards() -> int:
+	return deck_size - count
 
-		currentStackCards.append(possibleCards.cards[chosenIndex])
-	pass
-
-func getTopCard() -> Card:
-	if currentStackCards.size() == 0:
-		push_error("currentStackCards size is 0")
-		return null
-	return currentStackCards[0]
-
-func playCard() -> void:
-	var poppedCard = currentStackCards.pop_front()
-	cardStackUpdate.emit()
-	pass
+func lose_condition():
+	return count > deck_size
