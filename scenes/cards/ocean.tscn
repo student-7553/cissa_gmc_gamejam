@@ -16,10 +16,10 @@ anchor_left = 0.5
 anchor_top = 0.462
 anchor_right = 0.5
 anchor_bottom = 0.462
-offset_left = -105.0
-offset_top = 23.56
-offset_right = 105.0
-offset_bottom = 83.56
+offset_left = -103.0
+offset_top = 5.56
+offset_right = 107.0
+offset_bottom = 47.56
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
@@ -40,7 +40,7 @@ offset_right = 166.11
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "Location: Ground
+text = "Location: Ground, Lava
 Effect:	 
 *   +1 life
 *   turns the ground node into an ocean"

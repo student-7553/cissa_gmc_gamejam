@@ -5,7 +5,6 @@ class_name CardManager
 signal cardStackUpdate
 
 @export var possibleCards: Card_List
-# @export var possibleCards2: Array[Card]
 
 @export var defaultSpawnCard: int = 0
 
@@ -18,16 +17,8 @@ var rng = RandomNumberGenerator.new()
 var currentStackCards: Array[Card] = []
 
 func _ready() -> void:
-	
-	
-	
-	
-	# print(possibleCards2)
 	handleStackCardInit()
-	
 	cardStackUpdate.emit()
-
-	pass
 
 func handleStackCardInit() -> void:
 	for index in cardStackCount:

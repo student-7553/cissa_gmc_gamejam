@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgacn6wle2m7l"]
+[gd_scene load_steps=2 format=3 uid="uid://bgacn6wle2m7l"]
 
-[ext_resource type="PackedScene" uid="uid://btidctxipuuiy" path="res://assets/models/glTF/HexCell_Arctic_1.glb" id="1_8bnxa"]
-[ext_resource type="Script" uid="uid://buloub7v6367x" path="res://scripts/cards/check/arctic_check.gd" id="2_bp0kn"]
+[ext_resource type="PackedScene" uid="uid://bsygi7f3u4c11" path="res://assets/models/glTF/HexCell_Arctic_1.glb" id="1_8bnxa"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -10,4 +9,3 @@
 [node name="SynergyLogic" type="Node3D" parent="."]
 
 [node name="check" type="Node3D" parent="."]
-script = ExtResource("2_bp0kn")

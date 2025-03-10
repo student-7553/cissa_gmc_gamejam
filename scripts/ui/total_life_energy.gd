@@ -1,17 +1,11 @@
 extends Label
 
-
-var lifeEnergyManager: LifeEnergyManager
-
 func updateUI() -> void:
-	text = str(lifeEnergyManager.currentLifeEnergy)
-	pass
+	text = str(Globals.life_energy_manager.currentLifeEnergy)
+	print(Globals.life_energy_manager.currentLifeEnergy)
+	print(text)
 
 func _ready() -> void:
-	if !lifeEnergyManager:
-		lifeEnergyManager = get_node("../../../LifeEnergyManager")
-		print(lifeEnergyManager)
-	
-		lifeEnergyManager.update.connect(updateUI)
-		updateUI()
-	pass
+	Globals.life_energy_manager.update.connect(updateUI)
+	updateUI()
+# 
