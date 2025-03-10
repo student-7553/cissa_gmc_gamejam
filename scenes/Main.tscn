@@ -63,7 +63,7 @@ tile_scene = ExtResource("4_q8u5g")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
 possibleCards = SubResource("Resource_cvmbd")
-cardStackCount = 20
+cardStackCount = 100
 forcedEntries = Array[ExtResource("8_bjd11")]([ExtResource("9_qmy6f"), SubResource("Resource_bjd11")])
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]
