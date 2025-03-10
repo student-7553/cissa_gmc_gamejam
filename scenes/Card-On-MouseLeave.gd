@@ -1,15 +1,14 @@
 extends Control
-
 class_name CardHolder
-#slides the card down if the player's mouse leaves the card
+
+# Slides the card down if the player's mouse leaves the card
+
 @export var Card_Holder: Control
+@export var yPlus = 280
 
 var save_pos: Vector2
-
 var spawnedCurrentCard: TextureRect
 var cardManager: CardManager
-
-@export var yPlus = 200
 
 func _ready() -> void:
 	save_pos = position
