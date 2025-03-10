@@ -1,13 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://jkirbq8yfswi"]
+[gd_scene load_steps=2 format=3 uid="uid://p43llu6fbe8q"]
 
-[ext_resource type="Texture2D" uid="uid://blopq8ff6mc18" path="res://assets/textures/new card/Sprite-Ocean.png" id="1_8ichh"]
+[ext_resource type="Texture2D" uid="uid://dkca34kofqdtu" path="res://assets/textures/new card/Sprite-Gloablt.png" id="1_t4q2p"]
 
 [node name="Control" type="TextureRect"]
+texture_filter = 1
 anchors_preset = -1
 anchor_right = 0.391
 anchor_bottom = 1.0
-texture = ExtResource("1_8ichh")
-stretch_mode = 2
+offset_right = -0.432037
+texture = ExtResource("1_t4q2p")
 
 [node name="Card Title" type="Label" parent="."]
 clip_children = 2
@@ -24,25 +25,25 @@ offset_bottom = 47.56
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
-text = "Ocean"
+text = "Settlement"
 horizontal_alignment = 1
 
 [node name="Card Text" type="Label" parent="."]
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.523
-anchor_top = 0.85
-anchor_right = 0.523
-anchor_bottom = 0.85
-offset_left = -165.89
-offset_top = -187.0
-offset_right = 166.11
+anchor_left = 0.522
+anchor_top = 0.852
+anchor_right = 0.522
+anchor_bottom = 0.852
+offset_left = -165.9
+offset_top = -187.096
+offset_right = 166.1
+offset_bottom = -0.0960083
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
-text = "Location: Ground, Lava
+text = "Location: Ground
 Effect:	 
-*   +1 life
-*   turns the ground node into an ocean"
+*   signs of Civilization, gives +1 life to every placed node on the map"
 autowrap_mode = 3

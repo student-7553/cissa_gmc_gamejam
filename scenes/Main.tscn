@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
 [ext_resource type="Texture2D" uid="uid://bsq1oxugt7l2s" path="res://assets/textures/panorama1.jpg" id="1_jlsqs"]
-[ext_resource type="Script" uid="uid://ce25wqeailiwx" path="res://scripts/world_environment.gd" id="2_1iba3"]
+[ext_resource type="Script" path="res://scripts/world_environment.gd" id="2_1iba3"]
 [ext_resource type="PackedScene" uid="uid://cj0q2y1fq7awm" path="res://scenes/hex_cells/lava_hcell.tscn" id="4_q8u5g"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://ggxwtq4sadur" path="res://scenes/player_manager.tscn" id="12_bjd11"]
 [ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="12_yxlcp"]
 [ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="13_ebg2g"]
-[ext_resource type="Script" uid="uid://co0s6k43jokap" path="res://scripts/game_manager.gd" id="13_qmy6f"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 [ext_resource type="Resource" uid="uid://csbyk666hipww" path="res://scripts/resources/camp.tres" id="14_yxlcp"]
 

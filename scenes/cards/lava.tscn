@@ -5,7 +5,7 @@
 [node name="Control" type="TextureRect"]
 anchors_preset = -1
 anchor_right = 0.391
-anchor_bottom = 0.988
+anchor_bottom = 1.0
 offset_right = -0.432037
 offset_bottom = -0.223999
 texture = ExtResource("1_6tduf")
