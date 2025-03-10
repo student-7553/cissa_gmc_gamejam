@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ux7gh38v7tss"]
+[gd_scene load_steps=8 format=3 uid="uid://ux7gh38v7tss"]
 
 [ext_resource type="PackedScene" uid="uid://b0n7kew1266pq" path="res://assets/models/glTF/HexCell_Ocean_1.glb" id="1_xor61"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_018vy"]
@@ -6,10 +6,12 @@
 [ext_resource type="Script" uid="uid://cgkap1xipd1f6" path="res://scripts/synergy/ocean_synergy.gd" id="4_5sd38"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_cg5u2"]
 [ext_resource type="Resource" uid="uid://c82sy05k4nyy" path="res://scripts/resources/ground.tres" id="5_fp5ja"]
+[ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="7_gwixi"]
 
-[node name="ocean_hcell" instance=ExtResource("1_xor61")]
+[node name="ocean_hcell" node_paths=PackedStringArray("score_indicator") instance=ExtResource("1_xor61")]
 script = ExtResource("2_018vy")
 cell_type = 3
+score_indicator = NodePath("score_indicator")
 
 [node name="HexCell_Ocean" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
@@ -25,5 +27,7 @@ ground_card = ExtResource("5_fp5ja")
 [node name="check" type="Node" parent="." index="3"]
 script = ExtResource("4_cg5u2")
 valid_cells = Array[int]([5, 2])
+
+[node name="score_indicator" parent="." index="4" instance=ExtResource("7_gwixi")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]

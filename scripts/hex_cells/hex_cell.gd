@@ -2,6 +2,7 @@ extends Node3D
 class_name Hex_Cell
 
 @export var cell_type: Card.PossibleCell
+@export var score_indicator: Score_Indicator
 
 @onready var check_node: BaseCheck = $check
 @onready var synergy: Synergy = $synergy
@@ -21,6 +22,8 @@ func _ready() -> void:
 
 func increase_score(amount: int):
 	current_score += amount
+	if score_indicator:
+		score_indicator.play_anim()
 
 ## Called when a cell is being replaced
 func copy_cell_data(cell: Hex_Cell):
