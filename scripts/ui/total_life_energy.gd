@@ -10,7 +10,6 @@ func updateUI() -> void:
 func _ready() -> void:
 	if !lifeEnergyManager:
 		lifeEnergyManager = get_node("../../../LifeEnergyManager")
-		print(lifeEnergyManager)
 	
 		lifeEnergyManager.update.connect(updateUI)
 		updateUI()
