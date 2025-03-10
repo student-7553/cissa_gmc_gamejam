@@ -42,7 +42,7 @@ func _input(event):
 		if current_cell.synergy:
 			current_cell.synergy.replace_self.connect(replace_cell)
 			current_cell.synergy.attempt_synergy_self(save_type)
-			current_cell.synergy.scan_neighbours(get_neighbours(save_coord))
+			current_cell.synergy.scan_neighbours(current_cell.synergy.get_neighbours(save_coord, grid))
 		current_cell.select_cell.connect(select_new_cell)
 
 func replace_cell(card: Card):
@@ -69,12 +69,3 @@ func select_new_cell(cell: Hex_Cell):
 	current_cell.pop_down()
 	current_cell = cell
 	current_cell.pop_up()
-
-## Get the adjacent cells
-func get_neighbours(pos: Vector3) -> Array[Hex_Cell]:
-	var hex_array: Array[Hex_Cell] = []
-	for hex_dir in HEX_DIRECTIONS:
-		var adj_pos: Vector3 = hex_dir + pos
-		if adj_pos in grid.grid.keys():
-			hex_array.append(grid.grid[hex_dir + pos])
-	return hex_array

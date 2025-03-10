@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=29 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 [ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
+[ext_resource type="Texture2D" uid="uid://d0y7r2cfw116e" path="res://assets/textures/UI/Progress_Under.png" id="11_ycmcx"]
+[ext_resource type="Texture2D" uid="uid://duplir55kx0ww" path="res://assets/textures/UI/Progress_Complete.png" id="12_ycmcx"]
 [ext_resource type="Texture2D" uid="uid://cwjc5gk5pgwr4" path="res://assets/textures/UI/GameEndBackdropNoDither-Sheet.png" id="13_cof4p"]
 [ext_resource type="FontFile" uid="uid://cwcpcjl2b0ejw" path="res://assets/fonts/Born3bSporty.ttf" id="13_f7tlh"]
 [ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
@@ -19,8 +21,6 @@
 [ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 [ext_resource type="Script" uid="uid://285hy56rt4m8" path="res://scripts/gameRestart.gd" id="19_jkdwc"]
-[ext_resource type="PackedScene" uid="uid://cnyorwollarn7" path="res://scenes/card_choice_window.tscn" id="20_rlppe"]
-[ext_resource type="PackedScene" uid="uid://ba3sedxx2a1qd" path="res://scenes/card_choice.tscn" id="21_ycmcx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
 
@@ -29,22 +29,6 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wid3i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jei0d"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfhj8"]
-bg_color = Color(0.109804, 0.113725, 0.0313726, 0.921569)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_waygp"]
-bg_color = Color(0.28908, 0.71665, 7.70092e-07, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.129558, 0.129559, 0.129558, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qsv74"]
 
@@ -207,49 +191,47 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -120.0
-offset_top = -379.0
+offset_top = -100.0
 offset_right = 120.0
+offset_bottom = 279.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 script = ExtResource("7_7dvkv")
+yPlus = 200
 
 [node name="Progress" type="Node" parent="."]
 script = ExtResource("10_cof4p")
 
 [node name="TotalLifeEnergy" type="Label" parent="Progress"]
-z_index = 1
-anchors_preset = -1
+z_index = 5
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.071
 anchor_right = 0.5
-anchor_bottom = 0.071
 offset_left = -31.96
-offset_top = -9.008
+offset_top = 10.495
 offset_right = 32.232
-offset_bottom = 39.992
+offset_bottom = 85.495
 text = "0
 
 "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="life_energy_bar" type="ProgressBar" parent="Progress"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Progress"]
 z_index = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.006
-anchor_right = 0.5
-anchor_bottom = 0.006
-offset_left = -287.544
-offset_top = 4.112
-offset_right = 288.456
-offset_bottom = 32.112
-theme_override_styles/background = SubResource("StyleBoxFlat_cfhj8")
-theme_override_styles/fill = SubResource("StyleBoxFlat_waygp")
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 648.0
+grow_horizontal = 2
+
+[node name="life_energy_bar" type="TextureProgressBar" parent="Progress/AspectRatioContainer"]
+z_index = 1
+layout_mode = 2
+mouse_filter = 2
 max_value = 1000.0
-step = 1.0
-show_percentage = false
+texture_under = ExtResource("11_ycmcx")
+texture_progress = ExtResource("12_ycmcx")
 
 [node name="CardCarousel" parent="." instance=ExtResource("17_f7tlh")]
 visible = false
@@ -260,7 +242,7 @@ mouse_filter = 2
 
 [node name="GameEndScreen" type="Panel" parent="."]
 visible = false
-z_index = 100
+z_index = 200
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -271,7 +253,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_qsv74")
 script = ExtResource("16_cof4p")
 
 [node name="MainLabel" type="Label" parent="GameEndScreen"]
-z_index = 20
+z_index = 205
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -293,7 +275,7 @@ autowrap_mode = 3
 [node name="GameWinBackdrop" type="TextureRect" parent="GameEndScreen"]
 visible = false
 self_modulate = Color(0.574271, 0.879769, 0.766053, 1)
-z_index = 1
+z_index = 200
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -306,7 +288,7 @@ texture = ExtResource("13_cof4p")
 expand_mode = 2
 
 [node name="GameWin" type="TextureRect" parent="GameEndScreen/GameWinBackdrop"]
-z_index = 10
+z_index = 205
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -322,6 +304,7 @@ scale = Vector2(5, 5)
 texture = ExtResource("14_cof4p")
 
 [node name="Button" type="Button" parent="GameEndScreen/GameWinBackdrop"]
+z_index = 200
 layout_mode = 0
 offset_left = 525.0
 offset_top = 575.0
@@ -332,7 +315,7 @@ script = ExtResource("19_jkdwc")
 
 [node name="GameOverBackdrop" type="TextureRect" parent="GameEndScreen"]
 self_modulate = Color(0.354525, 0.359313, 0.328108, 1)
-z_index = 1
+z_index = 200
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -345,6 +328,7 @@ texture = ExtResource("15_cof4p")
 
 [node name="GameOver" type="TextureRect" parent="GameEndScreen/GameOverBackdrop"]
 modulate = Color(1, 1, 1, 0.988235)
+z_index = 200
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -363,6 +347,7 @@ theme = SubResource("Theme_h1mc3")
 texture = ExtResource("13_h1mc3")
 
 [node name="Button" type="Button" parent="GameEndScreen/GameOverBackdrop"]
+z_index = 200
 layout_mode = 0
 offset_left = 525.0
 offset_top = 575.0
@@ -370,21 +355,6 @@ offset_right = 639.0
 offset_bottom = 606.0
 text = "Restart Game"
 script = ExtResource("19_jkdwc")
-
-[node name="card_choice_window" parent="." instance=ExtResource("20_rlppe")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -103.0
-offset_top = 119.0
-offset_right = 335.0
-offset_bottom = 284.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.5, 0.5)
-card_choice_scene = ExtResource("21_ycmcx")
 
 [connection signal="pressed" from="HUD/Button_Discard" to="HUD/Button_Discard" method="onPress"]
 [connection signal="pressed" from="Card Deck/Panel/Button_OpenCarousel" to="Card Deck/Panel/Button_OpenCarousel" method="_on_deck_button_pressed"]
