@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ggxwtq4sadur" path="res://scenes/player_manager.tscn" id="12_bjd11"]
 [ext_resource type="Resource" uid="uid://dagx6mgh8cldu" path="res://scripts/resources/mountain.tres" id="12_yxlcp"]
 [ext_resource type="Resource" uid="uid://dx3fhg74pmpcl" path="res://scripts/resources/ocean.tres" id="13_ebg2g"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="13_qmy6f"]
+[ext_resource type="Script" uid="uid://co0s6k43jokap" path="res://scripts/game_manager.gd" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
@@ -44,9 +44,9 @@ metadata/_custom_type_script = "uid://bghi0wij0p1a1"
 
 [sub_resource type="Resource" id="Resource_bjd11"]
 script = ExtResource("8_bjd11")
-forcedPercentage = 0.35
-forcedIndexStart = 5
-forcedIndexEnd = 10
+forcedPercentage = 0.5
+forcedIndexStart = 7
+forcedIndexEnd = 40
 forcedCard = 3
 
 [node name="Main" type="Node3D"]
@@ -63,7 +63,7 @@ tile_scene = ExtResource("4_q8u5g")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.1951, 0)
 script = ExtResource("4_rarhs")
 possibleCards = SubResource("Resource_cvmbd")
-cardStackCount = 100
+cardStackCount = 40
 forcedEntries = Array[ExtResource("8_bjd11")]([ExtResource("9_qmy6f"), SubResource("Resource_bjd11")])
 
 [node name="LifeEnergyManager" type="Node3D" parent="."]

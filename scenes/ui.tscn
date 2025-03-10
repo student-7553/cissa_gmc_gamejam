@@ -1,16 +1,16 @@
-[gd_scene load_steps=28 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=29 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
 [ext_resource type="PackedScene" uid="uid://715os2dhpmfu" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
-[ext_resource type="Script" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
+[ext_resource type="Script" uid="uid://dgkhpjluyh7eg" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
 [ext_resource type="Texture2D" uid="uid://xkeirwhipm1r" path="res://assets/Cards/Sprite-forest.png" id="3_toj4d"]
 [ext_resource type="Script" uid="uid://yrb1khsfclgs" path="res://scripts/ui/deck_button.gd" id="5_ox6g0"]
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
-[ext_resource type="Script" path="res://scripts/progress_manager.gd" id="10_cof4p"]
+[ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
 [ext_resource type="Texture2D" uid="uid://cwjc5gk5pgwr4" path="res://assets/textures/UI/GameEndBackdropNoDither-Sheet.png" id="13_cof4p"]
 [ext_resource type="FontFile" uid="uid://cwcpcjl2b0ejw" path="res://assets/fonts/Born3bSporty.ttf" id="13_f7tlh"]
 [ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://rwtxwc48vgt4" path="res://assets/textures/UI/GameEndBackdropNoStar-Sheet.png" id="15_cof4p"]
 [ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
+[ext_resource type="Script" uid="uid://285hy56rt4m8" path="res://scripts/gameRestart.gd" id="19_jkdwc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrt2e"]
 
@@ -77,6 +78,7 @@ script = ExtResource("3_cof4p")
 [node name="Card Deck" type="Node" parent="."]
 
 [node name="Panel" type="Panel" parent="Card Deck"]
+visible = false
 z_index = 50
 anchors_preset = 3
 anchor_left = 1.0
@@ -249,7 +251,6 @@ show_percentage = false
 
 [node name="CardCarousel" parent="." instance=ExtResource("17_f7tlh")]
 visible = false
-z_index = 80
 
 [node name="SettingsPanel" parent="." instance=ExtResource("2_jkdwc")]
 z_index = 90
@@ -318,6 +319,14 @@ offset_bottom = -134.38
 scale = Vector2(5, 5)
 texture = ExtResource("14_cof4p")
 
+[node name="Button" type="Button" parent="GameEndScreen/GameWinBackdrop"]
+offset_left = 525.0
+offset_top = 575.0
+offset_right = 639.0
+offset_bottom = 606.0
+text = "Restart Game"
+script = ExtResource("19_jkdwc")
+
 [node name="GameOverBackdrop" type="TextureRect" parent="GameEndScreen"]
 self_modulate = Color(0.354525, 0.359313, 0.328108, 1)
 z_index = 1
@@ -350,8 +359,19 @@ scale = Vector2(5, 5)
 theme = SubResource("Theme_h1mc3")
 texture = ExtResource("13_h1mc3")
 
+[node name="Button" type="Button" parent="GameEndScreen/GameOverBackdrop"]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 575.0
+offset_right = 639.0
+offset_bottom = 606.0
+text = "Restart Game"
+script = ExtResource("19_jkdwc")
+
 [connection signal="pressed" from="HUD/Button_Discard" to="HUD/Button_Discard" method="onPress"]
 [connection signal="pressed" from="Card Deck/Panel/Button_OpenCarousel" to="Card Deck/Panel/Button_OpenCarousel" method="_on_deck_button_pressed"]
 [connection signal="toggleVisibility" from="Card Deck/Panel/Button_OpenCarousel" to="CardCarousel" method="_on_button_2_toggle_visibility"]
 [connection signal="mouse_entered" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_control_mouse_exited"]
+[connection signal="pressed" from="GameEndScreen/GameWinBackdrop/Button" to="GameEndScreen/GameWinBackdrop/Button" method="_on_pressed"]
+[connection signal="pressed" from="GameEndScreen/GameOverBackdrop/Button" to="GameEndScreen/GameOverBackdrop/Button" method="_on_pressed"]

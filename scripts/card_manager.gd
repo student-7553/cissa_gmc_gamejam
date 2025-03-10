@@ -31,9 +31,11 @@ func handleStackCardInit() -> void:
 			if entry.forcedIndexStart <= index && entry.forcedIndexEnd > index:
 				percentageCounter = percentageCounter + entry.forcedPercentage
 				if percentageCounter > randomFloat:
+					print()
 					chosenIndex = possibleCards.cards.find_custom(func(card): return card.cellKey == entry.forcedCard)
 					break
 				pass
+
 		currentStackCards.append(possibleCards.cards[chosenIndex])
 	pass
 
