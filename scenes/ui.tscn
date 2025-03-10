@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
 [ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
 [ext_resource type="Texture2D" uid="uid://d0y7r2cfw116e" path="res://assets/textures/UI/Progress_Under.png" id="11_ycmcx"]
-[ext_resource type="Texture2D" uid="uid://bc1tfwxbrdu74" path="res://assets/textures/UI/Progress_Progress.png" id="12_kupmu"]
+[ext_resource type="Texture2D" uid="uid://duplir55kx0ww" path="res://assets/textures/UI/Progress_Complete.png" id="12_ycmcx"]
 [ext_resource type="Texture2D" uid="uid://cwjc5gk5pgwr4" path="res://assets/textures/UI/GameEndBackdropNoDither-Sheet.png" id="13_cof4p"]
 [ext_resource type="FontFile" uid="uid://cwcpcjl2b0ejw" path="res://assets/fonts/Born3bSporty.ttf" id="13_f7tlh"]
 [ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
@@ -209,30 +209,29 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -31.96
-offset_top = 11.615
+offset_top = 10.495
 offset_right = 32.232
-offset_bottom = 86.615
+offset_bottom = 85.495
 text = "0
 
 "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="life_energy_bar" type="TextureProgressBar" parent="Progress"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Progress"]
 z_index = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.006
-anchor_right = 0.5
-anchor_bottom = 0.006
-offset_left = -576.0
-offset_top = -3.888
-offset_right = 576.0
-offset_bottom = 644.112
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 648.0
+grow_horizontal = 2
+
+[node name="life_energy_bar" type="TextureProgressBar" parent="Progress/AspectRatioContainer"]
+z_index = 1
+layout_mode = 2
+mouse_filter = 2
 max_value = 1000.0
-step = 0.0
 texture_under = ExtResource("11_ycmcx")
-texture_progress = ExtResource("12_kupmu")
+texture_progress = ExtResource("12_ycmcx")
 
 [node name="CardCarousel" parent="." instance=ExtResource("17_f7tlh")]
 visible = false

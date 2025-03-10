@@ -1,7 +1,7 @@
 extends Node
 
 @onready var life_energy_label: Label = $TotalLifeEnergy
-@onready var life_energy_bar: TextureProgressBar = $life_energy_bar
+@onready var life_energy_bar: TextureProgressBar = $AspectRatioContainer/life_energy_bar
 
 func _ready() -> void:
 	Globals.life_energy_manager.update.connect(updateUI)
