@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=27 format=3 uid="uid://6pv160xcxskc"]
 
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
 [ext_resource type="Texture2D" uid="uid://bsq1oxugt7l2s" path="res://assets/textures/panorama1.jpg" id="1_jlsqs"]
+[ext_resource type="Script" uid="uid://ce25wqeailiwx" path="res://scripts/world_environment.gd" id="2_1iba3"]
 [ext_resource type="PackedScene" uid="uid://cj0q2y1fq7awm" path="res://scenes/hex_cells/lava_hcell.tscn" id="4_q8u5g"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
@@ -53,6 +54,7 @@ forcedCard = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6wwtl")
+script = ExtResource("2_1iba3")
 
 [node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
 
