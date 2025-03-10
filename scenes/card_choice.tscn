@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba3sedxx2a1qd"]
+
+[ext_resource type="PackedScene" uid="uid://ggmoghus375f" path="res://scenes/cards/beach.tscn" id="1_8uqop"]
+[ext_resource type="Script" uid="uid://n2pvpvl42qcn" path="res://scripts/card_choice.gd" id="1_ng52u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t60o4"]
+bg_color = Color(0, 0, 0, 0.215686)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uqop"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng52u"]
+bg_color = Color(0, 0, 0, 0.517647)
+
+[sub_resource type="Theme" id="Theme_ng52u"]
+Button/styles/hover = SubResource("StyleBoxFlat_t60o4")
+Button/styles/normal = SubResource("StyleBoxFlat_8uqop")
+Button/styles/pressed = SubResource("StyleBoxFlat_ng52u")
+
+[node name="card_choice" type="AspectRatioContainer"]
+offset_right = 450.0
+offset_bottom = 640.0
+script = ExtResource("1_ng52u")
+
+[node name="card" parent="." instance=ExtResource("1_8uqop")]
+custom_minimum_size = Vector2(0, 640)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 640)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_ng52u")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

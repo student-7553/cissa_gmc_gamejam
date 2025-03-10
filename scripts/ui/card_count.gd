@@ -1,14 +1,9 @@
 extends Label
 
-var cardManager: CardManager
-
 func updateUI() -> void:
-	text = str(cardManager.currentStackCards.size())
+	text = str(Globals.card_manager.remaining_cards())
 	pass
 
 func _ready() -> void:
-	if !cardManager:
-		cardManager = get_node("../../CardManager")
-		cardManager.cardStackUpdate.connect(updateUI)
-		updateUI()
-	pass
+	Globals.card_manager.drawn_card.connect(updateUI)
+	updateUI()
