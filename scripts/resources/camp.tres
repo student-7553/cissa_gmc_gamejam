@@ -9,4 +9,5 @@ script = ExtResource("1_qkl45")
 scene = ExtResource("2_oghei")
 cellKey = 7
 cardSpriteScene = ExtResource("1_43q3k")
+roulette_entries = 3
 metadata/_custom_type_script = "uid://cx0txkira3or2"

@@ -26,6 +26,7 @@ offset_right = 200.0
 offset_bottom = 278.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 
 [node name="Card Title" type="Label" parent="VBoxContainer"]
 clip_children = 2
@@ -43,13 +44,15 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_pdwo6")
 theme_override_font_sizes/font_size = 36
-text = "Place on: Ground, Ocean"
+text = "Place on: Ground, Ocean
+"
 autowrap_mode = 3
 
 [node name="Card Text2" type="Label" parent="VBoxContainer"]
 clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_pdwo6")
-theme_override_font_sizes/font_size = 28
-text = "+100 to every adjacent Ocean and Ground"
+theme_override_font_sizes/font_size = 36
+text = "+100 to each adjacent Ocean and Ground"
+horizontal_alignment = 1
 autowrap_mode = 3
