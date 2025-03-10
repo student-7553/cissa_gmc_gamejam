@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmso0wc058cy6"
-path="res://.godot/imported/Sprite-forest.png-ff0af2154dbe0e417c538142864fc894.ctex"
+uid="uid://cystse13l4n2v"
+path="res://.godot/imported/Sprite-Lava.png-910770aaa3dc30c52ae6f8b7b05e5f2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cards/Sprite-forest.png"
-dest_files=["res://.godot/imported/Sprite-forest.png-ff0af2154dbe0e417c538142864fc894.ctex"]
+source_file="res://assets/textures/new card/Sprite-Lava.png"
+dest_files=["res://.godot/imported/Sprite-Lava.png-910770aaa3dc30c52ae6f8b7b05e5f2d.ctex"]
 
 [params]
 
