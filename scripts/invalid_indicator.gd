@@ -9,9 +9,10 @@ func _ready() -> void:
 	hide()
 
 func _process(delta: float) -> void:
-	camera_pos = Globals.camera.global_transform.origin
-	camera_pos.y = 0
-	look_at(camera_pos, Vector3(0, 1, 0))
+	if visible:
+		camera_pos = Globals.camera.global_transform.origin
+		camera_pos.y = 0
+		look_at(camera_pos, Vector3(0, 1, 0))
 
 func indicate():
 	show()

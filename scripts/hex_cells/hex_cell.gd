@@ -3,8 +3,8 @@ class_name Hex_Cell
 
 @export var mesh: MeshInstance3D
 @export var cell_type: Card.PossibleCell
-@export var score_indicator: Score_Indicator
 
+@onready var score_indicator: Score_Indicator = $score_indicator
 @onready var invalid_indicator: Invalid_Indicator = $invalid_indicator
 @onready var check_node: BaseCheck = $check
 @onready var synergy: Synergy = $synergy

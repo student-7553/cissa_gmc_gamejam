@@ -35,3 +35,4 @@ valid_cells = Array[int]([5, 2, 6])
 [node name="invalid_indicator" parent="." index="5" instance=ExtResource("8_mfon1")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]

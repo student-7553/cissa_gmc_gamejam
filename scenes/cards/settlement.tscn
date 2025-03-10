@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://p43llu6fbe8q"]
+
+[ext_resource type="Texture2D" uid="uid://dkca34kofqdtu" path="res://assets/textures/new card/Sprite-Gloablt.png" id="1_3g204"]
+[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="2_v5loq"]
+[ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="3_a7qjd"]
+
+[node name="settlement" type="TextureRect"]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 0.391
+anchor_bottom = 1.0
+offset_right = -0.432037
+texture = ExtResource("1_3g204")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -27.0
+offset_right = 200.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Card Title" type="Label" parent="VBoxContainer"]
+clip_children = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_v5loq")
+theme_override_font_sizes/font_size = 64
+text = "Settlement"
+horizontal_alignment = 1
+
+[node name="Card Text" type="Label" parent="VBoxContainer"]
+clip_children = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_a7qjd")
+theme_override_font_sizes/font_size = 36
+text = "Place On: Ground
+"
+autowrap_mode = 3
+
+[node name="Card Text2" type="Label" parent="VBoxContainer"]
+clip_children = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_a7qjd")
+theme_override_font_sizes/font_size = 36
+text = "+20 to ALL nodes on map"
+horizontal_alignment = 1
+autowrap_mode = 3
