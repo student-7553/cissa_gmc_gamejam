@@ -14,6 +14,9 @@ mesh = NodePath("HexCell_Arctic_1")
 cell_type = 5
 score_indicator = NodePath("score_indicator")
 
+[node name="HexCell_Arctic_1" parent="." index="0"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
 [node name="Area3D" type="Area3D" parent="." index="1"]
 
 [node name="CollisionShape3D" parent="Area3D" index="0" instance=ExtResource("3_rn81e")]
