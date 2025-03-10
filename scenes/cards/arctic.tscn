@@ -3,6 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dp3lr3i05ia46" path="res://assets/textures/new card/Sprite-Arctict.png" id="1_3ohw5"]
 
 [node name="Control" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 0.391
+anchor_bottom = 0.988
+offset_right = -450.432
+offset_bottom = -640.224
 texture = ExtResource("1_3ohw5")
 
 [node name="Card Title" type="Label" parent="."]

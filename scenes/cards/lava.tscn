@@ -3,8 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://cystse13l4n2v" path="res://assets/textures/new card/Sprite-Lava.png" id="1_6tduf"]
 
 [node name="Control" type="TextureRect"]
-offset_right = 450.0
-offset_bottom = 640.0
+anchors_preset = -1
+anchor_right = 0.391
+anchor_bottom = 0.988
+offset_right = -0.432037
+offset_bottom = -0.223999
 texture = ExtResource("1_6tduf")
 stretch_mode = 2
 
