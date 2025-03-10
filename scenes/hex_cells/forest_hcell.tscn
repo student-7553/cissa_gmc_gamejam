@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://p8sbiy7ewy4g"]
+[gd_scene load_steps=6 format=3 uid="uid://gcmj6b7jl0mq"]
 
 [ext_resource type="PackedScene" uid="uid://bdgmgi6abxfj8" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_x2i4u"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_u5ggj"]

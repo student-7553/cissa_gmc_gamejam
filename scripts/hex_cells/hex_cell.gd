@@ -54,3 +54,6 @@ func squash():
 
 func mouse_entered() -> void:
 	select_cell.emit(self)
+
+func popAnim() -> void:
+	$AnimationPlayer.play("HexCell_Pop")

@@ -4,9 +4,7 @@ var cardManager: CardManager
 
 @export var cardHolder: CardHolder
 var currentCard: Card
-var dict = {}
 
-var cardTypes: Array[Card] = []
 
 func _ready() -> void:
 	cardHolder = get_node("CardHolder")

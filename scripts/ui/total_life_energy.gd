@@ -4,6 +4,8 @@ var lifeEnergyManager: LifeEnergyManager
 
 func updateUI() -> void:
 	text = str(lifeEnergyManager.currentLifeEnergy)
+	print(lifeEnergyManager.currentLifeEnergy)
+	print(text)
 	pass
 
 func _ready() -> void:

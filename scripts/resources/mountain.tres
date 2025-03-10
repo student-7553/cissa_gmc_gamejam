@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Card" load_steps=4 format=3 uid="uid://dagx6mgh8cldu"]
 
+[ext_resource type="PackedScene" uid="uid://csrwcqtn4ggye" path="res://scenes/cards/mountain.tscn" id="1_4rrhs"]
 [ext_resource type="Script" uid="uid://cx0txkira3or2" path="res://scripts/cards/card.gd" id="1_n1vno"]
 [ext_resource type="PackedScene" uid="uid://cbjnbrxn8lp8c" path="res://scenes/hex_cells/mountain_hcell.tscn" id="2_4rrhs"]
-[ext_resource type="PackedScene" uid="uid://csrwcqtn4ggye" path="res://scenes/cards/mountain.tscn" id="2_slaon"]
 
 [resource]
 script = ExtResource("1_n1vno")
 scene = ExtResource("2_4rrhs")
 cellKey = 4
-cardSpriteScene = ExtResource("2_slaon")
+cardSpriteScene = ExtResource("1_4rrhs")
 metadata/_custom_type_script = "uid://cx0txkira3or2"

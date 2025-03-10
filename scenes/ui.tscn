@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=25 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
@@ -9,8 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://cpyj1schddos5" path="res://assets/Cards/Sprite-beach.png" id="6_4cct8"]
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
-[ext_resource type="Script" uid="uid://wlmyh71pqgiu" path="res://scenes/player's_progress.gd" id="7_fyfsq"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="8_x1e8k"]
+[ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
+[ext_resource type="Texture2D" uid="uid://xvf2vva5c5c8" path="res://assets/textures/UI/GameWin.png" id="14_cof4p"]
+[ext_resource type="Texture2D" uid="uid://beshk4dkwg7ft" path="res://assets/textures/UI/GameEndBackdrop.png" id="15_f7tlh"]
 [ext_resource type="Script" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 
@@ -37,6 +39,11 @@ border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.129558, 0.129559, 0.129558, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h1mc3"]
+texture = ExtResource("15_f7tlh")
+
+[sub_resource type="Theme" id="Theme_h1mc3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cof4p"]
 font_size = 64
@@ -170,7 +177,6 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-size_flags_vertical = 8
 script = ExtResource("7_cof4p")
 
 [node name="CardHolder" type="Control" parent="Current-Card"]
@@ -181,12 +187,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -126.0
-offset_top = -383.0
-offset_right = 111.0
-offset_bottom = -4.0
+offset_left = -120.0
+offset_top = -379.0
+offset_right = 120.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 script = ExtResource("7_7dvkv")
 
 [node name="Progress" type="Node" parent="."]
@@ -225,17 +231,50 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_waygp")
 max_value = 1000.0
 step = 1.0
 show_percentage = false
-script = ExtResource("7_fyfsq")
 
 [node name="GameEndScreen" type="Panel" parent="."]
-visible = false
 z_index = 200
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_h1mc3")
 script = ExtResource("16_cof4p")
+
+[node name="GameWin" type="TextureRect" parent="GameEndScreen"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.645
+anchor_right = 0.5
+anchor_bottom = 0.645
+offset_left = -170.0
+offset_top = -159.96
+offset_right = -106.0
+offset_bottom = -95.96
+scale = Vector2(5, 5)
+texture = ExtResource("14_cof4p")
+
+[node name="GameOver" type="TextureRect" parent="GameEndScreen"]
+modulate = Color(0.751881, 0.751881, 0.751881, 0.576471)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.645
+anchor_right = 0.5
+anchor_bottom = 0.645
+offset_left = -170.0
+offset_top = -159.96
+offset_right = -106.0
+offset_bottom = -95.96
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+theme = SubResource("Theme_h1mc3")
+texture = ExtResource("13_h1mc3")
 
 [node name="MainLabel" type="Label" parent="GameEndScreen"]
 layout_mode = 1
@@ -244,10 +283,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -171.0
+offset_top = -218.0
+offset_right = 165.0
+offset_bottom = -130.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Game over"
@@ -255,7 +294,15 @@ label_settings = SubResource("LabelSettings_cof4p")
 
 [node name="Control" parent="." instance=ExtResource("17_f7tlh")]
 visible = false
+z_index = 500
+
+[node name="GameEndBackdrop" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2330, 517)
+scale = Vector2(5, 5)
+texture = ExtResource("15_f7tlh")
 
 [connection signal="pressed" from="Card Deck/Panel/Button2" to="Card Deck/Panel/Button2" method="_on_deck_button_pressed"]
+[connection signal="toggleVisibility" from="Card Deck/Panel/Button2" to="Control" method="_on_button_2_toggle_visibility"]
 [connection signal="mouse_entered" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Current-Card/CardHolder" to="Current-Card/CardHolder" method="_on_control_mouse_exited"]
