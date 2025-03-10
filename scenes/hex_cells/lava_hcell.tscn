@@ -7,8 +7,9 @@
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_1qx7g"]
 [ext_resource type="Resource" uid="uid://c82sy05k4nyy" path="res://scripts/resources/ground.tres" id="5_8okny"]
 
-[node name="lava_hcell" instance=ExtResource("1_jted7")]
+[node name="lava_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_jted7")]
 script = ExtResource("2_jdx5f")
+mesh = NodePath("HexCell_Lava")
 cell_type = 2
 
 [node name="HexCell_Lava" parent="." index="0"]

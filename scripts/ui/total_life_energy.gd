@@ -1,6 +1,5 @@
 extends Label
 
-
 var lifeEnergyManager: LifeEnergyManager
 
 func updateUI() -> void:

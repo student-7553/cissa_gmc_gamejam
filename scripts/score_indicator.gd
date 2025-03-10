@@ -6,5 +6,6 @@ class_name Score_Indicator
 func _ready() -> void:
 	visible = false
 
-func play_anim():
+func indicate(amount: int):
+	text = "+" + str(amount)
 	anim.play("indicate")

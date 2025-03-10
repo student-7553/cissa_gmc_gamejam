@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dt6gvl36cu631" path="res://scenes/ui.tscn" id="9_lhr70"]
 [ext_resource type="Resource" uid="uid://bb1new86y1byr" path="res://scripts/resources/forcedStackEntry/ocean_force_entry.tres" id="9_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://ggxwtq4sadur" path="res://scenes/player_manager.tscn" id="12_bjd11"]
-[ext_resource type="Script" uid="uid://co0s6k43jokap" path="res://scripts/game_manager.gd" id="13_qmy6f"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="13_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cvsl6iabrrppl" path="res://scenes/SFX.tscn" id="14_mwfav"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
@@ -41,8 +41,6 @@ forcedCard = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6wwtl")
-
-[node name="UI" parent="." instance=ExtResource("9_lhr70")]
 
 [node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
 
@@ -74,3 +72,5 @@ transform = Transform3D(0.681678, -0.453395, 0.574237, -0.00958151, 0.779251, 0.
 
 [node name="GameManager" type="Node3D" parent="."]
 script = ExtResource("13_qmy6f")
+
+[node name="UI" parent="." instance=ExtResource("9_lhr70")]

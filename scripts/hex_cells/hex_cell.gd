@@ -1,6 +1,7 @@
 extends Node3D
 class_name Hex_Cell
 
+@export var mesh: MeshInstance3D
 @export var cell_type: Card.PossibleCell
 @export var score_indicator: Score_Indicator
 
@@ -14,8 +15,6 @@ var cube_coord: Vector3 ## Position in the hex grid (q, r, s)
 
 var isHovered: bool = false
 
-var lifeEnergyManager: LifeEnergyManager
-
 signal select_cell(cell: Hex_Cell)
 
 signal cell_score_change(scoreUpdate: int)
@@ -28,7 +27,7 @@ func increase_score(amount: int):
 	cell_score_change.emit(amount)
 	current_score += amount
 	if score_indicator:
-		score_indicator.play_anim()
+		score_indicator.indicate(amount)
 
 ## Called when a cell is being replaced
 func copy_cell_data(cell: Hex_Cell):
@@ -44,11 +43,14 @@ func copy_cell_data(cell: Hex_Cell):
 
 func pop_up():
 	var tw: Tween = get_tree().create_tween()
-	tw.tween_property(self, "position:y", save_pos.y + 0.51, 0.25)
+	tw.tween_property(self, "position:y", save_pos.y + 0.51, 0.25).set_trans(Tween.TRANS_BOUNCE)
 
 func pop_down():
 	var tw: Tween = get_tree().create_tween()
-	tw.tween_property(self, "position:y", save_pos.y, 0.25)
+	tw.tween_property(self, "position:y", save_pos.y, 0.25).set_trans(Tween.TRANS_BOUNCE)
+
+func squash():
+	var tw: Tween = get_tree().create_tween()
 
 func mouse_entered() -> void:
 	select_cell.emit(self)

@@ -18,10 +18,7 @@ var currentStackCards: Array[Card] = []
 
 func _ready() -> void:
 	handleStackCardInit()
-	
 	cardStackUpdate.emit()
-
-	pass
 
 func handleStackCardInit() -> void:
 	for index in cardStackCount:
