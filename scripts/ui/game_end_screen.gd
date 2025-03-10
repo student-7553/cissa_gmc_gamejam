@@ -1,7 +1,7 @@
 extends Panel
 
-@export var gameOverTitle = "Game Over"
-@export var gameFinishedTitle = "Humankind has been successfully nurtured"
+@export var gameOverTitle = "No Humans were born, the world stayed silent"
+@export var gameFinishedTitle = "The first Human was born, humankind has been successfully nurtured"
 
 func _ready() -> void:
 	var gameManager = get_node("../../GameManager")
@@ -18,10 +18,14 @@ func handleGameStateUpdate(newState: GameManager.GameState):
 
 func triggerGameOver() -> void:
 	visible = true
+	$GameOverBackdrop.visible = true
+	$GameWinBackdrop.visible = false
 	$MainLabel.text = gameOverTitle
 	pass # Replace with function body.
 
 func triggerGameComplete() -> void:
 	visible = true
+	$GameOverBackdrop.visible = false
+	$GameWinBackdrop.visible = true
 	$MainLabel.text = gameFinishedTitle
 	pass # Replace with function body.
