@@ -50,6 +50,6 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_hgo68")
 theme_override_font_sizes/font_size = 36
-text = "+100 to each adjacent Ocean"
+text = "+100 to EACH adjacent Ocean"
 horizontal_alignment = 1
 autowrap_mode = 3
