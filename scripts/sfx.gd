@@ -10,14 +10,12 @@ class_name Sound_Manager
 @onready var sfx_LowerCard: AudioStreamPlayer = $LowerCard
 @onready var sfx_ShipHover: AudioStreamPlayer = $SpaceShipHover
 @onready var sfx_CamZoom: AudioStreamPlayer = $CamZoom
+@onready var sfx_StageComplete: AudioStreamPlayer = $StageComplete
+@onready var sfx_CollectPoints: AudioStreamPlayer = $CollectPoints
+@onready var sfx_Discard: AudioStreamPlayer = $Discard
 
 func _ready() -> void:
 	Globals.sound_manager = self
-
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("TEMP_SfxTrigger"):
-		if not sfx_OpenCards.is_playing():
-			sfx_OpenCards.play()
 
 func sfx_place_node():
 	var rng = randi_range(0, 2)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvsl6iabrrppl"]
+[gd_scene load_steps=14 format=3 uid="uid://cvsl6iabrrppl"]
 
 [ext_resource type="Script" uid="uid://7srhvtvbjkyk" path="res://scripts/sfx.gd" id="1_2haqr"]
 [ext_resource type="AudioStream" uid="uid://basqekuri50i0" path="res://assets/sfx/OpenCardStack.mp3" id="2_lccbc"]
@@ -10,6 +10,9 @@
 [ext_resource type="AudioStream" uid="uid://c0plyb5m6jwsc" path="res://assets/sfx/ViewCard.mp3" id="8_0jrv7"]
 [ext_resource type="AudioStream" uid="uid://djdqsf0l1d774" path="res://assets/sfx/Spaceship_Hover.mp3" id="9_1pw5g"]
 [ext_resource type="AudioStream" uid="uid://c3qd7cd0fepyn" path="res://assets/sfx/CamZoom.mp3" id="10_v6evi"]
+[ext_resource type="AudioStream" uid="uid://g1ho6kpyg0do" path="res://assets/sfx/StageComplete.mp3" id="11_210p7"]
+[ext_resource type="AudioStream" uid="uid://dfo2g5gbhwgxg" path="res://assets/sfx/CollectPoints.mp3" id="12_4p076"]
+[ext_resource type="AudioStream" uid="uid://toy4pmvobdtu" path="res://assets/sfx/Discard.mp3" id="13_t7k33"]
 
 [node name="Sfx" type="Node"]
 script = ExtResource("1_2haqr")
@@ -63,3 +66,17 @@ bus = &"Movement"
 stream = ExtResource("10_v6evi")
 volume_db = -24.987
 bus = &"Movement"
+
+[node name="StageComplete" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_210p7")
+volume_db = -25.538
+
+[node name="CollectPoints" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_4p076")
+volume_db = -6.769
+pitch_scale = 0.79
+bus = &"Placement"
+
+[node name="Discard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_t7k33")
+bus = &"Placement"
