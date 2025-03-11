@@ -1,6 +1,8 @@
 extends Node3D
 class_name Hex_Grid
 
+const spacing_fac = 2.001 ## Don't set to 2 or face clipping will occur
+
 @export var map_size = 6
 @export var tile_size = 2
 @export var tile_scene: PackedScene ## The tile to start with
@@ -28,15 +30,22 @@ func generate_map():
 # 
 func add_tile(x, y):
 	var new_tile: Hex_Cell = tile_scene.instantiate()
-	var offset: float = 0.0 if !(x % 2) else tile_size / 2.0
 	
+	var horizontal_spacing = tile_size * 1.5 / spacing_fac
+	var vertical_spacing = tile_size * sqrt(3) / spacing_fac
+
+	var pos_x = x * horizontal_spacing
+	var pos_z = y * vertical_spacing
+
+	if int(x) & 1:
+		pos_z += vertical_spacing / 2.0
+
+	new_tile.translate(Vector3(pos_x, 0, pos_z))
+
 	add_child(new_tile)
 	var cube_coord: Vector3 = oddq_to_cube(Vector2(x, y))
 	new_tile.cube_coord = cube_coord
-	
 	grid[cube_coord] = new_tile
-	
-	new_tile.translate(Vector3(x * tile_size - x * .467, 0, y * tile_size * (0.875) + offset))
 
 func in_map(x, y):
 	var r = ceil(map_size / 2)
