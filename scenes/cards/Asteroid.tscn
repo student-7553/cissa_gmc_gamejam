@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1d8qxrn8iqxk"]
+[gd_scene load_steps=5 format=3 uid="uid://24eypp4l137n"]
 
 [ext_resource type="Texture2D" uid="uid://cxrm8hwr0hocs" path="res://assets/textures/new card/Sprite-asteroid.png" id="1_j4qf0"]
 [ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_krgdd"]
@@ -28,9 +28,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -199.0
-offset_top = -10.0
+offset_top = -15.5
 offset_right = 201.0
-offset_bottom = 216.0
+offset_bottom = 247.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -48,9 +48,8 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_wypu5")
 theme_override_font_sizes/font_size = 36
-text = "Location: Anywhere
+text = "Place On: Anywhere
 "
-horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="buff" type="Label" parent="VBoxContainer"]
@@ -58,7 +57,6 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_wypu5")
 theme_override_font_sizes/font_size = 36
-text = "Effect:
-Turns ALL adjacent nodes to Lava"
+text = "Turns ALL adjacent nodes to Lava"
 horizontal_alignment = 1
 autowrap_mode = 3

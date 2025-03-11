@@ -54,7 +54,6 @@ theme_override_fonts/font = ExtResource("3_pdwo6")
 theme_override_font_sizes/font_size = 36
 text = "Place On: Ground, Ocean
 "
-horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Card Text2" type="Label" parent="VBoxContainer"]
