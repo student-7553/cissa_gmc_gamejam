@@ -4,8 +4,6 @@
 [ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="2_3mmve"]
 [ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_wps1f"]
 [ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="3_7kop4"]
-[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="3_tj4uh"]
-[ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="4_s7q4l"]
 
 [node name="Control" type="TextureRect"]
 anchors_preset = -1
