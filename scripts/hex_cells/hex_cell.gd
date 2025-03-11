@@ -1,7 +1,7 @@
 extends Node3D
 class_name Hex_Cell
 
-@export var mesh: MeshInstance3D
+@export var mesh: Node3D
 @export var cell_type: Card.PossibleCell
 @export var alternate_meshes: Array[PackedScene]
 
@@ -23,7 +23,7 @@ signal cell_score_change(scoreUpdate: int)
 
 func _ready() -> void:
 	randomize_mesh()
-	mesh.rotation_degrees.y += random_angle() ## Random rotation for the cell placement
+
 	save_pos = position
 	synergy.increase_score.connect(increase_score)
 	synergy.type = cell_type
@@ -34,17 +34,18 @@ func random_angle():
 
 func randomize_mesh():
 	## See if there are any meshes
-	if alternate_meshes.size() == 0:
-		return
-	## Flip a coin, if heads use a random mesh and hide the current one
-	var face: int = randi_range(0,1)
-	## instantiate mesh and add child
-	if face == 1:
-		mesh.hide()
-		var idx: int = randi_range(0, alternate_meshes.size() - 1)
-		var new_mesh: Node3D = alternate_meshes[idx].instantiate()
-		add_child(new_mesh)
-		new_mesh.rotation_degrees.y += random_angle() + 30
+	if alternate_meshes.size() != 0:
+		## Flip a coin, if heads use a random mesh and hide the current one
+		var face: int = randi_range(0,1)
+		## instantiate mesh and add child
+		if face == 1:
+			mesh.hide()
+			var idx: int = randi_range(0, alternate_meshes.size() - 1)
+			var new_mesh: Node3D = alternate_meshes[idx].instantiate()
+			add_child(new_mesh)
+			new_mesh.rotation_degrees.y += random_angle() + 30
+			mesh = new_mesh
+	mesh.rotation_degrees.y += random_angle() ## Random rotation for the cell placement
 
 func increase_score(amount: int):
 	cell_score_change.emit(amount)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgrs6j2jx8wq2"]
+[gd_scene load_steps=5 format=3 uid="uid://dgrs6j2jx8wq2"]
 
 [ext_resource type="Texture2D" uid="uid://dkca34kofqdtu" path="res://assets/textures/new card/Sprite-Gloablt.png" id="1_3g204"]
+[ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_a7qjd"]
 [ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="2_v5loq"]
 [ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="3_a7qjd"]
 
@@ -12,6 +13,13 @@ anchor_bottom = 1.0
 offset_right = -0.432037
 texture = ExtResource("1_3g204")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_a7qjd")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -20,9 +28,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = -27.0
+offset_top = -13.0
 offset_right = 200.0
-offset_bottom = 273.0
+offset_bottom = 287.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
