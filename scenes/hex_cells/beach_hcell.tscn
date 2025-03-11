@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4x17dpp25op7"]
+[gd_scene load_steps=11 format=3 uid="uid://b4x17dpp25op7"]
 
 [ext_resource type="PackedScene" uid="uid://ca27i37n8tyl3" path="res://assets/models/glTF/HexCell_Beach_1.glb" id="1_pq5na"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_7xwds"]
+[ext_resource type="PackedScene" uid="uid://cgivpym8r5u06" path="res://assets/models/glTF/HexCell_Beach_Connect_6.glb" id="3_4ojex"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_7610s"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_2iycy"]
+[ext_resource type="PackedScene" uid="uid://g5iy1djujkyw" path="res://assets/models/glTF/HexCell_Beach_Connect_4.glb" id="4_cwifq"]
 [ext_resource type="Script" uid="uid://cyprit3l1x8ql" path="res://scripts/synergy/beach_synergy.gd" id="4_jr4kd"]
+[ext_resource type="PackedScene" uid="uid://c6poawfymail6" path="res://assets/models/glTF/HexCell_Beach_Connect_2.glb" id="5_1trff"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="6_k6fy8"]
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="7_hhtx7"]
 
@@ -12,6 +15,7 @@
 script = ExtResource("2_7xwds")
 mesh = NodePath("HexCell_Beach_1")
 cell_type = 6
+alternate_meshes = Array[PackedScene]([ExtResource("3_4ojex"), ExtResource("4_cwifq"), ExtResource("5_1trff")])
 
 [node name="HexCell_Beach_1" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)

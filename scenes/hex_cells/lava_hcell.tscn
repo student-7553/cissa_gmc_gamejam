@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj0q2y1fq7awm"]
+[gd_scene load_steps=9 format=3 uid="uid://cj0q2y1fq7awm"]
 
 [ext_resource type="PackedScene" uid="uid://b1rlom1f74mls" path="res://assets/models/glTF/HexCell_Lava_1.glb" id="1_jted7"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_jdx5f"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_1qx7g"]
 [ext_resource type="Resource" uid="uid://c82sy05k4nyy" path="res://scripts/resources/ground.tres" id="5_8okny"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="7_ce7ht"]
+[ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="8_7eyoc"]
 
 [node name="lava_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_jted7")]
 script = ExtResource("2_jdx5f")
@@ -31,6 +32,8 @@ script = ExtResource("4_1qx7g")
 valid_cells = Array[int]([3])
 
 [node name="invalid_indicator" parent="." index="4" instance=ExtResource("7_ce7ht")]
+
+[node name="score_indicator" parent="." index="5" instance=ExtResource("8_7eyoc")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]

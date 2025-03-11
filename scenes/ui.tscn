@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://715os2dhpmfu" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
 [ext_resource type="Script" uid="uid://dgkhpjluyh7eg" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
 [ext_resource type="FontFile" uid="uid://b35j13yoyf032" path="res://assets/fonts/outshine.ttf" id="4_jkdwc"]
-[ext_resource type="Script" uid="uid://cjikkkf2q88rg" path="res://scripts/level_count.gd" id="5_rlppe"]
+[ext_resource type="Script" path="res://scripts/level_count.gd" id="5_rlppe"]
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
@@ -49,6 +49,12 @@ bg_color = Color(0.886275, 0.886275, 0.886275, 0.392157)
 [node name="UI" type="CanvasLayer"]
 follow_viewport_enabled = true
 
+[node name="HUD" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 1.001
+anchor_bottom = 1.003
+texture = ExtResource("1_8k7j3")
+
 [node name="Button_Discard" type="Button" parent="."]
 z_index = 70
 texture_filter = 1
@@ -56,22 +62,15 @@ custom_minimum_size = Vector2(150, 50)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = -240.0
-offset_right = 234.0
-offset_bottom = -173.0
+offset_left = 25.0
+offset_top = -123.0
+offset_right = 275.0
+offset_bottom = -23.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("13_f7tlh")
 theme_override_font_sizes/font_size = 64
 text = "Discard"
 script = ExtResource("3_cof4p")
-
-[node name="HUD" type="TextureRect" parent="."]
-visible = false
-anchors_preset = -1
-anchor_right = 1.001
-anchor_bottom = 1.003
-texture = ExtResource("1_8k7j3")
 
 [node name="level_count" type="Label" parent="."]
 z_index = 5

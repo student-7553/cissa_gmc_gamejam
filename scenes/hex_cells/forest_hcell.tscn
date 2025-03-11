@@ -1,17 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://gcmj6b7jl0mq"]
+[gd_scene load_steps=9 format=3 uid="uid://gcmj6b7jl0mq"]
 
 [ext_resource type="PackedScene" uid="uid://bdgmgi6abxfj8" path="res://assets/models/glTF/HexCell_Forest_1.glb" id="1_x2i4u"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_u5ggj"]
+[ext_resource type="PackedScene" uid="uid://cahwjtsuo70xp" path="res://assets/models/glTF/HexCell_Forest_2.glb" id="3_l0o6c"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_nysdi"]
 [ext_resource type="Script" uid="uid://domgxwhn6rurf" path="res://scripts/synergy/forest_synergy.gd" id="4_denpu"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_o81qx"]
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_qh04n"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="7_7n15e"]
 
-[node name="forest_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_x2i4u")]
+[node name="forest_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_x2i4u")]
 script = ExtResource("2_u5ggj")
 mesh = NodePath("HexCell_Base_Forest")
-score_indicator = NodePath("score_indicator")
+alternate_meshes = Array[PackedScene]([ExtResource("3_l0o6c")])
 
 [node name="HexCell_Base_Forest" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
