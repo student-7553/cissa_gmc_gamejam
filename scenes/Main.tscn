@@ -1,8 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://6pv160xcxskc"]
+[gd_scene load_steps=31 format=3 uid="uid://6pv160xcxskc"]
 
+[ext_resource type="Material" uid="uid://bfw1et7lfhpuv" path="res://assets/shaders/SkyBoxMaterial.material" id="1_1nqs0"]
 [ext_resource type="PackedScene" uid="uid://chipkmnda25yf" path="res://scenes/HexGrid.tscn" id="1_1x53f"]
 [ext_resource type="PackedScene" uid="uid://bfrf3kiu1rx4g" path="res://scenes/CameraGimbal.tscn" id="1_5kkq7"]
-[ext_resource type="Texture2D" uid="uid://bsq1oxugt7l2s" path="res://assets/textures/panorama1.jpg" id="1_jlsqs"]
 [ext_resource type="PackedScene" uid="uid://cj0q2y1fq7awm" path="res://scenes/hex_cells/lava_hcell.tscn" id="4_q8u5g"]
 [ext_resource type="Script" uid="uid://csmpi7582tlt6" path="res://scripts/card_manager.gd" id="4_rarhs"]
 [ext_resource type="Script" uid="uid://u238va84xjcn" path="res://scripts/life_energy_manager.gd" id="7_nxtc6"]
@@ -21,21 +21,14 @@
 [ext_resource type="Resource" uid="uid://bm6r4s3gd03f0" path="res://scripts/resources/settlement.tres" id="19_1nqs0"]
 [ext_resource type="Script" uid="uid://c1cqhd4tg2yyd" path="res://scripts/level.gd" id="19_yxlcp"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nxtc6"]
-panorama = ExtResource("1_jlsqs")
+[sub_resource type="Sky" id="Sky_1iba3"]
+sky_material = ExtResource("1_1nqs0")
 
-[sub_resource type="Sky" id="Sky_m1mpq"]
-sky_material = SubResource("PanoramaSkyMaterial_nxtc6")
-
-[sub_resource type="Environment" id="Environment_6wwtl"]
+[sub_resource type="Environment" id="Environment_yxlcp"]
 background_mode = 2
-background_energy_multiplier = 0.47
-sky = SubResource("Sky_m1mpq")
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 10.72
-tonemap_mode = 2
-glow_intensity = 2.89
-glow_bloom = 0.08
+sky = SubResource("Sky_1iba3")
+tonemap_mode = 3
+glow_enabled = true
 
 [sub_resource type="Resource" id="Resource_ebg2g"]
 script = ExtResource("19_yxlcp")
@@ -88,7 +81,7 @@ metadata/_custom_type_script = "uid://c1cqhd4tg2yyd"
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_6wwtl")
+environment = SubResource("Environment_yxlcp")
 
 [node name="CameraGimbal" parent="." instance=ExtResource("1_5kkq7")]
 
@@ -112,9 +105,6 @@ grid = NodePath("../HexGrid")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
 light_energy = 12.21
 omni_range = 30.0
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.681678, -0.453395, 0.574237, -0.00958151, 0.779251, 0.626639, -0.73159, -0.432668, 0.526854, 35, 15, -8)
 
 [node name="UI" parent="." instance=ExtResource("9_lhr70")]
 
