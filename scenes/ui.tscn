@@ -289,6 +289,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qsv74")
 script = ExtResource("16_cof4p")
+gameOverTitle = "No humans were born. The world stayed silent"
+gameFinishedTitle = "The first human was born. Humankind has successfully evolved"
 
 [node name="MainLabel" type="Label" parent="GameEndScreen"]
 z_index = 205
