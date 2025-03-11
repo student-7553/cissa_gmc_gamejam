@@ -36,7 +36,7 @@ func add_tile(x, y):
 	
 	grid[cube_coord] = new_tile
 	
-	new_tile.translate(Vector3(x * tile_size - x * .45, 0, y * tile_size * (0.875) + offset))
+	new_tile.translate(Vector3(x * tile_size - x * .467, 0, y * tile_size * (0.875) + offset))
 
 func in_map(x, y):
 	var r = ceil(map_size / 2)
