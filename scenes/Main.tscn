@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://ds8yrk5gkpux7" path="res://scripts/level_manager.gd" id="18_1iba3"]
 [ext_resource type="Resource" uid="uid://bksw347hwtcgt" path="res://scripts/resources/beach.tres" id="18_nfivy"]
 [ext_resource type="Resource" uid="uid://bm6r4s3gd03f0" path="res://scripts/resources/settlement.tres" id="19_1nqs0"]
-[ext_resource type="Script" uid="uid://c1cqhd4tg2yyd" path="res://scripts/level.gd" id="19_yxlcp"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="19_yxlcp"]
 
 [sub_resource type="Sky" id="Sky_1iba3"]
 sky_material = ExtResource("1_1nqs0")
