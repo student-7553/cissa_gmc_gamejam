@@ -13,12 +13,9 @@
 
 [node name="beach_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_pq5na")]
 script = ExtResource("2_7xwds")
-mesh = NodePath("HexCell_Beach_1")
+mesh = NodePath("HexCell_Beach_Connect_3")
 cell_type = 6
 alternate_meshes = Array[PackedScene]([ExtResource("3_4ojex"), ExtResource("4_cwifq"), ExtResource("5_1trff")])
-
-[node name="HexCell_Beach_1" parent="." index="0"]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="." index="1"]
 
@@ -31,9 +28,9 @@ script = ExtResource("4_jr4kd")
 script = ExtResource("4_2iycy")
 valid_cells = Array[int]([2])
 
-[node name="invalid_indicator" parent="." index="5" instance=ExtResource("6_k6fy8")]
+[node name="invalid_indicator" parent="." index="4" instance=ExtResource("6_k6fy8")]
 
-[node name="score_indicator" parent="." index="6" instance=ExtResource("7_hhtx7")]
+[node name="score_indicator" parent="." index="5" instance=ExtResource("7_hhtx7")]
 
 [connection signal="mouse_entered" from="Area3D" to="." method="mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="mouse_exited"]
