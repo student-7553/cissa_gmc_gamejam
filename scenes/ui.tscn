@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://715os2dhpmfu" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
 [ext_resource type="Script" uid="uid://dgkhpjluyh7eg" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
 [ext_resource type="FontFile" uid="uid://b35j13yoyf032" path="res://assets/fonts/outshine.ttf" id="4_jkdwc"]
-[ext_resource type="Script" path="res://scripts/level_count.gd" id="5_rlppe"]
 [ext_resource type="Script" uid="uid://cjikkkf2q88rg" path="res://scripts/level_count.gd" id="5_rlppe"]
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
