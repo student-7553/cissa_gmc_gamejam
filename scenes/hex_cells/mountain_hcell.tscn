@@ -8,11 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_ifeoy"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="7_613gi"]
 
-[node name="mountain_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_x88t0")]
+[node name="mountain_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_x88t0")]
 script = ExtResource("2_flkdx")
 mesh = NodePath("HexCell_Mountain")
 cell_type = 4
-score_indicator = NodePath("score_indicator")
 
 [node name="HexCell_Mountain" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
