@@ -18,7 +18,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	get_keyboard_input(delta)
 	check_hover(delta)
-	gimbal_x.rotation.x = clamp(gimbal_x.rotation.x, -0.5, .5)
+	gimbal_x.rotation.x = clamp(gimbal_x.rotation.x, -0.9, 1.5)
 	scale = lerp(scale, Vector3.ONE * zoom, zoomSpeed * delta)
 
 func _unhandled_input(event: InputEvent) -> void:

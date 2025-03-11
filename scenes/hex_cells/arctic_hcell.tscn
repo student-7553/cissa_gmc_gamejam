@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmgqf6t1jt27l"]
+[gd_scene load_steps=8 format=3 uid="uid://dmgqf6t1jt27l"]
 
 [ext_resource type="PackedScene" uid="uid://bsygi7f3u4c11" path="res://assets/models/glTF/HexCell_Arctic_1.glb" id="1_tnm24"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_gxjut"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="3_rn81e"]
-[ext_resource type="PackedScene" uid="uid://dkiuto8bgmfyg" path="res://assets/models/glTF/HexCell_Arctic_2.glb" id="3_s672u"]
 [ext_resource type="Script" uid="uid://bjj3l2fp4ech3" path="res://scripts/synergy/arctic_synergy.gd" id="4_16vo3"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="4_r3cpd"]
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_mdqpg"]
@@ -13,7 +12,6 @@
 script = ExtResource("2_gxjut")
 mesh = NodePath("HexCell_Arctic_1")
 cell_type = 5
-alternate_meshes = Array[PackedScene]([ExtResource("3_s672u")])
 
 [node name="HexCell_Arctic_1" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
