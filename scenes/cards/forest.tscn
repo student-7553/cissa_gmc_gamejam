@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_n15dy"]
 [ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="3_usu7u"]
 
-[node name="Control" type="TextureRect"]
+[node name="Control2" type="TextureRect"]
 anchors_preset = -1
 anchor_right = 0.391
 anchor_bottom = 1.0
@@ -49,15 +49,9 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_usu7u")
 theme_override_font_sizes/font_size = 36
-text = "Place On: Ground
+text = "Location: Ground
+Effect:
++ 100 life
 "
-autowrap_mode = 3
-
-[node name="Card Text2" type="Label" parent="VBoxContainer"]
-clip_children = 2
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_usu7u")
-theme_override_font_sizes/font_size = 36
-text = "+100 Life"
 horizontal_alignment = 1
 autowrap_mode = 3
