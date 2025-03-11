@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://csrwcqtn4ggye"]
+[gd_scene load_steps=5 format=3 uid="uid://csrwcqtn4ggye"]
 
 [ext_resource type="Texture2D" uid="uid://b4l5hn2inacrg" path="res://assets/textures/new card/Sprite-mountain.png" id="1_genw0"]
 [ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_k6tau"]
+[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="3_nn0cv"]
+[ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="4_kqigb"]
 
 [node name="Control" type="TextureRect"]
 anchors_preset = -1
@@ -27,13 +29,14 @@ anchor_left = 0.5
 anchor_top = 0.455
 anchor_right = 0.5
 anchor_bottom = 0.455
-offset_left = -172.0
-offset_top = 18.8
-offset_right = 172.0
-offset_bottom = 60.8
+offset_left = -175.0
+offset_top = 10.8
+offset_right = 169.0
+offset_bottom = 74.8
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_nn0cv")
+theme_override_font_sizes/font_size = 64
 text = "Mountain"
 horizontal_alignment = 1
 
@@ -41,18 +44,20 @@ horizontal_alignment = 1
 clip_children = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.858
-anchor_right = 0.5
-anchor_bottom = 0.858
-offset_left = -156.0
-offset_top = -186.12
-offset_right = 192.0
-offset_bottom = 0.880005
+anchor_left = 0.489
+anchor_top = 0.933
+anchor_right = 0.489
+anchor_bottom = 0.933
+offset_left = -174.05
+offset_top = -219.12
+offset_right = 173.95
+offset_bottom = -0.119995
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("4_kqigb")
+theme_override_font_sizes/font_size = 36
 text = "Location: Ground
 Effect:	 
-*   If placed next to Forest, gives every adjacent forest +1 life"
+ If placed next to Forest, gives every adjacent forest +100 life"
+horizontal_alignment = 1
 autowrap_mode = 3

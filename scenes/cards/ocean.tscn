@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://jkirbq8yfswi"]
+[gd_scene load_steps=5 format=3 uid="uid://jkirbq8yfswi"]
 
 [ext_resource type="Texture2D" uid="uid://blopq8ff6mc18" path="res://assets/textures/new card/Sprite-Ocean.png" id="1_8ichh"]
 [ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_wps1f"]
+[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="3_tj4uh"]
+[ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="4_s7q4l"]
 
 [node name="Control" type="TextureRect"]
 anchors_preset = -1
@@ -25,13 +27,14 @@ anchor_left = 0.5
 anchor_top = 0.462
 anchor_right = 0.5
 anchor_bottom = 0.462
-offset_left = -103.0
-offset_top = 5.56
-offset_right = 107.0
-offset_bottom = 47.56
+offset_left = -103.216
+offset_top = 9.62399
+offset_right = 106.784
+offset_bottom = 73.624
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_tj4uh")
+theme_override_font_sizes/font_size = 64
 text = "Ocean"
 horizontal_alignment = 1
 
@@ -44,14 +47,15 @@ anchor_top = 0.85
 anchor_right = 0.523
 anchor_bottom = 0.85
 offset_left = -166.576
-offset_top = -187.8
+offset_top = -170.8
 offset_right = 165.424
-offset_bottom = -0.799988
+offset_bottom = 16.2
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("4_s7q4l")
+theme_override_font_sizes/font_size = 36
 text = "Location: Ground, Lava
 Effect:	 
-*   +1 life
+*   +100 life
 *   turns the ground node into an ocean"
 autowrap_mode = 3

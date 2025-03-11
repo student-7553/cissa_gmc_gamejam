@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://24eypp4l137n"]
+[gd_scene load_steps=5 format=3 uid="uid://d1d8qxrn8iqxk"]
 
 [ext_resource type="Texture2D" uid="uid://cxrm8hwr0hocs" path="res://assets/textures/new card/Sprite-asteroid.png" id="1_j4qf0"]
 [ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_krgdd"]
 [ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="3_6j572"]
 [ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="4_wypu5"]
 
-[node name="Control2" type="TextureRect"]
+[node name="Control3" type="TextureRect"]
 texture_filter = 1
 anchors_preset = -1
 anchor_right = 0.391
@@ -48,8 +48,9 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_wypu5")
 theme_override_font_sizes/font_size = 36
-text = "Place On: Anywhere
+text = "Location: Anywhere
 "
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="buff" type="Label" parent="VBoxContainer"]
@@ -57,6 +58,7 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_wypu5")
 theme_override_font_sizes/font_size = 36
-text = "Turns ALL adjacent nodes to Lava"
+text = "Effect:
+Turns ALL adjacent nodes to Lava"
 horizontal_alignment = 1
 autowrap_mode = 3
