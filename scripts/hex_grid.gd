@@ -31,16 +31,16 @@ func generate_map():
 func add_tile(x, y):
 	var new_tile: Hex_Cell = tile_scene.instantiate()
 	
-	var horizontal_spacing = tile_size * 1.5 / spacing_fac
-	var vertical_spacing = tile_size * sqrt(3) / spacing_fac
+	var x_spacing = tile_size * 1.5 / spacing_fac
+	var z_spacing = tile_size * sqrt(3) / spacing_fac
 
-	var pos_x = x * horizontal_spacing
-	var pos_z = y * vertical_spacing
+	var pos_x = x * x_spacing
+	var pos_y = y * z_spacing
 
 	if int(x) & 1:
-		pos_z += vertical_spacing / 2.0
+		pos_y += z_spacing / 2.0
 
-	new_tile.translate(Vector3(pos_x, 0, pos_z))
+	new_tile.translate(Vector3(pos_x, 0, pos_y))
 
 	add_child(new_tile)
 	var cube_coord: Vector3 = oddq_to_cube(Vector2(x, y))
