@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://o85eaw7d2s7d"]
+[gd_scene load_steps=8 format=3 uid="uid://dcrbe5vmjh5si"]
 
 [ext_resource type="PackedScene" uid="uid://b3tgsadc2jljc" path="res://assets/models/glTF/volcano_node.glb" id="1_8deo5"]
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="2_0gktl"]
