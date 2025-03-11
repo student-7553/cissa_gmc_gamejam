@@ -5,6 +5,7 @@ func _ready() -> void:
 	Globals.discard_button = self
 
 func onPress() -> void:
+	Globals.sound_manager.sfx_Discard.play()
 	Globals.card_manager.draw_card()
 	pass
 
