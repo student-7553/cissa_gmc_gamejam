@@ -48,6 +48,7 @@ func randomize_mesh():
 
 func increase_score(amount: int):
 	cell_score_change.emit(amount)
+	Globals.sound_manager.sfx_CollectPoints.play()
 	current_score += amount
 	if score_indicator:
 		score_indicator.indicate(amount)

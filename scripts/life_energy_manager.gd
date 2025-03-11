@@ -19,6 +19,7 @@ func set_level(level: Level):
 
 func check_level():
 	if currentLifeEnergy >= life_energy_max:
+		Globals.sound_manager.sfx_StageComplete.play()
 		increment_level.emit()
 
 func relativeUpdateLifeEnergy(point: int) -> void:

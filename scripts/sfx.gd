@@ -10,6 +10,8 @@ class_name Sound_Manager
 @onready var sfx_LowerCard: AudioStreamPlayer = $LowerCard
 @onready var sfx_ShipHover: AudioStreamPlayer = $SpaceShipHover
 @onready var sfx_CamZoom: AudioStreamPlayer = $CamZoom
+@onready var sfx_StageComplete: AudioStreamPlayer = $StageComplete
+@onready var sfx_CollectPoints: AudioStreamPlayer = $CollectPoints
 
 func _ready() -> void:
 	Globals.sound_manager = self
