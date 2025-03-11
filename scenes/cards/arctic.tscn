@@ -36,17 +36,16 @@ theme_override_font_sizes/font_size = 64
 text = "Arctic"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="VBoxContainer"]
+[node name="place" type="Label" parent="VBoxContainer"]
 clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_hgo68")
 theme_override_font_sizes/font_size = 36
 text = "Place On: Ocean
 "
-horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Card Text2" type="Label" parent="VBoxContainer"]
+[node name="buff" type="Label" parent="VBoxContainer"]
 clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_hgo68")

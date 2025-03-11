@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1d8qxrn8iqxk"]
+[gd_scene load_steps=5 format=3 uid="uid://24eypp4l137n"]
 
 [ext_resource type="Texture2D" uid="uid://cxrm8hwr0hocs" path="res://assets/textures/new card/Sprite-asteroid.png" id="1_j4qf0"]
 [ext_resource type="Texture2D" uid="uid://nr5kawp000ni" path="res://assets/textures/new card/CARD_Template.png" id="2_krgdd"]
+[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="3_6j572"]
+[ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="4_wypu5"]
 
 [node name="Control2" type="TextureRect"]
 texture_filter = 1
@@ -18,40 +20,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource("2_krgdd")
 
-[node name="Card Title" type="Label" parent="."]
-clip_children = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.462
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.462
-offset_left = -103.0
-offset_top = 5.56
-offset_right = 107.0
-offset_bottom = 47.56
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = -10.0
+offset_right = 201.0
+offset_bottom = 216.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 30
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Card Title" type="Label" parent="VBoxContainer"]
+clip_children = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6j572")
+theme_override_font_sizes/font_size = 64
 text = "Asteroid"
 horizontal_alignment = 1
 
-[node name="Card Text" type="Label" parent="."]
+[node name="place" type="Label" parent="VBoxContainer"]
 clip_children = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.522
-anchor_top = 0.852
-anchor_right = 0.522
-anchor_bottom = 0.852
-offset_left = -165.9
-offset_top = -189.096
-offset_right = 166.1
-offset_bottom = -2.09601
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 25
-text = "Location: Anywhere
-Effect:	 
-*   destroys all adjacent nodes and turns them into lava"
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wypu5")
+theme_override_font_sizes/font_size = 36
+text = "Place On: Anywhere
+"
+autowrap_mode = 3
+
+[node name="buff" type="Label" parent="VBoxContainer"]
+clip_children = 2
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wypu5")
+theme_override_font_sizes/font_size = 36
+text = "Turns ALL adjacent nodes to Lava"
+horizontal_alignment = 1
 autowrap_mode = 3
