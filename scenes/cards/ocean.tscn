@@ -56,6 +56,7 @@ clip_children = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_7kop4")
 theme_override_font_sizes/font_size = 36
-text = "+100 Life"
+text = "+100 Life when placed
+on ground"
 horizontal_alignment = 1
 autowrap_mode = 3
