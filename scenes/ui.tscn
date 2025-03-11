@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=38 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
@@ -60,15 +60,29 @@ texture = ExtResource("12_ycmcx")
 [sub_resource type="LabelSettings" id="LabelSettings_cof4p"]
 font_size = 64
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rleeb"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kupmu"]
-bg_color = Color(0.886275, 0.886275, 0.886275, 0.666667)
+bg_color = Color(1, 1, 1, 0.0980392)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5tog"]
+bg_color = Color(1, 1, 1, 0.196078)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_catpy"]
-bg_color = Color(0.886275, 0.886275, 0.886275, 0.392157)
+bg_color = Color(1, 1, 1, 0)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -76,15 +90,30 @@ border_width_bottom = 2
 
 [sub_resource type="Theme" id="Theme_h1mc3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wquew"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycmcx"]
-bg_color = Color(0.886275, 0.886275, 0.886275, 0.666667)
+bg_color = Color(1, 1, 1, 0.0980392)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu1et"]
+bg_color = Color(1, 1, 1, 0.196078)
+draw_center = false
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlppe"]
-bg_color = Color(0.886275, 0.886275, 0.886275, 0.392157)
+bg_color = Color(1, 1, 1, 0)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -282,6 +311,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="GameWinBackdrop" type="TextureRect" parent="GameEndScreen"]
+visible = false
 self_modulate = Color(0.574271, 0.879769, 0.766053, 1)
 z_index = 200
 texture_filter = 1
@@ -319,19 +349,22 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -155.684
-offset_top = -147.888
-offset_right = 144.316
-offset_bottom = -67.888
+offset_left = -150.684
+offset_top = -97.888
+offset_right = 149.316
+offset_bottom = -17.888
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("13_f7tlh")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_rleeb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_kupmu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i5tog")
 theme_override_styles/normal = SubResource("StyleBoxFlat_catpy")
 text = "Restart Game"
 script = ExtResource("19_jkdwc")
 
 [node name="GameOverBackdrop" type="TextureRect" parent="GameEndScreen"]
-visible = false
 self_modulate = Color(0.354525, 0.359313, 0.328108, 1)
 z_index = 200
 texture_filter = 1
@@ -372,13 +405,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -155.684
-offset_top = -144.0
-offset_right = 144.316
-offset_bottom = -64.0
+offset_left = -150.684
+offset_top = -94.0
+offset_right = 149.316
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("13_f7tlh")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_wquew")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ycmcx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wu1et")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rlppe")
 text = "Restart Game"
 script = ExtResource("19_jkdwc")
