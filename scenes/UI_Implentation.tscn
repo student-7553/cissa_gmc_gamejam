@@ -1,12 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://duhu8ikcg47ck"]
+[gd_scene load_steps=11 format=3 uid="uid://bk4l85it556vh"]
 
-[ext_resource type="Script" path="res://scenes/ui_implentation.gd" id="1_ni0ms"]
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="2_1v0uc"]
-[ext_resource type="Texture2D" uid="uid://ck0kdo4jx6yb" path="res://assets/textures/cards/Sprite-asteroid.png" id="2_7ia38"]
 [ext_resource type="Texture2D" uid="uid://bfd72wi70onyh" path="res://assets/textures/UI/SettingsPanel.png" id="3_ka8di"]
-[ext_resource type="Texture2D" uid="uid://dsy3ji5hb5ghq" path="res://assets/textures/cards/Sprite-beach.png" id="3_wd8ij"]
-[ext_resource type="Texture2D" uid="uid://de82l6h2lf4ac" path="res://assets/textures/cards/Sprite-desert.png" id="4_0m1i7"]
 [ext_resource type="Texture2D" uid="uid://b0nsyy0ui8dq2" path="res://assets/Cards/Sprite-top-of-deck.png" id="6_ogau0"]
+
+[sub_resource type="Resource" id="Resource_d365t"]
+metadata/__load_path__ = "res://scenes/ui_implentation.gd"
+
+[sub_resource type="Resource" id="Resource_ls7po"]
+metadata/__load_path__ = "res://assets/textures/cards/Sprite-asteroid.png"
+
+[sub_resource type="Resource" id="Resource_l53ww"]
+metadata/__load_path__ = "res://assets/textures/cards/Sprite-beach.png"
+
+[sub_resource type="Resource" id="Resource_1v0uc"]
+metadata/__load_path__ = "res://assets/textures/cards/Sprite-desert.png"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmwtj"]
 
@@ -27,7 +35,7 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_ni0ms")
+script = SubResource("Resource_d365t")
 
 [node name="Pov UI" type="Sprite2D" parent="."]
 position = Vector2(578, 319)
@@ -48,19 +56,19 @@ texture = ExtResource("6_ogau0")
 position = Vector2(1061, 550)
 rotation = 0.254401
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_7ia38")
+texture = SubResource("Resource_ls7po")
 
 [node name="Sprite-beach" type="Sprite2D" parent="Card Deck"]
 position = Vector2(1045, 561)
 rotation = -0.490582
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_wd8ij")
+texture = SubResource("Resource_l53ww")
 
 [node name="Sprite-Lava" type="Sprite2D" parent="Card Deck"]
 position = Vector2(1073, 563)
 rotation = 0.181586
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_0m1i7")
+texture = SubResource("Resource_1v0uc")
 
 [node name="Deck Button" type="Button" parent="Card Deck"]
 z_index = 9

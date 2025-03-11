@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://xinvy1foikwy" path="res://assets/fonts/PixelMechaBold.ttf" id="3_hgo68"]
 
 [node name="Control" type="TextureRect"]
+texture_filter = 1
 anchors_preset = -1
 anchor_right = 0.391
 anchor_bottom = 0.988
@@ -19,10 +20,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -17.0
-offset_right = 200.0
-offset_bottom = 209.0
+offset_left = -199.0
+offset_top = -10.0
+offset_right = 201.0
+offset_bottom = 216.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -42,6 +43,7 @@ theme_override_fonts/font = ExtResource("3_hgo68")
 theme_override_font_sizes/font_size = 36
 text = "Place On: Ocean
 "
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Card Text2" type="Label" parent="VBoxContainer"]

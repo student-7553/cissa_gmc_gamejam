@@ -10,3 +10,4 @@ script = ExtResource("2_tc55h")
 scene = ExtResource("1_ut2n8")
 cellKey = 5
 cardSpriteScene = SubResource("PackedScene_8rufe")
+roulette_entries = 3

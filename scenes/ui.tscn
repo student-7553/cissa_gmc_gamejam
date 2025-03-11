@@ -1,11 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=28 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
 [ext_resource type="PackedScene" uid="uid://715os2dhpmfu" path="res://scenes/SettingsPanel.tscn" id="2_jkdwc"]
 [ext_resource type="Script" uid="uid://dgkhpjluyh7eg" path="res://scripts/ui/discardButton.gd" id="3_cof4p"]
 [ext_resource type="FontFile" uid="uid://b35j13yoyf032" path="res://assets/fonts/outshine.ttf" id="4_jkdwc"]
-[ext_resource type="Script" uid="uid://cjikkkf2q88rg" path="res://scripts/level_count.gd" id="5_rlppe"]
+[ext_resource type="Script" path="res://scripts/level_count.gd" id="5_rlppe"]
 [ext_resource type="Script" uid="uid://cu5h7en1drttd" path="res://scenes/Card-On-MouseLeave.gd" id="7_7dvkv"]
 [ext_resource type="Script" uid="uid://ck53n17g25qsk" path="res://scenes/CurrentCard_Manager.gd" id="7_cof4p"]
 [ext_resource type="Script" uid="uid://dxklkq5nqgu1h" path="res://scripts/progress_manager.gd" id="10_cof4p"]
@@ -26,7 +26,19 @@
 [sub_resource type="LabelSettings" id="LabelSettings_cof4p"]
 font_size = 64
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kupmu"]
+bg_color = Color(0.886275, 0.886275, 0.886275, 0.666667)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_catpy"]
+bg_color = Color(0.886275, 0.886275, 0.886275, 0.392157)
+
 [sub_resource type="Theme" id="Theme_h1mc3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycmcx"]
+bg_color = Color(0.886275, 0.886275, 0.886275, 0.666667)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlppe"]
+bg_color = Color(0.886275, 0.886275, 0.886275, 0.392157)
 
 [node name="UI" type="CanvasLayer"]
 follow_viewport_enabled = true
@@ -212,7 +224,6 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="GameWinBackdrop" type="TextureRect" parent="GameEndScreen"]
-visible = false
 self_modulate = Color(0.574271, 0.879769, 0.766053, 1)
 z_index = 200
 texture_filter = 1
@@ -244,15 +255,25 @@ texture = ExtResource("14_cof4p")
 
 [node name="Button" type="Button" parent="GameEndScreen/GameWinBackdrop"]
 z_index = 200
-layout_mode = 0
-offset_left = 525.0
-offset_top = 575.0
-offset_right = 639.0
-offset_bottom = 606.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -155.684
+offset_top = -147.888
+offset_right = 144.316
+offset_bottom = -67.888
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_kupmu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_catpy")
 text = "Restart Game"
 script = ExtResource("19_jkdwc")
 
 [node name="GameOverBackdrop" type="TextureRect" parent="GameEndScreen"]
+visible = false
 self_modulate = Color(0.354525, 0.359313, 0.328108, 1)
 z_index = 200
 texture_filter = 1
@@ -287,11 +308,20 @@ texture = ExtResource("13_h1mc3")
 
 [node name="Button" type="Button" parent="GameEndScreen/GameOverBackdrop"]
 z_index = 200
-layout_mode = 0
-offset_left = 525.0
-offset_top = 575.0
-offset_right = 639.0
-offset_bottom = 606.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -155.684
+offset_top = -144.0
+offset_right = 144.316
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_ycmcx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlppe")
 text = "Restart Game"
 script = ExtResource("19_jkdwc")
 
