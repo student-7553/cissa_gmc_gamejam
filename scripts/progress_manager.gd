@@ -5,7 +5,7 @@ const INCREMENT_FACTOR: int = 10
 @export var increment_delay: float = 0.02
 
 @onready var life_energy_label: Label = $TotalLifeEnergy
-@onready var life_energy_bar: TextureProgressBar = $AspectRatioContainer/life_energy_bar
+@onready var life_energy_bar: ProgressBar = $life_energy_bar
 @onready var timer: Timer = $Timer
 
 var display_life_energy: int = 0
