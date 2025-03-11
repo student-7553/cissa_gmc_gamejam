@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dt6gvl36cu631"]
+[gd_scene load_steps=39 format=3 uid="uid://dt6gvl36cu631"]
 
 [ext_resource type="Texture2D" uid="uid://bek0l78t3ob5s" path="res://assets/textures/UI/HUD.png" id="1_8k7j3"]
 [ext_resource type="Script" uid="uid://085mm1x0a0jw" path="res://scripts/ui/card_count.gd" id="1_nt7q6"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://eaod8sp01h7" path="res://assets/textures/UI/GameOver.png" id="13_h1mc3"]
 [ext_resource type="Texture2D" uid="uid://xvf2vva5c5c8" path="res://assets/textures/UI/GameWin.png" id="14_cof4p"]
 [ext_resource type="Texture2D" uid="uid://rwtxwc48vgt4" path="res://assets/textures/UI/GameEndBackdropNoStar-Sheet.png" id="15_cof4p"]
+[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="15_ycmcx"]
 [ext_resource type="Script" uid="uid://ciy6n0k311m0x" path="res://scripts/ui/game_end_screen.gd" id="16_cof4p"]
 [ext_resource type="PackedScene" uid="uid://it4xbalhx1n2" path="res://scenes/scroll.tscn" id="17_f7tlh"]
 [ext_resource type="Script" uid="uid://285hy56rt4m8" path="res://scripts/gameRestart.gd" id="19_jkdwc"]
@@ -306,7 +307,7 @@ offset_right = 546.0
 offset_bottom = 74.568
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("13_f7tlh")
+theme_override_fonts/font = ExtResource("15_ycmcx")
 text = "No humans were born. The world stayed silent"
 label_settings = SubResource("LabelSettings_cof4p")
 horizontal_alignment = 1

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnyorwollarn7"]
 
-[ext_resource type="FontFile" uid="uid://cwcpcjl2b0ejw" path="res://assets/fonts/Born3bSporty.ttf" id="1_gr0uc"]
-[ext_resource type="Script" path="res://scripts/card_choice_window.gd" id="1_v3hcv"]
+[ext_resource type="Script" uid="uid://c7ydtg27plj4l" path="res://scripts/card_choice_window.gd" id="1_v3hcv"]
 [ext_resource type="PackedScene" uid="uid://ba3sedxx2a1qd" path="res://scenes/card_choice.tscn" id="2_v3hcv"]
+[ext_resource type="FontFile" uid="uid://c5s88o8o4dmxj" path="res://assets/fonts/Born2bSportyV2.ttf" id="3_v3hcv"]
 
 [node name="card_choice_window" type="PanelContainer"]
 offset_right = 40.0
@@ -23,7 +23,7 @@ layout_mode = 2
 [node name="heading" type="Label" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_gr0uc")
+theme_override_fonts/font = ExtResource("3_v3hcv")
 theme_override_font_sizes/font_size = 64
 text = "Unlock a Card!"
 horizontal_alignment = 1
