@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b741xojvkmtud" path="res://scenes/hex_cells/hex_collider.tscn" id="2_6f4fu"]
 [ext_resource type="Script" uid="uid://bkil83u885r5f" path="res://scripts/hex_cells/hex_cell.gd" id="2_srmo8"]
 [ext_resource type="Script" uid="uid://bohs432y4hhwv" path="res://scripts/cards/check/base_check.gd" id="3_qw66a"]
-[ext_resource type="Script" uid="uid://c34uiy4uthfc" path="res://scripts/synergy/settlement_synergy.gd" id="3_u52p8"]
+[ext_resource type="Script" path="res://scripts/synergy/settlement_synergy.gd" id="3_u52p8"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="6_jl8sp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60aaf"]

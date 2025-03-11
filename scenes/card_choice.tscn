@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ba3sedxx2a1qd"]
 
 [ext_resource type="PackedScene" uid="uid://ggmoghus375f" path="res://scenes/cards/beach.tscn" id="1_8uqop"]
-[ext_resource type="Script" uid="uid://n2pvpvl42qcn" path="res://scripts/card_choice.gd" id="1_ng52u"]
+[ext_resource type="Script" path="res://scripts/card_choice.gd" id="1_ng52u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t60o4"]
 bg_color = Color(0, 0, 0, 0.215686)

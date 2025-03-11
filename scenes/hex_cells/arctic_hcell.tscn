@@ -8,11 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://csqxer6e82u86" path="res://scenes/score_indicator.tscn" id="6_mdqpg"]
 [ext_resource type="PackedScene" uid="uid://dejhudydw747x" path="res://scenes/invalid_indicator.tscn" id="7_xyjdm"]
 
-[node name="arctic_hcell" node_paths=PackedStringArray("mesh", "score_indicator") instance=ExtResource("1_tnm24")]
+[node name="arctic_hcell" node_paths=PackedStringArray("mesh") instance=ExtResource("1_tnm24")]
 script = ExtResource("2_gxjut")
 mesh = NodePath("HexCell_Arctic_1")
 cell_type = 5
-score_indicator = NodePath("score_indicator")
 
 [node name="HexCell_Arctic_1" parent="." index="0"]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
