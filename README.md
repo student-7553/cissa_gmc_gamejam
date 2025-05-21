@@ -1,4 +1,4 @@
-# Exogenesis
+# 🥇 Exogenesis
 A card based game where you must terraform the barren planet to help huamnity evolve.
 
 **Winner** of Judge's Choice and #9 for People's Choice in the CISSAxUMGMC Game Jam 2025.
